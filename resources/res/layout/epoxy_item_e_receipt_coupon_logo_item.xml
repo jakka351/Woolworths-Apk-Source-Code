@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/epoxy_item_e_receipt_coupon_logo_item_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:gravity="center"
+        android:id="@+id/coupon_partner_logo"
+        android:tag="binding_1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/half_default_margin"
+        android:importantForAccessibility="no"/>
+</FrameLayout>

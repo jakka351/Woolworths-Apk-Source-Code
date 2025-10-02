@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textAppearance="@style/TextAppearance.Caption"
+    android:tag="layout/epoxy_item_account_settings_app_version_0"
+    android:padding="@dimen/default_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha="?android:attr/disabledAlpha"/>

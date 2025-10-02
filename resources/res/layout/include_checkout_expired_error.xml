@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/expiredErrorWrapperLinearLayout"
+    android:tag="layout/include_checkout_expired_error_0"
+    android:background="@drawable/background_checkout_error_top_rounded_default"
+    android:paddingTop="@dimen/default_margin"
+    android:paddingBottom="@dimen/default_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_margin">
+    <ImageView
+        android:gravity="top|center_horizontal"
+        android:id="@+id/expiredErrorImageView"
+        android:layout_width="@dimen/error_warning_image_size"
+        android:layout_height="@dimen/error_warning_image_size"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:src="@drawable/ic_error_filled"/>
+    <TextView
+        android:gravity="center_vertical"
+        android:id="@+id/expiredErrorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        style="@style/CheckOut.ErrorText"/>
+</LinearLayout>

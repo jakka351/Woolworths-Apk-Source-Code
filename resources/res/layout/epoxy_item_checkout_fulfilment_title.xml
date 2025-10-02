@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:tag="layout/epoxy_item_checkout_fulfilment_title_0"
+    android:paddingTop="@dimen/default_padding"
+    android:paddingBottom="@dimen/half_default_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/default_padding"
+    android:paddingEnd="@dimen/default_padding">
+    <TextView
+        android:textColor="?android:attr/textColorSecondary"
+        android:tag="binding_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

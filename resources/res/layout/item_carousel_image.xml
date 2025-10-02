@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.piasy.biv.view.BigImageView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/carousel_image_view"
+    android:tag="layout/item_carousel_image_0"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:failureImage="@drawable/ic_product_image_unavailable"
+    app:failureImageInitScaleType="fitCenter"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:tapToRetry="false"/>

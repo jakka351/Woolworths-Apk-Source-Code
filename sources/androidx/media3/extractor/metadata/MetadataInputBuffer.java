@@ -1,0 +1,10 @@
+package androidx.media3.extractor.metadata;
+
+import androidx.media3.common.util.UnstableApi;
+import androidx.media3.decoder.DecoderInputBuffer;
+
+@UnstableApi
+/* loaded from: classes2.dex */
+public final class MetadataInputBuffer extends DecoderInputBuffer {
+    public long l;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textAppearance="@style/TextAppearance.Caption.Fresh.Medium"
+    android:textColor="?android:attr/textColorSecondary"
+    android:tag="layout/epoxy_item_your_groceries_category_title_0"
+    android:background="?attr/colorSurface"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/default_padding"
+    android:paddingVertical="@dimen/three_quarter_default_padding"/>

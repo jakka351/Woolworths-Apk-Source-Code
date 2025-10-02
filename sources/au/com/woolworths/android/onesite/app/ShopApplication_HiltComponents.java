@@ -1,0 +1,383 @@
+package au.com.woolworths.android.onesite.app;
+
+import au.com.woolworths.android.onesite.app.deeplink.ShopAppBranchDeepLinkActivity_GeneratedInjector;
+import au.com.woolworths.android.onesite.app.di.ShopEntryPoint;
+import au.com.woolworths.android.onesite.app.di.SnGLibraryEntryPoint;
+import au.com.woolworths.android.onesite.app.notification.WOWFirebaseMessagingService_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.checkout.ConfirmDialogFragment_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.checkout.digitalpay.DigitalPayForOrderFragment_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.checkout.digitalpay.StepUpDialogFragment_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.checkout.payserviceserror.PayServicesErrorFragment_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.checkout.ui.CheckoutActivity_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.customviews.WebViewActivity_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.deliveryaddress.managefulldeliveryaddresses.ManageFullDeliveryAddressesActivity_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.deliveryaddress.search.DeliveryAddressSearchActivity_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.main.MainActivity_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.onboarding.collectionmodesetup.CollectionModeSetupActivity_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.onboarding.rewardssetup.RewardsSetupFragment_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.onboarding.stepper.StepperView_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.rewards.RewardsSetupMoreActivity_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.search.searchscreen.SearchActivity_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.shortcuts.ShortcutsTrampolineActivity_GeneratedInjector;
+import au.com.woolworths.android.onesite.modules.splash.SplashScreenActivity_GeneratedInjector;
+import au.com.woolworths.base.shopapp.ui.infosection.InfoSectionFragment_GeneratedInjector;
+import au.com.woolworths.base.wallet.ocr.HiltWrapper_DependencyAccessor;
+import au.com.woolworths.base.wallet.ocr.RewardsWalletOcrActivity_GeneratedInjector;
+import au.com.woolworths.dynamic.page.ui.DynamicPageActivity_GeneratedInjector;
+import au.com.woolworths.feature.product.list.ComposeProductListActivity_GeneratedInjector;
+import au.com.woolworths.feature.product.list.ProductListFragment_GeneratedInjector;
+import au.com.woolworths.feature.product.list.ProductListOptionsFilterFragment_GeneratedInjector;
+import au.com.woolworths.feature.product.list.ProductListOptionsFragment_GeneratedInjector;
+import au.com.woolworths.feature.product.list.compose.AlternativeProductsFragment_GeneratedInjector;
+import au.com.woolworths.feature.product.list.legacy.LegacyProductListActivity_GeneratedInjector;
+import au.com.woolworths.feature.product.list.legacy.nutrition.NutritionBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.feature.product.list.v2.ProductListActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.authentication.RewardsAuthenticationActivityNew_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.authentication.RewardsAuthenticationActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.callback.RewardsCallbackUrlActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.closeaccount.CloseAccountActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.preferences.RewardsPreferenceDetailsActivityLegacy_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.preferences.RewardsPreferenceDetailsActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.preferences.RewardsPreferenceDetailsBottomSheetActivityLegacy_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.preferences.RewardsPreferenceDetailsBottomSheetActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.preferences.RewardsPreferenceDetailsBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.preferences.RewardsPreferenceDetailsFragmentLegacy_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.preferences.notification.RewardsPushPreferenceDetailsFragmentLegacy_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.settings.AccountSettingsActivityOld_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.settings.AccountSettingsFragmentOld_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.settings.v2.AccountSettingsActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.account.sso.RewardsMagicLinkActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.card.outage.ServiceUnavailableBottomSheetDialogFragment_GeneratedInjector;
+import au.com.woolworths.feature.rewards.card.overlay.RewardsCardOverlayActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.card.unlock.UnlockChristmasFundsBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.feature.rewards.everydayextras.signup.EverydayExtrasSignUpActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.everydayextras.signup.compose.chooseplan.EverydayExtraChoosePlanFragment_GeneratedInjector;
+import au.com.woolworths.feature.rewards.everydayextras.signup.compose.finalglance.FinalGlanceBottomSheetActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.everydayextras.signup.compose.landing.EverydayExtraLandingFragment_GeneratedInjector;
+import au.com.woolworths.feature.rewards.everydayextras.signup.compose.onboarding.EverydayExtraOnboardingFragment_GeneratedInjector;
+import au.com.woolworths.feature.rewards.everydayextras.signup.compose.summary.EverydayExtraSummaryFragment_GeneratedInjector;
+import au.com.woolworths.feature.rewards.offers.RewardsOffersFragmentLegacy_GeneratedInjector;
+import au.com.woolworths.feature.rewards.offers.detail.OfferDetailsActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.offers.detail.RewardsOfferDetailsActivityLegacy_GeneratedInjector;
+import au.com.woolworths.feature.rewards.offers.listpage.OfferListPageActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.offers.spinsurprise.SpinSurpriseGameActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.redemptionsettings.RewardsRedemptionSettingsActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.redemptionsettings.RewardsRedemptionSettingsBottomSheetActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.redemptionsettings.RewardsRedemptionSettingsBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.feature.rewards.redemptionsettings.RewardsRedemptionSettingsFragment_GeneratedInjector;
+import au.com.woolworths.feature.rewards.redemptionsettings.securitypreferences.SecurityPreferencesActivity_GeneratedInjector;
+import au.com.woolworths.feature.rewards.redemptionsettings.securitypreferences.SecurityPreferencesSecureDollarsActivity_GeneratedInjector;
+import au.com.woolworths.feature.shared.feedback.ui.Feedback2FormActivity_GeneratedInjector;
+import au.com.woolworths.feature.shared.feedback.ui.FeedbackFormActivity_GeneratedInjector;
+import au.com.woolworths.feature.shared.force.upgrade.ConfigActionActivity_GeneratedInjector;
+import au.com.woolworths.feature.shared.instore.wifi.notifications.InStoreWiFiNotificationReceiver_GeneratedInjector;
+import au.com.woolworths.feature.shared.instore.wifi.ui.InstoreWifiActivity_GeneratedInjector;
+import au.com.woolworths.feature.shared.instore.wifi.ui.JoinWifiActivity_GeneratedInjector;
+import au.com.woolworths.feature.shared.notification.optin.NotificationOptInActivity_GeneratedInjector;
+import au.com.woolworths.feature.shared.receipt.details.EReceiptDetailsActivity_GeneratedInjector;
+import au.com.woolworths.feature.shared.web.file.uploader.permission.CameraPermissionActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.account.ui.delete.DeleteAccountActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.account.ui.details.AccountDetailsActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.ask.olive.ui.AskOliveActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.barcode.scanner.BarcodeScannerActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.barcode.scanner.BarcodeScannerLegacyActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.brandedshop.BrandedShopActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.bundles.AddBundlesToCartBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.feature.shop.bundles.BundlesActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.catalogue.browse.CatalogueBrowseActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.catalogue.details.CatalogueDetailsActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.catalogue.home.CatalogueHomeActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.catalogue.intro.CatalogueIntroActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.catalogue.listing.category.CategoryListingActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.catalogue.listing.promotion.PromotionListingActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.catalogue.listing.promotion.details.PromotionDetailsActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.catalogue.productlist.CatalogueProductListActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.catalogue.storeselector.CatalogueStoreSelectorActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.catalogue.termsandconditions.TermsAndConditionsActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.contentpage.ContentPageActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.contentpage.ContentPageFragment_GeneratedInjector;
+import au.com.woolworths.feature.shop.countryselector.CountrySelectorActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.delivery.address.addaddressmanually.AddDeliveryAddressManuallyActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.editorder.errorscreen.EditOrderErrorActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.editorder.review.CmoReviewActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.foryou.RewardsBoostersFragmentLegacy_GeneratedInjector;
+import au.com.woolworths.feature.shop.foryou.settings.RewardsSettingsActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.haveyouforgotten.HaveYouForgottenActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.healthylifefoodtracker.FoodTrackerActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.homepage.presentation.HomePageFragment_GeneratedInjector;
+import au.com.woolworths.feature.shop.imagegallery.ProductImageGalleryActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.inbox.InboxActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.instore.cart.InstoreCartActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.instore.navigation.map.ui.InstoreMapActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.instore.navigation.productfinder.ProductFinderActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.login.LoginActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.marketplace.ui.brands.MarketplaceBrandsFragment_GeneratedInjector;
+import au.com.woolworths.feature.shop.marketplace.ui.categories.MarketplaceCategoriesFragment_GeneratedInjector;
+import au.com.woolworths.feature.shop.marketplace.ui.main.MarketplaceActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.marketplace.ui.marketplace.MarketplaceFragment_GeneratedInjector;
+import au.com.woolworths.feature.shop.marketplace.ui.personalised.MarketplacePersonalisedFragment_GeneratedInjector;
+import au.com.woolworths.feature.shop.marketplace.ui.sellers.MarketplaceSellersFragment_GeneratedInjector;
+import au.com.woolworths.feature.shop.modeselector.ModeSelectorActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.more.MoreFragment_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.OrderDetailsActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.baynumber.BayNumberSelectorBottomSheet_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.cancel.OrderCancellationPromptActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.help.HelpAndSupportActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.help.OrderDetailsHelpActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.infomodal.ApplicableDeliveryMethodActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.infomodal.ProgressStepperInfoActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.infomodal.ProgressStepperInfoUpliftActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.location.PickupOrderLocationTrackingService_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.location.RequestLocationPermissionPrimingDialog_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.parking.ParkingGuideActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.pickupeta.PickupEtaSelectorBottomSheet_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.proofofdelivery.ProofOfDeliveryActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.yourgroceries.YourGroceriesActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.details.yourgroceries.paymentsummary.YourGroceriesPaymentSummaryActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.editdriverinstruction.EditDriverInstructionActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.editorderconditions.EditOrderConditionsActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.guest.MyOrdersGuestFragment_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.orders.OrdersActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.myorders.orders.list.OrdersListFragment_GeneratedInjector;
+import au.com.woolworths.feature.shop.notification.preferences.ShopNotificationPreferencesActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.notification.preferences.details.ShopNotificationPreferencesDetailsFragment_GeneratedInjector;
+import au.com.woolworths.feature.shop.notification.preferences.guest.ShopNotificationPreferencesGuestFragment_GeneratedInjector;
+import au.com.woolworths.feature.shop.onboarding.OnboardingActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.onboarding.sdui.OnboardingSduiActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.product.availability.ProductAvailabilityActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.recipes.details.RecipeDetailsActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.recipes.freshmag.content.presentation.FreshMagContentActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.recipes.freshmag.home.presentation.FreshMagHomeActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.recipes.recipes.homepage.savedrecipes.SavedRecipesActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.recipes.recipes.list.RecipeListActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.recipes.search.RecipeSearchActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.shippingcalculator.ShippingCalculatorActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.signup.SignUpActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.storelocator.StoreLocatorActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.storelocator.details.StoreDetailsActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.storelocator.legacy.pickup.PickUpLocatorActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.storelocator.legacy.pickup.locationresult.PickUpLocationResultActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.video.FullPageVideoPlayerActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.voc.freetext.VocFreeTextActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.voc.webview.VocSurveyWebViewActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.weblink.WebLinkActivity_GeneratedInjector;
+import au.com.woolworths.feature.shop.wpay.ui.wpay.WPayForOrderFragment_GeneratedInjector;
+import au.com.woolworths.foundation.shop.deeplink.resolver.ui.ShopAppDeepLinkHandlerActivity_GeneratedInjector;
+import au.com.woolworths.foundation.shop.marketplace.education.ui.EducationBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.foundation.swrve.embedded.campaign.standardcampaign.StandardCampaignActivity_GeneratedInjector;
+import au.com.woolworths.product.addtocart.AddToCartBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.product.cartpreauth.CartPreAuthBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.product.deliveryaddressprompt.AddDeliveryAddressBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.product.details.HealthierBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.product.details.LegacyProductDetailsActivity_GeneratedInjector;
+import au.com.woolworths.product.infoview.ProductInfoView_GeneratedInjector;
+import au.com.woolworths.product.offers.ProductsBoostView_GeneratedInjector;
+import au.com.woolworths.product.productmessagebottomsheet.ProductMessageBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.promotion.banner.ui.PromotionActivity_GeneratedInjector;
+import au.com.woolworths.sdui.rewards.appmodal.RewardsAppModalActivity_GeneratedInjector;
+import au.com.woolworths.shop.addtolist.add.AddToListBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.shop.addtolist.edit.CreateUpdateShoppingListActivity_GeneratedInjector;
+import au.com.woolworths.shop.buyagain.ui.BuyAgainActivity_GeneratedInjector;
+import au.com.woolworths.shop.buyagain.ui.legacy.BuyAgainFragmentLegacy_GeneratedInjector;
+import au.com.woolworths.shop.buyagain.ui.legacy.quantityselector.BuyAgainQuantitySelectorFragment_GeneratedInjector;
+import au.com.woolworths.shop.cart.ui.CartActivity_GeneratedInjector;
+import au.com.woolworths.shop.cart.ui.CartBadgeActionView_GeneratedInjector;
+import au.com.woolworths.shop.cart.ui.CartSectionOptionsBottomSheet_GeneratedInjector;
+import au.com.woolworths.shop.cart.ui.cart.CartFragment_GeneratedInjector;
+import au.com.woolworths.shop.cart.ui.productalternative.ProductReviewAlternativeFragment_GeneratedInjector;
+import au.com.woolworths.shop.cart.ui.productreview.ProductReviewFragment_GeneratedInjector;
+import au.com.woolworths.shop.cart.ui.productreview.ProductsReviewActivity_GeneratedInjector;
+import au.com.woolworths.shop.checkout.ui.confirmation.OrderConfirmationActivity_GeneratedInjector;
+import au.com.woolworths.shop.checkout.ui.content.bottomsheet.MarketplacePickupBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.shop.checkout.ui.details.CheckoutDetailsFragment_GeneratedInjector;
+import au.com.woolworths.shop.checkout.ui.fulfilmentwindows.FulfilmentWindowsActivity_GeneratedInjector;
+import au.com.woolworths.shop.checkout.ui.fulfilmentwindows.FulfilmentWindowsFragment_GeneratedInjector;
+import au.com.woolworths.shop.checkout.ui.fulfilmentwindowsgroup.FulfilmentWindowsGroupFragment_GeneratedInjector;
+import au.com.woolworths.shop.checkout.ui.idverification.IdVerificationActivity_GeneratedInjector;
+import au.com.woolworths.shop.checkout.ui.product.CheckoutProductFragment_GeneratedInjector;
+import au.com.woolworths.shop.checkout.ui.substitution.SubstitutionActivity_GeneratedInjector;
+import au.com.woolworths.shop.checkout.ui.summary.CheckoutSummaryFragment_GeneratedInjector;
+import au.com.woolworths.shop.checkout.ui.timeselector.TimeSelectorActivity_GeneratedInjector;
+import au.com.woolworths.shop.deliveryunlimited.signup.confirmation.ConfirmationActivity_GeneratedInjector;
+import au.com.woolworths.shop.deliveryunlimited.signup.confirmsubscription.ConfirmSubscriptionActivity_GeneratedInjector;
+import au.com.woolworths.shop.deliveryunlimited.signup.confirmsubscription.terms.ConfirmSubscriptionTermsAndConditionBottomSheetFragmentOld_GeneratedInjector;
+import au.com.woolworths.shop.deliveryunlimited.signup.landing.DeliveryUnlimitedSignUpLandingActivity_GeneratedInjector;
+import au.com.woolworths.shop.deliveryunlimited.signup.payment.PaymentActivity_GeneratedInjector;
+import au.com.woolworths.shop.deliveryunlimited.signup.selectplan.SelectPlanActivity_GeneratedInjector;
+import au.com.woolworths.shop.digipay.creditcard.CreditCardFragment_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.details.ui.ListDetailsView_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.guest.onboarding.ShopListGuestOnboardingActivity_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.lists.ListsFragment_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.lists.menu.ListsBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.lists.mylists.MyListsFragment_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.lists.sng.SngListsActivity_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.lists.suggested.SuggestedListsFragment_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.magicmatch.MagicMatchActivity_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.pastshops.PastShopsActivity_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.shoppinglist.main.ShoppingListDetailsActivity_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.shoppinglist.sort.SortByView_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.shoppinglist.sort.sortbottomsheet.SortByBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.snapalist.main.ProcessorActivity_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.snapalist.snapbottomsheet.SnapAListBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.substitutions.ViewSimilarProductsActivity_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.watchlist.bottomsheet.WatchlistBottomSheetFragment_GeneratedInjector;
+import au.com.woolworths.shop.lists.ui.watchlist.toggle.WatchlistToggleView_GeneratedInjector;
+import au.com.woolworths.shop.product.details.ProductDetailsActivity_GeneratedInjector;
+import au.com.woolworths.shop.product.navigation.ui.product.ProductCategoryFragment_GeneratedInjector;
+import au.com.woolworths.shop.product.navigation.ui.subcategory.SubCategoryActivity_GeneratedInjector;
+import au.com.woolworths.shop.ratings.and.reviews.reviewsdetails.RatingsAndReviewsActivity_GeneratedInjector;
+import au.com.woolworths.shop.ratings.and.reviews.submitreviews.SubmitReviewActivity_GeneratedInjector;
+import au.com.woolworths.shop.receipts.ShopReceiptListActivity_GeneratedInjector;
+import au.com.woolworths.shop.rewards.RewardsActivityLegacy_GeneratedInjector;
+import au.com.woolworths.shop.rewards.ShopRewardsActivity_GeneratedInjector;
+import au.com.woolworths.shop.rewards.priming.RewardsSetupPrimingActivity_GeneratedInjector;
+import au.com.woolworths.shop.rewards.promo.PromoAppActivity_GeneratedInjector;
+import au.com.woolworths.shop.specials.SpecialsHomeFragment_GeneratedInjector;
+import dagger.Component;
+import dagger.Module;
+import dagger.Subcomponent;
+import dagger.hilt.android.components.ActivityComponent;
+import dagger.hilt.android.components.ActivityRetainedComponent;
+import dagger.hilt.android.components.FragmentComponent;
+import dagger.hilt.android.components.ServiceComponent;
+import dagger.hilt.android.components.ViewComponent;
+import dagger.hilt.android.components.ViewModelComponent;
+import dagger.hilt.android.components.ViewWithFragmentComponent;
+import dagger.hilt.android.flags.FragmentGetContextFix;
+import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
+import dagger.hilt.android.internal.builders.ActivityRetainedComponentBuilder;
+import dagger.hilt.android.internal.builders.FragmentComponentBuilder;
+import dagger.hilt.android.internal.builders.ServiceComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewModelComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewWithFragmentComponentBuilder;
+import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories;
+import dagger.hilt.android.internal.lifecycle.HiltViewModelFactory;
+import dagger.hilt.android.internal.lifecycle.HiltWrapper_HiltViewModelFactory_ActivityCreatorEntryPoint;
+import dagger.hilt.android.internal.managers.ActivityComponentManager;
+import dagger.hilt.android.internal.managers.FragmentComponentManager;
+import dagger.hilt.android.internal.managers.HiltWrapper_ActivityRetainedComponentManager_ActivityRetainedComponentBuilderEntryPoint;
+import dagger.hilt.android.internal.managers.HiltWrapper_ActivityRetainedComponentManager_ActivityRetainedLifecycleEntryPoint;
+import dagger.hilt.android.internal.managers.ServiceComponentManager;
+import dagger.hilt.android.internal.managers.ViewComponentManager;
+import dagger.hilt.android.scopes.ActivityRetainedScoped;
+import dagger.hilt.android.scopes.ActivityScoped;
+import dagger.hilt.android.scopes.FragmentScoped;
+import dagger.hilt.android.scopes.ServiceScoped;
+import dagger.hilt.android.scopes.ViewModelScoped;
+import dagger.hilt.android.scopes.ViewScoped;
+import dagger.hilt.components.SingletonComponent;
+import dagger.hilt.internal.GeneratedComponent;
+import dagger.hilt.migration.DisableInstallInCheck;
+import javax.inject.Singleton;
+
+/* loaded from: classes3.dex */
+public final class ShopApplication_HiltComponents {
+
+    @ActivityScoped
+    @Subcomponent
+    /* loaded from: classes.dex */
+    public static abstract class ActivityC implements ShopAppBranchDeepLinkActivity_GeneratedInjector, CheckoutActivity_GeneratedInjector, WebViewActivity_GeneratedInjector, ManageFullDeliveryAddressesActivity_GeneratedInjector, DeliveryAddressSearchActivity_GeneratedInjector, MainActivity_GeneratedInjector, CollectionModeSetupActivity_GeneratedInjector, RewardsSetupMoreActivity_GeneratedInjector, SearchActivity_GeneratedInjector, ShortcutsTrampolineActivity_GeneratedInjector, SplashScreenActivity_GeneratedInjector, RewardsWalletOcrActivity_GeneratedInjector, DynamicPageActivity_GeneratedInjector, ComposeProductListActivity_GeneratedInjector, au.com.woolworths.feature.product.list.legacy.ComposeProductListActivity_GeneratedInjector, LegacyProductListActivity_GeneratedInjector, ProductListActivity_GeneratedInjector, RewardsAuthenticationActivityNew_GeneratedInjector, RewardsAuthenticationActivity_GeneratedInjector, RewardsCallbackUrlActivity_GeneratedInjector, CloseAccountActivity_GeneratedInjector, RewardsPreferenceDetailsActivityLegacy_GeneratedInjector, RewardsPreferenceDetailsActivity_GeneratedInjector, RewardsPreferenceDetailsBottomSheetActivityLegacy_GeneratedInjector, RewardsPreferenceDetailsBottomSheetActivity_GeneratedInjector, AccountSettingsActivityOld_GeneratedInjector, AccountSettingsActivity_GeneratedInjector, RewardsMagicLinkActivity_GeneratedInjector, RewardsCardOverlayActivity_GeneratedInjector, EverydayExtrasSignUpActivity_GeneratedInjector, FinalGlanceBottomSheetActivity_GeneratedInjector, OfferDetailsActivity_GeneratedInjector, RewardsOfferDetailsActivityLegacy_GeneratedInjector, OfferListPageActivity_GeneratedInjector, SpinSurpriseGameActivity_GeneratedInjector, RewardsRedemptionSettingsActivity_GeneratedInjector, RewardsRedemptionSettingsBottomSheetActivity_GeneratedInjector, SecurityPreferencesActivity_GeneratedInjector, SecurityPreferencesSecureDollarsActivity_GeneratedInjector, Feedback2FormActivity_GeneratedInjector, FeedbackFormActivity_GeneratedInjector, ConfigActionActivity_GeneratedInjector, InstoreWifiActivity_GeneratedInjector, JoinWifiActivity_GeneratedInjector, NotificationOptInActivity_GeneratedInjector, EReceiptDetailsActivity_GeneratedInjector, CameraPermissionActivity_GeneratedInjector, DeleteAccountActivity_GeneratedInjector, AccountDetailsActivity_GeneratedInjector, AskOliveActivity_GeneratedInjector, BarcodeScannerActivity_GeneratedInjector, BarcodeScannerLegacyActivity_GeneratedInjector, BrandedShopActivity_GeneratedInjector, BundlesActivity_GeneratedInjector, CatalogueBrowseActivity_GeneratedInjector, CatalogueDetailsActivity_GeneratedInjector, CatalogueHomeActivity_GeneratedInjector, CatalogueIntroActivity_GeneratedInjector, CategoryListingActivity_GeneratedInjector, PromotionListingActivity_GeneratedInjector, PromotionDetailsActivity_GeneratedInjector, CatalogueProductListActivity_GeneratedInjector, CatalogueStoreSelectorActivity_GeneratedInjector, TermsAndConditionsActivity_GeneratedInjector, ContentPageActivity_GeneratedInjector, CountrySelectorActivity_GeneratedInjector, AddDeliveryAddressManuallyActivity_GeneratedInjector, EditOrderErrorActivity_GeneratedInjector, CmoReviewActivity_GeneratedInjector, RewardsSettingsActivity_GeneratedInjector, HaveYouForgottenActivity_GeneratedInjector, FoodTrackerActivity_GeneratedInjector, ProductImageGalleryActivity_GeneratedInjector, InboxActivity_GeneratedInjector, InstoreCartActivity_GeneratedInjector, InstoreMapActivity_GeneratedInjector, ProductFinderActivity_GeneratedInjector, LoginActivity_GeneratedInjector, MarketplaceActivity_GeneratedInjector, ModeSelectorActivity_GeneratedInjector, OrderDetailsActivity_GeneratedInjector, OrderCancellationPromptActivity_GeneratedInjector, HelpAndSupportActivity_GeneratedInjector, OrderDetailsHelpActivity_GeneratedInjector, ApplicableDeliveryMethodActivity_GeneratedInjector, ProgressStepperInfoActivity_GeneratedInjector, ProgressStepperInfoUpliftActivity_GeneratedInjector, ParkingGuideActivity_GeneratedInjector, ProofOfDeliveryActivity_GeneratedInjector, YourGroceriesActivity_GeneratedInjector, YourGroceriesPaymentSummaryActivity_GeneratedInjector, EditDriverInstructionActivity_GeneratedInjector, EditOrderConditionsActivity_GeneratedInjector, OrdersActivity_GeneratedInjector, ShopNotificationPreferencesActivity_GeneratedInjector, OnboardingActivity_GeneratedInjector, OnboardingSduiActivity_GeneratedInjector, ProductAvailabilityActivity_GeneratedInjector, RecipeDetailsActivity_GeneratedInjector, FreshMagContentActivity_GeneratedInjector, FreshMagHomeActivity_GeneratedInjector, SavedRecipesActivity_GeneratedInjector, RecipeListActivity_GeneratedInjector, RecipeSearchActivity_GeneratedInjector, ShippingCalculatorActivity_GeneratedInjector, SignUpActivity_GeneratedInjector, StoreLocatorActivity_GeneratedInjector, StoreDetailsActivity_GeneratedInjector, au.com.woolworths.feature.shop.storelocator.legacy.StoreLocatorActivity_GeneratedInjector, PickUpLocatorActivity_GeneratedInjector, au.com.woolworths.feature.shop.storelocator.legacy.pickup.details.StoreDetailsActivity_GeneratedInjector, PickUpLocationResultActivity_GeneratedInjector, FullPageVideoPlayerActivity_GeneratedInjector, VocFreeTextActivity_GeneratedInjector, VocSurveyWebViewActivity_GeneratedInjector, WebLinkActivity_GeneratedInjector, ShopAppDeepLinkHandlerActivity_GeneratedInjector, StandardCampaignActivity_GeneratedInjector, LegacyProductDetailsActivity_GeneratedInjector, PromotionActivity_GeneratedInjector, RewardsAppModalActivity_GeneratedInjector, CreateUpdateShoppingListActivity_GeneratedInjector, BuyAgainActivity_GeneratedInjector, CartActivity_GeneratedInjector, ProductsReviewActivity_GeneratedInjector, OrderConfirmationActivity_GeneratedInjector, FulfilmentWindowsActivity_GeneratedInjector, IdVerificationActivity_GeneratedInjector, SubstitutionActivity_GeneratedInjector, TimeSelectorActivity_GeneratedInjector, ConfirmationActivity_GeneratedInjector, ConfirmSubscriptionActivity_GeneratedInjector, DeliveryUnlimitedSignUpLandingActivity_GeneratedInjector, PaymentActivity_GeneratedInjector, SelectPlanActivity_GeneratedInjector, ShopListGuestOnboardingActivity_GeneratedInjector, SngListsActivity_GeneratedInjector, MagicMatchActivity_GeneratedInjector, PastShopsActivity_GeneratedInjector, ShoppingListDetailsActivity_GeneratedInjector, ProcessorActivity_GeneratedInjector, ViewSimilarProductsActivity_GeneratedInjector, ProductDetailsActivity_GeneratedInjector, SubCategoryActivity_GeneratedInjector, RatingsAndReviewsActivity_GeneratedInjector, SubmitReviewActivity_GeneratedInjector, ShopReceiptListActivity_GeneratedInjector, RewardsActivityLegacy_GeneratedInjector, ShopRewardsActivity_GeneratedInjector, RewardsSetupPrimingActivity_GeneratedInjector, PromoAppActivity_GeneratedInjector, ActivityComponent, DefaultViewModelFactories.ActivityEntryPoint, HiltWrapper_HiltViewModelFactory_ActivityCreatorEntryPoint, FragmentComponentManager.FragmentComponentBuilderEntryPoint, ViewComponentManager.ViewComponentBuilderEntryPoint, GeneratedComponent {
+
+        @Subcomponent.Builder
+        public interface Builder extends ActivityComponentBuilder {
+        }
+    }
+
+    @DisableInstallInCheck
+    @Module
+    public interface ActivityCBuilderModule {
+    }
+
+    @ActivityRetainedScoped
+    @Subcomponent
+    /* loaded from: classes.dex */
+    public static abstract class ActivityRetainedC implements ActivityRetainedComponent, ActivityComponentManager.ActivityComponentBuilderEntryPoint, HiltWrapper_ActivityRetainedComponentManager_ActivityRetainedLifecycleEntryPoint, GeneratedComponent {
+
+        @Subcomponent.Builder
+        public interface Builder extends ActivityRetainedComponentBuilder {
+        }
+    }
+
+    @DisableInstallInCheck
+    @Module
+    public interface ActivityRetainedCBuilderModule {
+    }
+
+    @FragmentScoped
+    @Subcomponent
+    public static abstract class FragmentC implements ConfirmDialogFragment_GeneratedInjector, DigitalPayForOrderFragment_GeneratedInjector, StepUpDialogFragment_GeneratedInjector, PayServicesErrorFragment_GeneratedInjector, RewardsSetupFragment_GeneratedInjector, InfoSectionFragment_GeneratedInjector, ProductListFragment_GeneratedInjector, ProductListOptionsFilterFragment_GeneratedInjector, ProductListOptionsFragment_GeneratedInjector, AlternativeProductsFragment_GeneratedInjector, au.com.woolworths.feature.product.list.legacy.ProductListFragment_GeneratedInjector, au.com.woolworths.feature.product.list.legacy.ProductListOptionsFilterFragment_GeneratedInjector, au.com.woolworths.feature.product.list.legacy.ProductListOptionsFragment_GeneratedInjector, au.com.woolworths.feature.product.list.legacy.compose.AlternativeProductsFragment_GeneratedInjector, NutritionBottomSheetFragment_GeneratedInjector, au.com.woolworths.feature.product.list.nutrition.NutritionBottomSheetFragment_GeneratedInjector, RewardsPreferenceDetailsBottomSheetFragment_GeneratedInjector, RewardsPreferenceDetailsFragmentLegacy_GeneratedInjector, RewardsPushPreferenceDetailsFragmentLegacy_GeneratedInjector, AccountSettingsFragmentOld_GeneratedInjector, ServiceUnavailableBottomSheetDialogFragment_GeneratedInjector, UnlockChristmasFundsBottomSheetFragment_GeneratedInjector, EverydayExtraChoosePlanFragment_GeneratedInjector, EverydayExtraLandingFragment_GeneratedInjector, EverydayExtraOnboardingFragment_GeneratedInjector, EverydayExtraSummaryFragment_GeneratedInjector, RewardsOffersFragmentLegacy_GeneratedInjector, RewardsRedemptionSettingsBottomSheetFragment_GeneratedInjector, RewardsRedemptionSettingsFragment_GeneratedInjector, AddBundlesToCartBottomSheetFragment_GeneratedInjector, ContentPageFragment_GeneratedInjector, RewardsBoostersFragmentLegacy_GeneratedInjector, HomePageFragment_GeneratedInjector, MarketplaceBrandsFragment_GeneratedInjector, MarketplaceCategoriesFragment_GeneratedInjector, MarketplaceFragment_GeneratedInjector, MarketplacePersonalisedFragment_GeneratedInjector, MarketplaceSellersFragment_GeneratedInjector, MoreFragment_GeneratedInjector, BayNumberSelectorBottomSheet_GeneratedInjector, RequestLocationPermissionPrimingDialog_GeneratedInjector, PickupEtaSelectorBottomSheet_GeneratedInjector, MyOrdersGuestFragment_GeneratedInjector, OrdersListFragment_GeneratedInjector, ShopNotificationPreferencesDetailsFragment_GeneratedInjector, ShopNotificationPreferencesGuestFragment_GeneratedInjector, WPayForOrderFragment_GeneratedInjector, EducationBottomSheetFragment_GeneratedInjector, AddToCartBottomSheetFragment_GeneratedInjector, CartPreAuthBottomSheetFragment_GeneratedInjector, AddDeliveryAddressBottomSheetFragment_GeneratedInjector, HealthierBottomSheetFragment_GeneratedInjector, ProductMessageBottomSheetFragment_GeneratedInjector, AddToListBottomSheetFragment_GeneratedInjector, BuyAgainFragmentLegacy_GeneratedInjector, BuyAgainQuantitySelectorFragment_GeneratedInjector, CartSectionOptionsBottomSheet_GeneratedInjector, CartFragment_GeneratedInjector, ProductReviewAlternativeFragment_GeneratedInjector, ProductReviewFragment_GeneratedInjector, MarketplacePickupBottomSheetFragment_GeneratedInjector, CheckoutDetailsFragment_GeneratedInjector, FulfilmentWindowsFragment_GeneratedInjector, FulfilmentWindowsGroupFragment_GeneratedInjector, CheckoutProductFragment_GeneratedInjector, CheckoutSummaryFragment_GeneratedInjector, ConfirmSubscriptionTermsAndConditionBottomSheetFragmentOld_GeneratedInjector, CreditCardFragment_GeneratedInjector, ListsFragment_GeneratedInjector, ListsBottomSheetFragment_GeneratedInjector, MyListsFragment_GeneratedInjector, SuggestedListsFragment_GeneratedInjector, SortByBottomSheetFragment_GeneratedInjector, SnapAListBottomSheetFragment_GeneratedInjector, WatchlistBottomSheetFragment_GeneratedInjector, ProductCategoryFragment_GeneratedInjector, SpecialsHomeFragment_GeneratedInjector, FragmentComponent, DefaultViewModelFactories.FragmentEntryPoint, ViewComponentManager.ViewWithFragmentComponentBuilderEntryPoint, GeneratedComponent {
+
+        @Subcomponent.Builder
+        public interface Builder extends FragmentComponentBuilder {
+        }
+    }
+
+    @DisableInstallInCheck
+    @Module
+    public interface FragmentCBuilderModule {
+    }
+
+    @ServiceScoped
+    @Subcomponent
+    public static abstract class ServiceC implements WOWFirebaseMessagingService_GeneratedInjector, PickupOrderLocationTrackingService_GeneratedInjector, ServiceComponent, GeneratedComponent {
+
+        @Subcomponent.Builder
+        public interface Builder extends ServiceComponentBuilder {
+        }
+    }
+
+    @DisableInstallInCheck
+    @Module
+    public interface ServiceCBuilderModule {
+    }
+
+    @Component
+    @Singleton
+    /* loaded from: classes.dex */
+    public static abstract class SingletonC implements ShopApplication_GeneratedInjector, ShopEntryPoint, SnGLibraryEntryPoint, HiltWrapper_DependencyAccessor, InStoreWiFiNotificationReceiver_GeneratedInjector, FragmentGetContextFix.FragmentGetContextFixEntryPoint, HiltWrapper_ActivityRetainedComponentManager_ActivityRetainedComponentBuilderEntryPoint, ServiceComponentManager.ServiceComponentBuilderEntryPoint, SingletonComponent, GeneratedComponent {
+    }
+
+    @ViewScoped
+    @Subcomponent
+    public static abstract class ViewC implements StepperView_GeneratedInjector, ProductInfoView_GeneratedInjector, ProductsBoostView_GeneratedInjector, CartBadgeActionView_GeneratedInjector, ListDetailsView_GeneratedInjector, SortByView_GeneratedInjector, WatchlistToggleView_GeneratedInjector, ViewComponent, GeneratedComponent {
+
+        @Subcomponent.Builder
+        public interface Builder extends ViewComponentBuilder {
+        }
+    }
+
+    @DisableInstallInCheck
+    @Module
+    public interface ViewCBuilderModule {
+    }
+
+    @ViewModelScoped
+    @Subcomponent
+    /* loaded from: classes.dex */
+    public static abstract class ViewModelC implements ViewModelComponent, HiltViewModelFactory.ViewModelFactoriesEntryPoint, GeneratedComponent {
+
+        @Subcomponent.Builder
+        public interface Builder extends ViewModelComponentBuilder {
+        }
+    }
+
+    @DisableInstallInCheck
+    @Module
+    public interface ViewModelCBuilderModule {
+    }
+
+    @ViewScoped
+    @Subcomponent
+    public static abstract class ViewWithFragmentC implements ViewWithFragmentComponent, GeneratedComponent {
+
+        @Subcomponent.Builder
+        public interface Builder extends ViewWithFragmentComponentBuilder {
+        }
+    }
+
+    @DisableInstallInCheck
+    @Module
+    public interface ViewWithFragmentCBuilderModule {
+    }
+}

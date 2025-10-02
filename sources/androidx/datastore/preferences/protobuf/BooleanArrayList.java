@@ -1,0 +1,219 @@
+package androidx.datastore.preferences.protobuf;
+
+import YU.a;
+import androidx.datastore.preferences.protobuf.Internal;
+import java.nio.charset.Charset;
+import java.util.AbstractList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.RandomAccess;
+
+/* loaded from: classes2.dex */
+final class BooleanArrayList extends AbstractProtobufList<Boolean> implements Internal.BooleanList, RandomAccess, PrimitiveNonBoxingCollection {
+    public boolean[] e;
+    public int f;
+
+    static {
+        new BooleanArrayList(new boolean[0], 0, false);
+    }
+
+    public BooleanArrayList(boolean[] zArr, int i, boolean z) {
+        super(z);
+        this.e = zArr;
+        this.f = i;
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.AbstractProtobufList, java.util.AbstractList, java.util.List
+    public final void add(int i, Object obj) {
+        int i2;
+        boolean zBooleanValue = ((Boolean) obj).booleanValue();
+        b();
+        if (i < 0 || i > (i2 = this.f)) {
+            StringBuilder sbR = a.r(i, "Index:", ", Size:");
+            sbR.append(this.f);
+            throw new IndexOutOfBoundsException(sbR.toString());
+        }
+        boolean[] zArr = this.e;
+        if (i2 < zArr.length) {
+            System.arraycopy(zArr, i, zArr, i + 1, i2 - i);
+        } else {
+            boolean[] zArr2 = new boolean[androidx.constraintlayout.core.state.a.a(i2, 3, 2, 1)];
+            System.arraycopy(zArr, 0, zArr2, 0, i);
+            System.arraycopy(this.e, i, zArr2, i + 1, this.f - i);
+            this.e = zArr2;
+        }
+        this.e[i] = zBooleanValue;
+        this.f++;
+        ((AbstractList) this).modCount++;
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.AbstractProtobufList, java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final boolean addAll(Collection collection) {
+        b();
+        Charset charset = Internal.f2648a;
+        collection.getClass();
+        if (!(collection instanceof BooleanArrayList)) {
+            return super.addAll(collection);
+        }
+        BooleanArrayList booleanArrayList = (BooleanArrayList) collection;
+        int i = booleanArrayList.f;
+        if (i == 0) {
+            return false;
+        }
+        int i2 = this.f;
+        if (Integer.MAX_VALUE - i2 < i) {
+            throw new OutOfMemoryError();
+        }
+        int i3 = i2 + i;
+        boolean[] zArr = this.e;
+        if (i3 > zArr.length) {
+            this.e = Arrays.copyOf(zArr, i3);
+        }
+        System.arraycopy(booleanArrayList.e, 0, this.e, this.f, booleanArrayList.f);
+        this.f = i3;
+        ((AbstractList) this).modCount++;
+        return true;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final boolean contains(Object obj) {
+        return indexOf(obj) != -1;
+    }
+
+    public final void d(boolean z) {
+        b();
+        int i = this.f;
+        boolean[] zArr = this.e;
+        if (i == zArr.length) {
+            boolean[] zArr2 = new boolean[androidx.constraintlayout.core.state.a.a(i, 3, 2, 1)];
+            System.arraycopy(zArr, 0, zArr2, 0, i);
+            this.e = zArr2;
+        }
+        boolean[] zArr3 = this.e;
+        int i2 = this.f;
+        this.f = i2 + 1;
+        zArr3[i2] = z;
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.AbstractProtobufList, java.util.AbstractList, java.util.Collection, java.util.List
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof BooleanArrayList)) {
+            return super.equals(obj);
+        }
+        BooleanArrayList booleanArrayList = (BooleanArrayList) obj;
+        if (this.f != booleanArrayList.f) {
+            return false;
+        }
+        boolean[] zArr = booleanArrayList.e;
+        for (int i = 0; i < this.f; i++) {
+            if (this.e[i] != zArr[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public final void g(int i) {
+        if (i < 0 || i >= this.f) {
+            StringBuilder sbR = a.r(i, "Index:", ", Size:");
+            sbR.append(this.f);
+            throw new IndexOutOfBoundsException(sbR.toString());
+        }
+    }
+
+    @Override // java.util.AbstractList, java.util.List
+    public final Object get(int i) {
+        return Boolean.valueOf(h(i));
+    }
+
+    public final boolean h(int i) {
+        g(i);
+        return this.e[i];
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.AbstractProtobufList, java.util.AbstractList, java.util.Collection, java.util.List
+    public final int hashCode() {
+        int i = 1;
+        for (int i2 = 0; i2 < this.f; i2++) {
+            int i3 = i * 31;
+            boolean z = this.e[i2];
+            Charset charset = Internal.f2648a;
+            i = i3 + (z ? 1231 : 1237);
+        }
+        return i;
+    }
+
+    @Override // java.util.AbstractList, java.util.List
+    public final int indexOf(Object obj) {
+        if (!(obj instanceof Boolean)) {
+            return -1;
+        }
+        boolean zBooleanValue = ((Boolean) obj).booleanValue();
+        int i = this.f;
+        for (int i2 = 0; i2 < i; i2++) {
+            if (this.e[i2] == zBooleanValue) {
+                return i2;
+            }
+        }
+        return -1;
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.AbstractProtobufList, java.util.AbstractList, java.util.List
+    public final Object remove(int i) {
+        b();
+        g(i);
+        boolean[] zArr = this.e;
+        boolean z = zArr[i];
+        if (i < this.f - 1) {
+            System.arraycopy(zArr, i + 1, zArr, i, (r2 - i) - 1);
+        }
+        this.f--;
+        ((AbstractList) this).modCount++;
+        return Boolean.valueOf(z);
+    }
+
+    @Override // java.util.AbstractList
+    public final void removeRange(int i, int i2) {
+        b();
+        if (i2 < i) {
+            throw new IndexOutOfBoundsException("toIndex < fromIndex");
+        }
+        boolean[] zArr = this.e;
+        System.arraycopy(zArr, i2, zArr, i, this.f - i2);
+        this.f -= i2 - i;
+        ((AbstractList) this).modCount++;
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.AbstractProtobufList, java.util.AbstractList, java.util.List
+    public final Object set(int i, Object obj) {
+        boolean zBooleanValue = ((Boolean) obj).booleanValue();
+        b();
+        g(i);
+        boolean[] zArr = this.e;
+        boolean z = zArr[i];
+        zArr[i] = zBooleanValue;
+        return Boolean.valueOf(z);
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final int size() {
+        return this.f;
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Internal.ProtobufList, androidx.datastore.preferences.protobuf.Internal.BooleanList
+    public final Internal.BooleanList a(int i) {
+        if (i >= this.f) {
+            return new BooleanArrayList(Arrays.copyOf(this.e, i), this.f, true);
+        }
+        throw new IllegalArgumentException();
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.AbstractProtobufList, java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final boolean add(Object obj) {
+        d(((Boolean) obj).booleanValue());
+        return true;
+    }
+}

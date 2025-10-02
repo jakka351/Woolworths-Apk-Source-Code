@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/epoxy_item_add_to_list_0"
+    android:background="@drawable/clickable_white_background_with_ripple"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/default_padding"
+    android:paddingVertical="@dimen/three_quarter_default_padding">
+    <TextView
+        android:textAppearance="@style/TextAppearance.Subtitle2"
+        android:ellipsize="middle"
+        android:id="@+id/shopping_list_title_text_view"
+        android:tag="binding_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:paddingEnd="@dimen/three_quarter_default_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shopping_list_button_save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textAppearance="@style/TextAppearance.Body.Medium"
+        android:textColor="?attr/colorPrimary"
+        android:id="@+id/shopping_list_button_save"
+        android:tag="binding_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_save"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ProgressBar
+        android:id="@+id/progress_small"
+        android:tag="binding_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/shopping_list_button_save"
+        app:layout_constraintEnd_toEndOf="@+id/shopping_list_button_save"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/shopping_list_button_save"
+        app:layout_constraintTop_toTopOf="@+id/shopping_list_button_save"
+        app:layout_constraintVertical_bias="0.5"
+        style="?android:attr/progressBarStyleSmall"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

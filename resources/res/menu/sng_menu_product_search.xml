@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/sng_ic_search_black_24dp"
+        android:id="@+id/product_search"
+        android:title="@string/sng_menu_label_search"
+        android:iconifiedByDefault="false"
+        app:showAsAction="collapseActionView|ifRoom"/>
+</menu>

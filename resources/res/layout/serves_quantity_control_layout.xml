@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/serves_quantity_control_layout_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageButton
+        android:id="@+id/minus_button"
+        android:tag="binding_1"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/recipe_detail_decrement_serves_content_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_serves_minus"/>
+    <TextView
+        android:textAppearance="@style/TextAppearance.Subtitle2"
+        android:gravity="center"
+        android:id="@+id/quantity"
+        android:tag="binding_2"
+        android:layout_width="46dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/plus_button"
+        app:layout_constraintStart_toEndOf="@+id/minus_button"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageButton
+        android:id="@+id/plus_button"
+        android:tag="binding_3"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/recipe_detail_increment_serves_content_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_serves_plus"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

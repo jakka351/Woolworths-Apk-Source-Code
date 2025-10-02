@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@color/color_accent"
+    android:id="@+id/guest_button"
+    android:tag="layout/epoxy_item_continue_as_guest_action_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/quarter_default_margin"
+    android:layout_marginBottom="@dimen/quarter_default_margin"
+    android:text="@string/continue_as_guest"
+    android:textAllCaps="false"
+    android:elevation="0dp"
+    android:backgroundTint="@color/color_black_50"
+    style="?attr/borderlessButtonStyle"/>

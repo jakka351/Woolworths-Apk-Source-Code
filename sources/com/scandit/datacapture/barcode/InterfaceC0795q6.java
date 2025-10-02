@@ -1,0 +1,7 @@
+package com.scandit.datacapture.barcode;
+
+/* renamed from: com.scandit.datacapture.barcode.q6, reason: case insensitive filesystem */
+/* loaded from: classes6.dex */
+public interface InterfaceC0795q6 {
+    void a();
+}

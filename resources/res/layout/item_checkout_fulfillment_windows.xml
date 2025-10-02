@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textAppearance="@style/TextAppearance.Body.Medium"
+        android:tag="layout/item_checkout_fulfillment_windows_0"
+        android:padding="@dimen/default_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.airbnb.epoxy.Carousel
+        android:id="@+id/carousel"
+        android:tag="layout/item_checkout_fulfillment_windows_1"
+        android:paddingBottom="@dimen/default_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/default_padding"
+        android:paddingEnd="@dimen/default_padding"/>
+</merge>

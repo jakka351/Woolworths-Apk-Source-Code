@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/layout_member_price_label_0"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/reward_card_imageview"
+        android:layout_width="20dp"
+        android:layout_height="12.5dp"
+        android:src="@drawable/ic_rewards_card_small"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@+id/header_textview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header_textview"/>
+    <TextView
+        android:textColor="@color/color_rewards_dark"
+        android:id="@+id/header_textview"
+        android:tag="binding_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/quarter_default_margin"
+        app:layout_constraintStart_toEndOf="@+id/reward_card_imageview"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextAppearance.Caption.Medium"/>
+    <TextView
+        android:textColor="@color/color_rewards_dark"
+        android:id="@+id/title_textview"
+        android:tag="binding_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/quarter_default_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_textview"
+        style="@style/TextAppearance.Caption.Medium"/>
+    <TextView
+        android:textColor="@color/color_rewards_dark"
+        android:id="@+id/subtitle_textview"
+        android:tag="binding_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/quarter_default_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_textview"
+        style="@style/TextAppearance.Caption"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

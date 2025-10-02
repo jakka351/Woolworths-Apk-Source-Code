@@ -1,0 +1,13 @@
+package au.com.woolworths.feature.shop.recipes.recipes.homepage.savedrecipes;
+
+import dagger.internal.DaggerGenerated;
+import dagger.internal.IdentifierNameString;
+
+@DaggerGenerated
+@IdentifierNameString
+/* loaded from: classes.dex */
+public final class SavedRecipesViewModel_HiltModules_KeyModule_Provide_LazyMapKey {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ int f8073a = 0;
+}

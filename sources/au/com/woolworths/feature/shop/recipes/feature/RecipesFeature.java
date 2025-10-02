@@ -1,0 +1,62 @@
+package au.com.woolworths.feature.shop.recipes.feature;
+
+import au.com.woolworths.android.onesite.featuretoggles.Feature;
+import kotlin.Metadata;
+import kotlin.enums.EnumEntries;
+import kotlin.enums.EnumEntriesKt;
+
+/* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
+/* JADX WARN: Unknown enum class pattern. Please report as an issue! */
+@Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\b\u0086\u0081\u0002\u0018\u00002\u00020\u00012\b\u0012\u0004\u0012\u00020\u00000\u0002¨\u0006\u0003"}, d2 = {"Lau/com/woolworths/feature/shop/recipes/feature/RecipesFeature;", "Lau/com/woolworths/android/onesite/featuretoggles/Feature;", "", "recipes_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes.dex */
+public abstract class RecipesFeature implements Feature {
+    public static final RecipesFeature d;
+    public static final /* synthetic */ RecipesFeature[] e;
+    public static final /* synthetic */ EnumEntries f;
+
+    static {
+        RecipesFeature recipesFeature = new RecipesFeature() { // from class: au.com.woolworths.feature.shop.recipes.feature.RecipesFeature.FRESH_MAG_COMPOSE
+            @Override // au.com.woolworths.android.onesite.featuretoggles.Feature
+            public final String c() {
+                return "ft_fresh_mag_compose";
+            }
+
+            @Override // au.com.woolworths.feature.shop.recipes.feature.RecipesFeature, au.com.woolworths.android.onesite.featuretoggles.Feature
+            public final boolean getDefaultValue() {
+                return true;
+            }
+        };
+        d = recipesFeature;
+        RecipesFeature[] recipesFeatureArr = {recipesFeature, new RecipesFeature() { // from class: au.com.woolworths.feature.shop.recipes.feature.RecipesFeature.RECIPE_HOME_COMPOSE
+            @Override // au.com.woolworths.android.onesite.featuretoggles.Feature
+            public final String c() {
+                return "ft_recipe_home_compose";
+            }
+
+            @Override // au.com.woolworths.feature.shop.recipes.feature.RecipesFeature, au.com.woolworths.android.onesite.featuretoggles.Feature
+            public final boolean getDefaultValue() {
+                return true;
+            }
+        }};
+        e = recipesFeatureArr;
+        f = EnumEntriesKt.a(recipesFeatureArr);
+    }
+
+    public static RecipesFeature valueOf(String str) {
+        return (RecipesFeature) Enum.valueOf(RecipesFeature.class, str);
+    }
+
+    public static RecipesFeature[] values() {
+        return (RecipesFeature[]) e.clone();
+    }
+
+    @Override // au.com.woolworths.android.onesite.featuretoggles.Feature
+    public final String a() {
+        return "";
+    }
+
+    @Override // au.com.woolworths.android.onesite.featuretoggles.Feature
+    public boolean getDefaultValue() {
+        return false;
+    }
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:title="@string/sng_navigation_menu_group_general">
+            <menu>
+                <item
+                    android:icon="@drawable/sng_ic_nav_menu_my_account_24dp"
+                    android:id="@+id/nav_account"
+                    android:title="@string/sng_nav_menu_my_account"/>
+                <item
+                    android:icon="@drawable/sng_ic_transaction_history_24dp"
+                    android:id="@+id/nav_trans_history"
+                    android:title="@string/sng_nav_menu_transaction_history"/>
+                <item
+                    android:icon="@drawable/sng_ic_nav_cancel_shop_24dp"
+                    android:id="@+id/nav_cancel_shop"
+                    android:title="@string/sng_action_clear_cart"/>
+                <item
+                    android:icon="@drawable/sng_ic_nav_menu_settings_24dp"
+                    android:id="@+id/nav_settings"
+                    android:title="@string/sng_nav_menu_settings"/>
+            </menu>
+        </item>
+        <item android:title="@string/sng_navigation_menu_group_help">
+            <menu>
+                <item
+                    android:icon="@drawable/sng_ic_how_it_works_24"
+                    android:id="@+id/nav_tutorial"
+                    android:title="@string/sng_nav_menu_tutorial"/>
+                <item
+                    android:icon="@drawable/sng_ic_help_24dp"
+                    android:id="@+id/nav_faq"
+                    android:title="@string/sng_nav_menu_faqs_and_help"/>
+                <item
+                    android:icon="@drawable/sng_ic_contact_us_24dp"
+                    android:id="@+id/nav_contact_us"
+                    android:title="@string/sng_nav_menu_contact_us"/>
+                <item
+                    android:icon="@drawable/sng_ic_feedback_24dp"
+                    android:id="@+id/nav_send_feedback"
+                    android:title="@string/sng_nav_menu_send_feedback"/>
+            </menu>
+        </item>
+        <item android:title="@string/sng_navigation_menu_group_privacy">
+            <menu>
+                <item
+                    android:icon="@drawable/sng_ic_info_24dp"
+                    android:id="@+id/nav_terms_conditions"
+                    android:title="@string/sng_label_tnc"/>
+                <item
+                    android:icon="@drawable/sng_ic_privacy_policy_24dp"
+                    android:id="@+id/nav_privacy_policy"
+                    android:title="@string/sng_nav_menu_privacy_policy"/>
+                <item
+                    android:icon="@drawable/sng_ic_privacy_collection_24dp"
+                    android:id="@+id/nav_privacy_notice"
+                    android:title="@string/sng_nav_menu_privacy_collection_notice"/>
+            </menu>
+        </item>
+    </group>
+</menu>

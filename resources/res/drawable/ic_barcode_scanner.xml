@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="40dp"
+    android:width="40dp"
+    android:viewportWidth="40"
+    android:viewportHeight="40">
+    <path
+        android:fillColor="#f5f5f5"
+        android:pathData="M0,0h40v40h-40z"/>
+    <path
+        android:fillColor="#f5f5f5"
+        android:pathData="M-1408,-520C-1408,-521.105 -1407.1,-522 -1406,-522H2353C2354.1,-522 2355,-521.105 2355,-520V898C2355,899.104 2354.1,900 2353,900H-1406C-1407.1,900 -1408,899.105 -1408,898V-520Z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M-1406,-521H2353V-523H-1406V-521ZM2354,-520V898H2356V-520H2354ZM2353,899H-1406V901H2353V899ZM-1407,898V-520H-1409V898H-1407ZM-1406,899C-1406.55,899 -1407,898.552 -1407,898H-1409C-1409,899.657 -1407.66,901 -1406,901V899ZM2354,898C2354,898.552 2353.55,899 2353,899V901C2354.66,901 2356,899.657 2356,898H2354ZM2353,-521C2353.55,-521 2354,-520.552 2354,-520H2356C2356,-521.657 2354.66,-523 2353,-523V-521ZM-1406,-523C-1407.66,-523 -1409,-521.657 -1409,-520H-1407C-1407,-520.552 -1406.55,-521 -1406,-521V-523Z"
+        android:fillAlpha="0.1"/>
+    <group>
+        <clip-path android:pathData="M-192,-110h360v800h-360z"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M-192,-110h360v800h-360z"/>
+        <path
+            android:fillColor="#f5f6f6"
+            android:pathData="M5,-12L139,-12A13,13 0,0 1,152 1L152,105A13,13 0,0 1,139 118L5,118A13,13 0,0 1,-8 105L-8,1A13,13 0,0 1,5 -12z"/>
+        <path
+            android:fillColor="#178841"
+            android:pathData="M20,0L20,0A20,20 0,0 1,40 20L40,20A20,20 0,0 1,20 40L20,40A20,20 0,0 1,0 20L0,20A20,20 0,0 1,20 0z"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M9,29V24H11V27H14V29H9ZM26,29V27H29V24H31V29H26ZM12,26V14H14V26H12ZM15,26V14H16V26H15ZM18,26V14H20V26H18ZM21,26V14H24V26H21ZM25,26V14H26V26H25ZM27,26V14H28V26H27ZM9,16V11H14V13H11V16H9ZM29,16V13H26V11H31V16H29Z"/>
+    </group>
+</vector>

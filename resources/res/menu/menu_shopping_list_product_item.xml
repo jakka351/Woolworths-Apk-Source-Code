@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/ic_shop_lists_item_value_swaps"
+        android:id="@+id/open_value_swaps"
+        android:title="@string/shop_lists_item_menu_option_value_swaps_placeholder"/>
+    <item
+        android:icon="@drawable/ic_shop_lists_item_copy"
+        android:id="@+id/copy"
+        android:title="@string/shop_lists_item_menu_option_copy"/>
+    <item
+        android:icon="@drawable/ic_heart_grey"
+        android:id="@+id/copy_to_watchlist"
+        android:title="@string/shop_lists_item_menu_option_copy_to_watchlist"/>
+    <item
+        android:icon="@drawable/ic_shop_lists_item_delete"
+        android:id="@+id/delete"
+        android:title="@string/shop_lists_item_menu_option_delete"/>
+</menu>

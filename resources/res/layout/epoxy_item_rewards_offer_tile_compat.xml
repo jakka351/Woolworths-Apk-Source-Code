@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.compose.ui.platform.ComposeView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/compose_view"
+    android:tag="layout/epoxy_item_rewards_offer_tile_compat_0"
+    android:paddingTop="@dimen/half_default_padding"
+    android:paddingBottom="@dimen/default_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/default_padding"
+    android:paddingEnd="@dimen/default_padding"/>

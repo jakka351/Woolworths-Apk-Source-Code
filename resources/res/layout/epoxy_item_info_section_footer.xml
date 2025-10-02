@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textAppearance="@style/TextAppearance.Caption"
+    android:textColorHighlight="@color/color_control_highlight_flat"
+    android:textColorLink="@color/color_clickable_text"
+    android:gravity="center"
+    android:id="@+id/footer_text"
+    android:tag="layout/epoxy_item_info_section_footer_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="16dp"/>

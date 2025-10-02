@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/include_no_sng_store_0"
+    android:padding="@dimen/sng_spacing_extra"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imgNoStore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="@dimen/sng_spacing_extra_large"
+        android:layout_marginEnd="@dimen/sng_spacing_extra_large"
+        app:layout_constraintBottom_toTopOf="@+id/txtNoStore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/sng_ic_no_store"/>
+    <TextView
+        android:textAppearance="@style/TextAppearance.H6.Fresh.Medium"
+        android:gravity="center"
+        android:id="@+id/txtNoStore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sng_spacing_extra"
+        android:text="@string/sng_no_available_stores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgNoStore"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

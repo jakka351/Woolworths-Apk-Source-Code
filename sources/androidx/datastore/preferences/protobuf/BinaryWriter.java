@@ -1,0 +1,2247 @@
+package androidx.datastore.preferences.protobuf;
+
+import androidx.compose.ui.input.pointer.a;
+import androidx.datastore.preferences.protobuf.Internal;
+import androidx.datastore.preferences.protobuf.MapEntryLite;
+import androidx.datastore.preferences.protobuf.Utf8;
+import androidx.datastore.preferences.protobuf.WireFormat;
+import androidx.datastore.preferences.protobuf.Writer;
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.util.List;
+import java.util.Map;
+
+@CheckReturnValue
+/* loaded from: classes2.dex */
+abstract class BinaryWriter extends ByteOutput implements Writer {
+
+    /* renamed from: a, reason: collision with root package name */
+    public int f2597a;
+
+    /* renamed from: androidx.datastore.preferences.protobuf.BinaryWriter$1, reason: invalid class name */
+    public static /* synthetic */ class AnonymousClass1 {
+
+        /* renamed from: a, reason: collision with root package name */
+        public static final /* synthetic */ int[] f2598a;
+
+        static {
+            int[] iArr = new int[WireFormat.FieldType.values().length];
+            f2598a = iArr;
+            try {
+                iArr[WireFormat.FieldType.m.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.l.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.k.ordinal()] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.j.ordinal()] = 4;
+            } catch (NoSuchFieldError unused4) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.h.ordinal()] = 5;
+            } catch (NoSuchFieldError unused5) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.t.ordinal()] = 6;
+            } catch (NoSuchFieldError unused6) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.u.ordinal()] = 7;
+            } catch (NoSuchFieldError unused7) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.v.ordinal()] = 8;
+            } catch (NoSuchFieldError unused8) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.w.ordinal()] = 9;
+            } catch (NoSuchFieldError unused9) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.n.ordinal()] = 10;
+            } catch (NoSuchFieldError unused10) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.r.ordinal()] = 11;
+            } catch (NoSuchFieldError unused11) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.i.ordinal()] = 12;
+            } catch (NoSuchFieldError unused12) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.g.ordinal()] = 13;
+            } catch (NoSuchFieldError unused13) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.f.ordinal()] = 14;
+            } catch (NoSuchFieldError unused14) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.p.ordinal()] = 15;
+            } catch (NoSuchFieldError unused15) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.q.ordinal()] = 16;
+            } catch (NoSuchFieldError unused16) {
+            }
+            try {
+                f2598a[WireFormat.FieldType.s.ordinal()] = 17;
+            } catch (NoSuchFieldError unused17) {
+            }
+        }
+    }
+
+    public static final class SafeDirectWriter extends BinaryWriter {
+        public int b;
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void C(int i, Object obj) {
+            int iT = T();
+            Protobuf protobuf = Protobuf.c;
+            protobuf.getClass();
+            protobuf.a(obj.getClass()).e(obj, this);
+            int iT2 = T() - iT;
+            U(10);
+            d0(iT2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void J(int i, int i2) {
+            U(10);
+            a0(i2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void K(int i, ByteString byteString) {
+            try {
+                byteString.y(this);
+                U(10);
+                d0(byteString.size());
+                throw null;
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void L(int i, Object obj, Schema schema) {
+            int iT = T();
+            schema.e(obj, this);
+            int iT2 = T() - iT;
+            U(10);
+            d0(iT2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void O(int i, Object obj, Schema schema) {
+            c0(i, 4);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.ByteOutput
+        public final void Q(int i, int i2, byte[] bArr) {
+            int i3 = this.b;
+            if (i3 + 1 >= i2) {
+                this.b = i3 - i2;
+                throw null;
+            }
+            this.f2597a += i2;
+            AllocatedBuffer.b(i, i2, bArr);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.ByteOutput
+        public final void R(ByteBuffer byteBuffer) {
+            int iRemaining = byteBuffer.remaining();
+            int i = this.b;
+            if (i + 1 >= iRemaining) {
+                this.b = i - iRemaining;
+                throw null;
+            }
+            this.f2597a += iRemaining;
+            AllocatedBuffer.a(byteBuffer);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final int T() {
+            return (0 - this.b) + this.f2597a;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void U(int i) {
+            if (this.b + 1 >= i) {
+                return;
+            }
+            Math.max(i, 0);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void V(boolean z) {
+            this.b--;
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void W(int i) {
+            this.b -= 4;
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void X(long j) {
+            this.b -= 8;
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void Y(int i) {
+            if (i < 0) {
+                e0(i);
+            } else {
+                d0(i);
+                throw null;
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void a0(int i) {
+            d0(CodedOutputStream.a0(i));
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void b0(long j) {
+            e0(CodedOutputStream.b0(j));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void c(int i, int i2) {
+            U(9);
+            W(i2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void c0(int i, int i2) {
+            d0((i << 3) | i2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void d(int i, String str) {
+            int i2;
+            int i3;
+            int i4;
+            int iT = T();
+            U(str.length());
+            int length = str.length();
+            int i5 = length - 1;
+            this.b -= i5;
+            if (i5 >= 0 && str.charAt(i5) < 128) {
+                throw null;
+            }
+            if (i5 != -1) {
+                this.b += i5;
+                while (i5 >= 0) {
+                    char cCharAt = str.charAt(i5);
+                    if (cCharAt < 128 && (i4 = this.b) >= 0) {
+                        this.b = i4 - 1;
+                        throw null;
+                    }
+                    if (cCharAt < 2048 && (i3 = this.b) > 0) {
+                        this.b = i3 - 1;
+                        throw null;
+                    }
+                    if ((cCharAt < 55296 || 57343 < cCharAt) && (i2 = this.b) > 1) {
+                        this.b = i2 - 1;
+                        throw null;
+                    }
+                    if (this.b > 2) {
+                        if (i5 != 0) {
+                            char cCharAt2 = str.charAt(length - 2);
+                            if (Character.isSurrogatePair(cCharAt2, cCharAt)) {
+                                Character.toCodePoint(cCharAt2, cCharAt);
+                                this.b--;
+                                throw null;
+                            }
+                        }
+                        throw new Utf8.UnpairedSurrogateException(length - 2, i5);
+                    }
+                    U(i5);
+                }
+            } else {
+                this.b--;
+            }
+            int iT2 = T() - iT;
+            U(10);
+            d0(iT2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void d0(int i) {
+            if ((i & (-128)) == 0) {
+                this.b--;
+                throw null;
+            }
+            if ((i & (-16384)) == 0) {
+                h0(i);
+                throw null;
+            }
+            if (((-2097152) & i) == 0) {
+                g0(i);
+                throw null;
+            }
+            if (((-268435456) & i) == 0) {
+                f0(i);
+                throw null;
+            }
+            this.b--;
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void e(int i, long j) {
+            U(15);
+            e0(j);
+            c0(i, 0);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void e0(long j) {
+            switch (BinaryWriter.S(j)) {
+                case 1:
+                    this.b--;
+                    throw null;
+                case 2:
+                    h0((int) j);
+                    throw null;
+                case 3:
+                    g0((int) j);
+                    throw null;
+                case 4:
+                    f0((int) j);
+                    throw null;
+                case 5:
+                    this.b -= 5;
+                    throw null;
+                case 6:
+                    this.b -= 6;
+                    throw null;
+                case 7:
+                    this.b -= 7;
+                    throw null;
+                case 8:
+                    this.b -= 8;
+                    throw null;
+                case 9:
+                    this.b--;
+                    throw null;
+                case 10:
+                    this.b--;
+                    throw null;
+                default:
+                    return;
+            }
+        }
+
+        public final void f0(int i) {
+            this.b -= 4;
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void g(int i, int i2) {
+            U(15);
+            Y(i2);
+            c0(i, 0);
+            throw null;
+        }
+
+        public final void g0(int i) {
+            this.b -= 3;
+            throw null;
+        }
+
+        public final void h0(int i) {
+            this.b -= 2;
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void j(int i, long j) {
+            U(15);
+            b0(j);
+            c0(i, 0);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void k(int i, int i2) {
+            U(10);
+            d0(i2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void m(int i, long j) {
+            U(13);
+            X(j);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void n(int i, boolean z) {
+            U(6);
+            this.b--;
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void p(int i) {
+            c0(i, 3);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void r(int i) {
+            c0(i, 4);
+            throw null;
+        }
+    }
+
+    public static final class SafeHeapWriter extends BinaryWriter {
+        public int b;
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void C(int i, Object obj) {
+            int iT = T();
+            Protobuf protobuf = Protobuf.c;
+            protobuf.getClass();
+            protobuf.a(obj.getClass()).e(obj, this);
+            int iT2 = T() - iT;
+            U(10);
+            d0(iT2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void J(int i, int i2) {
+            U(10);
+            a0(i2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void K(int i, ByteString byteString) {
+            try {
+                byteString.y(this);
+                U(10);
+                d0(byteString.size());
+                throw null;
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void L(int i, Object obj, Schema schema) {
+            int iT = T();
+            schema.e(obj, this);
+            int iT2 = T() - iT;
+            U(10);
+            d0(iT2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void O(int i, Object obj, Schema schema) {
+            c0(i, 4);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.ByteOutput
+        public final void Q(int i, int i2, byte[] bArr) {
+            int i3 = this.b;
+            if (i3 < i2) {
+                this.f2597a += i2;
+                AllocatedBuffer.b(i, i2, bArr);
+                throw null;
+            }
+            int i4 = i3 - i2;
+            this.b = i4;
+            System.arraycopy(bArr, i, null, i4 + 1, i2);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.ByteOutput
+        public final void R(ByteBuffer byteBuffer) {
+            int iRemaining = byteBuffer.remaining();
+            int i = this.b;
+            if (i < iRemaining) {
+                this.f2597a += iRemaining;
+                AllocatedBuffer.a(byteBuffer);
+                throw null;
+            }
+            int i2 = i - iRemaining;
+            this.b = i2;
+            byteBuffer.get(null, i2 + 1, iRemaining);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final int T() {
+            return (0 - this.b) + this.f2597a;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void U(int i) {
+            if (this.b >= i) {
+                return;
+            }
+            Math.max(i, 0);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void V(boolean z) {
+            this.b--;
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void W(int i) {
+            this.b--;
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void X(long j) {
+            this.b--;
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void Y(int i) {
+            if (i < 0) {
+                e0(i);
+            } else {
+                d0(i);
+                throw null;
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void a0(int i) {
+            d0(CodedOutputStream.a0(i));
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void b0(long j) {
+            e0(CodedOutputStream.b0(j));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void c(int i, int i2) {
+            U(9);
+            W(i2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void c0(int i, int i2) {
+            d0((i << 3) | i2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void d(int i, String str) {
+            int i2;
+            int i3;
+            int i4;
+            int iT = T();
+            U(str.length());
+            int length = str.length();
+            int i5 = length - 1;
+            this.b -= i5;
+            if (i5 >= 0 && str.charAt(i5) < 128) {
+                throw null;
+            }
+            if (i5 != -1) {
+                this.b += i5;
+                while (i5 >= 0) {
+                    char cCharAt = str.charAt(i5);
+                    if (cCharAt < 128 && (i4 = this.b) > 0) {
+                        this.b = i4 - 1;
+                        throw null;
+                    }
+                    if (cCharAt < 2048 && (i3 = this.b) > 0) {
+                        this.b = i3 - 1;
+                        throw null;
+                    }
+                    if ((cCharAt < 55296 || 57343 < cCharAt) && (i2 = this.b) > 1) {
+                        this.b = i2 - 1;
+                        throw null;
+                    }
+                    if (this.b > 2) {
+                        if (i5 != 0) {
+                            char cCharAt2 = str.charAt(length - 2);
+                            if (Character.isSurrogatePair(cCharAt2, cCharAt)) {
+                                Character.toCodePoint(cCharAt2, cCharAt);
+                                this.b--;
+                                throw null;
+                            }
+                        }
+                        throw new Utf8.UnpairedSurrogateException(length - 2, i5);
+                    }
+                    U(i5);
+                }
+            } else {
+                this.b--;
+            }
+            int iT2 = T() - iT;
+            U(10);
+            d0(iT2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void d0(int i) {
+            if ((i & (-128)) == 0) {
+                this.b--;
+                throw null;
+            }
+            if ((i & (-16384)) == 0) {
+                this.b--;
+                throw null;
+            }
+            if (((-2097152) & i) == 0) {
+                this.b--;
+                throw null;
+            }
+            if ((i & (-268435456)) == 0) {
+                this.b--;
+                throw null;
+            }
+            this.b--;
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void e(int i, long j) {
+            U(15);
+            e0(j);
+            c0(i, 0);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void e0(long j) {
+            switch (BinaryWriter.S(j)) {
+                case 1:
+                    this.b--;
+                    throw null;
+                case 2:
+                    this.b--;
+                    throw null;
+                case 3:
+                    this.b--;
+                    throw null;
+                case 4:
+                    this.b--;
+                    throw null;
+                case 5:
+                    this.b--;
+                    throw null;
+                case 6:
+                    this.b--;
+                    throw null;
+                case 7:
+                    this.b--;
+                    throw null;
+                case 8:
+                    this.b--;
+                    throw null;
+                case 9:
+                    this.b--;
+                    throw null;
+                case 10:
+                    this.b--;
+                    throw null;
+                default:
+                    return;
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void g(int i, int i2) {
+            U(15);
+            Y(i2);
+            c0(i, 0);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void j(int i, long j) {
+            U(15);
+            b0(j);
+            c0(i, 0);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void k(int i, int i2) {
+            U(10);
+            d0(i2);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void m(int i, long j) {
+            U(13);
+            X(j);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void n(int i, boolean z) {
+            U(6);
+            this.b--;
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void p(int i) {
+            c0(i, 3);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void r(int i) {
+            c0(i, 4);
+            throw null;
+        }
+    }
+
+    public static final class UnsafeDirectWriter extends BinaryWriter {
+        public long b;
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void C(int i, Object obj) {
+            Protobuf protobuf = Protobuf.c;
+            protobuf.getClass();
+            protobuf.a(obj.getClass()).e(obj, this);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void J(int i, int i2) {
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void K(int i, ByteString byteString) {
+            try {
+                byteString.y(this);
+                throw null;
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void L(int i, Object obj, Schema schema) {
+            schema.e(obj, this);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void O(int i, Object obj, Schema schema) {
+            c0(i, 4);
+            schema.e(obj, this);
+            c0(i, 3);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.ByteOutput
+        public final void Q(int i, int i2, byte[] bArr) {
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.ByteOutput
+        public final void R(ByteBuffer byteBuffer) {
+            byteBuffer.remaining();
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final int T() {
+            return this.f2597a + ((int) (0 - this.b));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void U(int i) {
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void V(boolean z) {
+            byte b = z ? (byte) 1 : (byte) 0;
+            long j = this.b;
+            this.b = j - 1;
+            UnsafeUtil.l(j, b);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void W(int i) {
+            long j = this.b;
+            this.b = j - 1;
+            UnsafeUtil.l(j, (byte) ((i >> 24) & 255));
+            long j2 = this.b;
+            this.b = j2 - 1;
+            UnsafeUtil.l(j2, (byte) ((i >> 16) & 255));
+            long j3 = this.b;
+            this.b = j3 - 1;
+            UnsafeUtil.l(j3, (byte) ((i >> 8) & 255));
+            long j4 = this.b;
+            this.b = j4 - 1;
+            UnsafeUtil.l(j4, (byte) (i & 255));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void X(long j) {
+            long j2 = this.b;
+            this.b = j2 - 1;
+            UnsafeUtil.l(j2, (byte) (((int) (j >> 56)) & 255));
+            long j3 = this.b;
+            this.b = j3 - 1;
+            UnsafeUtil.l(j3, (byte) (((int) (j >> 48)) & 255));
+            long j4 = this.b;
+            this.b = j4 - 1;
+            UnsafeUtil.l(j4, (byte) (((int) (j >> 40)) & 255));
+            long j5 = this.b;
+            this.b = j5 - 1;
+            UnsafeUtil.l(j5, (byte) (((int) (j >> 32)) & 255));
+            long j6 = this.b;
+            this.b = j6 - 1;
+            UnsafeUtil.l(j6, (byte) (((int) (j >> 24)) & 255));
+            long j7 = this.b;
+            this.b = j7 - 1;
+            UnsafeUtil.l(j7, (byte) (((int) (j >> 16)) & 255));
+            long j8 = this.b;
+            this.b = j8 - 1;
+            UnsafeUtil.l(j8, (byte) (((int) (j >> 8)) & 255));
+            long j9 = this.b;
+            this.b = j9 - 1;
+            UnsafeUtil.l(j9, (byte) (((int) j) & 255));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void Y(int i) {
+            if (i >= 0) {
+                d0(i);
+            } else {
+                e0(i);
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void a0(int i) {
+            d0(CodedOutputStream.a0(i));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void b0(long j) {
+            e0(CodedOutputStream.b0(j));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void c(int i, int i2) {
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void c0(int i, int i2) {
+            d0((i << 3) | i2);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void d(int i, String str) {
+            str.length();
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void d0(int i) {
+            if ((i & (-128)) == 0) {
+                long j = this.b;
+                this.b = j - 1;
+                UnsafeUtil.l(j, (byte) i);
+                return;
+            }
+            if ((i & (-16384)) == 0) {
+                long j2 = this.b;
+                this.b = j2 - 1;
+                UnsafeUtil.l(j2, (byte) (i >>> 7));
+                long j3 = this.b;
+                this.b = j3 - 1;
+                UnsafeUtil.l(j3, (byte) ((i & 127) | 128));
+                return;
+            }
+            if (((-2097152) & i) == 0) {
+                long j4 = this.b;
+                this.b = j4 - 1;
+                UnsafeUtil.l(j4, (byte) (i >>> 14));
+                long j5 = this.b;
+                this.b = j5 - 1;
+                UnsafeUtil.l(j5, (byte) (((i >>> 7) & 127) | 128));
+                long j6 = this.b;
+                this.b = j6 - 1;
+                UnsafeUtil.l(j6, (byte) ((i & 127) | 128));
+                return;
+            }
+            if (((-268435456) & i) == 0) {
+                long j7 = this.b;
+                this.b = j7 - 1;
+                UnsafeUtil.l(j7, (byte) (i >>> 21));
+                long j8 = this.b;
+                this.b = j8 - 1;
+                UnsafeUtil.l(j8, (byte) (((i >>> 14) & 127) | 128));
+                long j9 = this.b;
+                this.b = j9 - 1;
+                UnsafeUtil.l(j9, (byte) (((i >>> 7) & 127) | 128));
+                long j10 = this.b;
+                this.b = j10 - 1;
+                UnsafeUtil.l(j10, (byte) ((i & 127) | 128));
+                return;
+            }
+            long j11 = this.b;
+            this.b = j11 - 1;
+            UnsafeUtil.l(j11, (byte) (i >>> 28));
+            long j12 = this.b;
+            this.b = j12 - 1;
+            UnsafeUtil.l(j12, (byte) (((i >>> 21) & 127) | 128));
+            long j13 = this.b;
+            this.b = j13 - 1;
+            UnsafeUtil.l(j13, (byte) (((i >>> 14) & 127) | 128));
+            long j14 = this.b;
+            this.b = j14 - 1;
+            UnsafeUtil.l(j14, (byte) (((i >>> 7) & 127) | 128));
+            long j15 = this.b;
+            this.b = j15 - 1;
+            UnsafeUtil.l(j15, (byte) ((i & 127) | 128));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void e(int i, long j) {
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void e0(long j) {
+            switch (BinaryWriter.S(j)) {
+                case 1:
+                    long j2 = this.b;
+                    this.b = j2 - 1;
+                    UnsafeUtil.l(j2, (byte) j);
+                    break;
+                case 2:
+                    long j3 = this.b;
+                    this.b = j3 - 1;
+                    UnsafeUtil.l(j3, (byte) (j >>> 7));
+                    long j4 = this.b;
+                    this.b = j4 - 1;
+                    UnsafeUtil.l(j4, (byte) ((((int) j) & 127) | 128));
+                    break;
+                case 3:
+                    long j5 = this.b;
+                    this.b = j5 - 1;
+                    UnsafeUtil.l(j5, (byte) (((int) j) >>> 14));
+                    long j6 = this.b;
+                    this.b = j6 - 1;
+                    UnsafeUtil.l(j6, (byte) (((j >>> 7) & 127) | 128));
+                    long j7 = this.b;
+                    this.b = j7 - 1;
+                    UnsafeUtil.l(j7, (byte) ((j & 127) | 128));
+                    break;
+                case 4:
+                    long j8 = this.b;
+                    this.b = j8 - 1;
+                    UnsafeUtil.l(j8, (byte) (j >>> 21));
+                    long j9 = this.b;
+                    this.b = j9 - 1;
+                    UnsafeUtil.l(j9, (byte) (((j >>> 14) & 127) | 128));
+                    long j10 = this.b;
+                    this.b = j10 - 1;
+                    UnsafeUtil.l(j10, (byte) (((j >>> 7) & 127) | 128));
+                    long j11 = this.b;
+                    this.b = j11 - 1;
+                    UnsafeUtil.l(j11, (byte) ((j & 127) | 128));
+                    break;
+                case 5:
+                    long j12 = this.b;
+                    this.b = j12 - 1;
+                    UnsafeUtil.l(j12, (byte) (j >>> 28));
+                    long j13 = this.b;
+                    this.b = j13 - 1;
+                    UnsafeUtil.l(j13, (byte) (((j >>> 21) & 127) | 128));
+                    long j14 = this.b;
+                    this.b = j14 - 1;
+                    UnsafeUtil.l(j14, (byte) (((j >>> 14) & 127) | 128));
+                    long j15 = this.b;
+                    this.b = j15 - 1;
+                    UnsafeUtil.l(j15, (byte) (((j >>> 7) & 127) | 128));
+                    long j16 = this.b;
+                    this.b = j16 - 1;
+                    UnsafeUtil.l(j16, (byte) ((j & 127) | 128));
+                    break;
+                case 6:
+                    long j17 = this.b;
+                    this.b = j17 - 1;
+                    UnsafeUtil.l(j17, (byte) (j >>> 35));
+                    long j18 = this.b;
+                    this.b = j18 - 1;
+                    UnsafeUtil.l(j18, (byte) (((j >>> 28) & 127) | 128));
+                    long j19 = this.b;
+                    this.b = j19 - 1;
+                    UnsafeUtil.l(j19, (byte) (((j >>> 21) & 127) | 128));
+                    long j20 = this.b;
+                    this.b = j20 - 1;
+                    UnsafeUtil.l(j20, (byte) (((j >>> 14) & 127) | 128));
+                    long j21 = this.b;
+                    this.b = j21 - 1;
+                    UnsafeUtil.l(j21, (byte) (((j >>> 7) & 127) | 128));
+                    long j22 = this.b;
+                    this.b = j22 - 1;
+                    UnsafeUtil.l(j22, (byte) ((j & 127) | 128));
+                    break;
+                case 7:
+                    long j23 = this.b;
+                    this.b = j23 - 1;
+                    UnsafeUtil.l(j23, (byte) (j >>> 42));
+                    long j24 = this.b;
+                    this.b = j24 - 1;
+                    UnsafeUtil.l(j24, (byte) (((j >>> 35) & 127) | 128));
+                    long j25 = this.b;
+                    this.b = j25 - 1;
+                    UnsafeUtil.l(j25, (byte) (((j >>> 28) & 127) | 128));
+                    long j26 = this.b;
+                    this.b = j26 - 1;
+                    UnsafeUtil.l(j26, (byte) (((j >>> 21) & 127) | 128));
+                    long j27 = this.b;
+                    this.b = j27 - 1;
+                    UnsafeUtil.l(j27, (byte) (((j >>> 14) & 127) | 128));
+                    long j28 = this.b;
+                    this.b = j28 - 1;
+                    UnsafeUtil.l(j28, (byte) (((j >>> 7) & 127) | 128));
+                    long j29 = this.b;
+                    this.b = j29 - 1;
+                    UnsafeUtil.l(j29, (byte) ((j & 127) | 128));
+                    break;
+                case 8:
+                    long j30 = this.b;
+                    this.b = j30 - 1;
+                    UnsafeUtil.l(j30, (byte) (j >>> 49));
+                    long j31 = this.b;
+                    this.b = j31 - 1;
+                    UnsafeUtil.l(j31, (byte) (((j >>> 42) & 127) | 128));
+                    long j32 = this.b;
+                    this.b = j32 - 1;
+                    UnsafeUtil.l(j32, (byte) (((j >>> 35) & 127) | 128));
+                    long j33 = this.b;
+                    this.b = j33 - 1;
+                    UnsafeUtil.l(j33, (byte) (((j >>> 28) & 127) | 128));
+                    long j34 = this.b;
+                    this.b = j34 - 1;
+                    UnsafeUtil.l(j34, (byte) (((j >>> 21) & 127) | 128));
+                    long j35 = this.b;
+                    this.b = j35 - 1;
+                    UnsafeUtil.l(j35, (byte) (((j >>> 14) & 127) | 128));
+                    long j36 = this.b;
+                    this.b = j36 - 1;
+                    UnsafeUtil.l(j36, (byte) (((j >>> 7) & 127) | 128));
+                    long j37 = this.b;
+                    this.b = j37 - 1;
+                    UnsafeUtil.l(j37, (byte) ((j & 127) | 128));
+                    break;
+                case 9:
+                    long j38 = this.b;
+                    this.b = j38 - 1;
+                    UnsafeUtil.l(j38, (byte) (j >>> 56));
+                    long j39 = this.b;
+                    this.b = j39 - 1;
+                    UnsafeUtil.l(j39, (byte) (((j >>> 49) & 127) | 128));
+                    long j40 = this.b;
+                    this.b = j40 - 1;
+                    UnsafeUtil.l(j40, (byte) (((j >>> 42) & 127) | 128));
+                    long j41 = this.b;
+                    this.b = j41 - 1;
+                    UnsafeUtil.l(j41, (byte) (((j >>> 35) & 127) | 128));
+                    long j42 = this.b;
+                    this.b = j42 - 1;
+                    UnsafeUtil.l(j42, (byte) (((j >>> 28) & 127) | 128));
+                    long j43 = this.b;
+                    this.b = j43 - 1;
+                    UnsafeUtil.l(j43, (byte) (((j >>> 21) & 127) | 128));
+                    long j44 = this.b;
+                    this.b = j44 - 1;
+                    UnsafeUtil.l(j44, (byte) (((j >>> 14) & 127) | 128));
+                    long j45 = this.b;
+                    this.b = j45 - 1;
+                    UnsafeUtil.l(j45, (byte) (((j >>> 7) & 127) | 128));
+                    long j46 = this.b;
+                    this.b = j46 - 1;
+                    UnsafeUtil.l(j46, (byte) ((j & 127) | 128));
+                    break;
+                case 10:
+                    long j47 = this.b;
+                    this.b = j47 - 1;
+                    UnsafeUtil.l(j47, (byte) (j >>> 63));
+                    long j48 = this.b;
+                    this.b = j48 - 1;
+                    UnsafeUtil.l(j48, (byte) (((j >>> 56) & 127) | 128));
+                    long j49 = this.b;
+                    this.b = j49 - 1;
+                    UnsafeUtil.l(j49, (byte) (((j >>> 49) & 127) | 128));
+                    long j50 = this.b;
+                    this.b = j50 - 1;
+                    UnsafeUtil.l(j50, (byte) (((j >>> 42) & 127) | 128));
+                    long j51 = this.b;
+                    this.b = j51 - 1;
+                    UnsafeUtil.l(j51, (byte) (((j >>> 35) & 127) | 128));
+                    long j52 = this.b;
+                    this.b = j52 - 1;
+                    UnsafeUtil.l(j52, (byte) (((j >>> 28) & 127) | 128));
+                    long j53 = this.b;
+                    this.b = j53 - 1;
+                    UnsafeUtil.l(j53, (byte) (((j >>> 21) & 127) | 128));
+                    long j54 = this.b;
+                    this.b = j54 - 1;
+                    UnsafeUtil.l(j54, (byte) (((j >>> 14) & 127) | 128));
+                    long j55 = this.b;
+                    this.b = j55 - 1;
+                    UnsafeUtil.l(j55, (byte) (((j >>> 7) & 127) | 128));
+                    long j56 = this.b;
+                    this.b = j56 - 1;
+                    UnsafeUtil.l(j56, (byte) ((j & 127) | 128));
+                    break;
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void g(int i, int i2) {
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void j(int i, long j) {
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void k(int i, int i2) {
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void m(int i, long j) {
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void n(int i, boolean z) {
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void p(int i) {
+            c0(i, 3);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void r(int i) {
+            c0(i, 4);
+        }
+    }
+
+    public static final class UnsafeHeapWriter extends BinaryWriter {
+        public long b;
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void C(int i, Object obj) {
+            int iT = T();
+            Protobuf protobuf = Protobuf.c;
+            protobuf.getClass();
+            protobuf.a(obj.getClass()).e(obj, this);
+            int iT2 = T() - iT;
+            U(10);
+            d0(iT2);
+            c0(i, 2);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void J(int i, int i2) {
+            U(10);
+            a0(i2);
+            c0(i, 0);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void K(int i, ByteString byteString) {
+            try {
+                byteString.y(this);
+                U(10);
+                d0(byteString.size());
+                c0(i, 2);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void L(int i, Object obj, Schema schema) {
+            int iT = T();
+            schema.e(obj, this);
+            int iT2 = T() - iT;
+            U(10);
+            d0(iT2);
+            c0(i, 2);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void O(int i, Object obj, Schema schema) {
+            c0(i, 4);
+            schema.e(obj, this);
+            c0(i, 3);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.ByteOutput
+        public final void Q(int i, int i2, byte[] bArr) {
+            if (i < 0 || i + i2 > bArr.length) {
+                throw new ArrayIndexOutOfBoundsException(String.format("value.length=%d, offset=%d, length=%d", Integer.valueOf(bArr.length), Integer.valueOf(i), Integer.valueOf(i2)));
+            }
+            long j = this.b;
+            if (((int) j) < i2) {
+                this.f2597a += i2;
+                AllocatedBuffer.b(i, i2, bArr);
+                throw null;
+            }
+            long j2 = j - i2;
+            this.b = j2;
+            System.arraycopy(bArr, i, null, ((int) j2) + 1, i2);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.ByteOutput
+        public final void R(ByteBuffer byteBuffer) {
+            int iRemaining = byteBuffer.remaining();
+            long j = this.b;
+            if (((int) j) < iRemaining) {
+                this.f2597a += iRemaining;
+                AllocatedBuffer.a(byteBuffer);
+                throw null;
+            }
+            long j2 = j - iRemaining;
+            this.b = j2;
+            byteBuffer.get(null, ((int) j2) + 1, iRemaining);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final int T() {
+            return this.f2597a + ((int) (0 - this.b));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void U(int i) {
+            if (((int) this.b) >= i) {
+                return;
+            }
+            Math.max(i, 0);
+            throw null;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void V(boolean z) {
+            byte b = z ? (byte) 1 : (byte) 0;
+            long j = this.b;
+            this.b = j - 1;
+            UnsafeUtil.m(null, j, b);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void W(int i) {
+            long j = this.b;
+            this.b = j - 1;
+            UnsafeUtil.m(null, j, (byte) ((i >> 24) & 255));
+            long j2 = this.b;
+            this.b = j2 - 1;
+            UnsafeUtil.m(null, j2, (byte) ((i >> 16) & 255));
+            long j3 = this.b;
+            this.b = j3 - 1;
+            UnsafeUtil.m(null, j3, (byte) ((i >> 8) & 255));
+            long j4 = this.b;
+            this.b = j4 - 1;
+            UnsafeUtil.m(null, j4, (byte) (i & 255));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void X(long j) {
+            long j2 = this.b;
+            this.b = j2 - 1;
+            UnsafeUtil.m(null, j2, (byte) (((int) (j >> 56)) & 255));
+            long j3 = this.b;
+            this.b = j3 - 1;
+            UnsafeUtil.m(null, j3, (byte) (((int) (j >> 48)) & 255));
+            long j4 = this.b;
+            this.b = j4 - 1;
+            UnsafeUtil.m(null, j4, (byte) (((int) (j >> 40)) & 255));
+            long j5 = this.b;
+            this.b = j5 - 1;
+            UnsafeUtil.m(null, j5, (byte) (((int) (j >> 32)) & 255));
+            long j6 = this.b;
+            this.b = j6 - 1;
+            UnsafeUtil.m(null, j6, (byte) (((int) (j >> 24)) & 255));
+            long j7 = this.b;
+            this.b = j7 - 1;
+            UnsafeUtil.m(null, j7, (byte) (((int) (j >> 16)) & 255));
+            long j8 = this.b;
+            this.b = j8 - 1;
+            UnsafeUtil.m(null, j8, (byte) (((int) (j >> 8)) & 255));
+            long j9 = this.b;
+            this.b = j9 - 1;
+            UnsafeUtil.m(null, j9, (byte) (((int) j) & 255));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void Y(int i) {
+            if (i >= 0) {
+                d0(i);
+            } else {
+                e0(i);
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void a0(int i) {
+            d0(CodedOutputStream.a0(i));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void b0(long j) {
+            e0(CodedOutputStream.b0(j));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void c(int i, int i2) {
+            U(9);
+            W(i2);
+            c0(i, 5);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void c0(int i, int i2) {
+            d0((i << 3) | i2);
+        }
+
+        /* JADX WARN: Removed duplicated region for block: B:17:0x004a  */
+        /* JADX WARN: Removed duplicated region for block: B:22:0x006f  */
+        /* JADX WARN: Removed duplicated region for block: B:29:0x00a8  */
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        /*
+            Code decompiled incorrectly, please refer to instructions dump.
+            To view partially-correct code enable 'Show inconsistent code' option in preferences
+        */
+        public final void d(int r14, java.lang.String r15) {
+            /*
+                Method dump skipped, instructions count: 288
+                To view this dump change 'Code comments level' option to 'DEBUG'
+            */
+            throw new UnsupportedOperationException("Method not decompiled: androidx.datastore.preferences.protobuf.BinaryWriter.UnsafeHeapWriter.d(int, java.lang.String):void");
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void d0(int i) {
+            if ((i & (-128)) == 0) {
+                long j = this.b;
+                this.b = j - 1;
+                UnsafeUtil.m(null, j, (byte) i);
+                return;
+            }
+            if ((i & (-16384)) == 0) {
+                long j2 = this.b;
+                this.b = j2 - 1;
+                UnsafeUtil.m(null, j2, (byte) (i >>> 7));
+                long j3 = this.b;
+                this.b = j3 - 1;
+                UnsafeUtil.m(null, j3, (byte) ((i & 127) | 128));
+                return;
+            }
+            if (((-2097152) & i) == 0) {
+                long j4 = this.b;
+                this.b = j4 - 1;
+                UnsafeUtil.m(null, j4, (byte) (i >>> 14));
+                long j5 = this.b;
+                this.b = j5 - 1;
+                UnsafeUtil.m(null, j5, (byte) (((i >>> 7) & 127) | 128));
+                long j6 = this.b;
+                this.b = j6 - 1;
+                UnsafeUtil.m(null, j6, (byte) ((i & 127) | 128));
+                return;
+            }
+            if (((-268435456) & i) == 0) {
+                long j7 = this.b;
+                this.b = j7 - 1;
+                UnsafeUtil.m(null, j7, (byte) (i >>> 21));
+                long j8 = this.b;
+                this.b = j8 - 1;
+                UnsafeUtil.m(null, j8, (byte) (((i >>> 14) & 127) | 128));
+                long j9 = this.b;
+                this.b = j9 - 1;
+                UnsafeUtil.m(null, j9, (byte) (((i >>> 7) & 127) | 128));
+                long j10 = this.b;
+                this.b = j10 - 1;
+                UnsafeUtil.m(null, j10, (byte) ((i & 127) | 128));
+                return;
+            }
+            long j11 = this.b;
+            this.b = j11 - 1;
+            UnsafeUtil.m(null, j11, (byte) (i >>> 28));
+            long j12 = this.b;
+            this.b = j12 - 1;
+            UnsafeUtil.m(null, j12, (byte) (((i >>> 21) & 127) | 128));
+            long j13 = this.b;
+            this.b = j13 - 1;
+            UnsafeUtil.m(null, j13, (byte) (((i >>> 14) & 127) | 128));
+            long j14 = this.b;
+            this.b = j14 - 1;
+            UnsafeUtil.m(null, j14, (byte) (((i >>> 7) & 127) | 128));
+            long j15 = this.b;
+            this.b = j15 - 1;
+            UnsafeUtil.m(null, j15, (byte) ((i & 127) | 128));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void e(int i, long j) {
+            U(15);
+            e0(j);
+            c0(i, 0);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.BinaryWriter
+        public final void e0(long j) {
+            switch (BinaryWriter.S(j)) {
+                case 1:
+                    long j2 = this.b;
+                    this.b = j2 - 1;
+                    UnsafeUtil.m(null, j2, (byte) j);
+                    break;
+                case 2:
+                    long j3 = this.b;
+                    this.b = j3 - 1;
+                    UnsafeUtil.m(null, j3, (byte) (j >>> 7));
+                    long j4 = this.b;
+                    this.b = j4 - 1;
+                    UnsafeUtil.m(null, j4, (byte) ((((int) j) & 127) | 128));
+                    break;
+                case 3:
+                    long j5 = this.b;
+                    this.b = j5 - 1;
+                    UnsafeUtil.m(null, j5, (byte) (((int) j) >>> 14));
+                    long j6 = this.b;
+                    this.b = j6 - 1;
+                    UnsafeUtil.m(null, j6, (byte) (((j >>> 7) & 127) | 128));
+                    long j7 = this.b;
+                    this.b = j7 - 1;
+                    UnsafeUtil.m(null, j7, (byte) ((j & 127) | 128));
+                    break;
+                case 4:
+                    long j8 = this.b;
+                    this.b = j8 - 1;
+                    UnsafeUtil.m(null, j8, (byte) (j >>> 21));
+                    long j9 = this.b;
+                    this.b = j9 - 1;
+                    UnsafeUtil.m(null, j9, (byte) (((j >>> 14) & 127) | 128));
+                    long j10 = this.b;
+                    this.b = j10 - 1;
+                    UnsafeUtil.m(null, j10, (byte) (((j >>> 7) & 127) | 128));
+                    long j11 = this.b;
+                    this.b = j11 - 1;
+                    UnsafeUtil.m(null, j11, (byte) ((j & 127) | 128));
+                    break;
+                case 5:
+                    long j12 = this.b;
+                    this.b = j12 - 1;
+                    UnsafeUtil.m(null, j12, (byte) (j >>> 28));
+                    long j13 = this.b;
+                    this.b = j13 - 1;
+                    UnsafeUtil.m(null, j13, (byte) (((j >>> 21) & 127) | 128));
+                    long j14 = this.b;
+                    this.b = j14 - 1;
+                    UnsafeUtil.m(null, j14, (byte) (((j >>> 14) & 127) | 128));
+                    long j15 = this.b;
+                    this.b = j15 - 1;
+                    UnsafeUtil.m(null, j15, (byte) (((j >>> 7) & 127) | 128));
+                    long j16 = this.b;
+                    this.b = j16 - 1;
+                    UnsafeUtil.m(null, j16, (byte) ((j & 127) | 128));
+                    break;
+                case 6:
+                    long j17 = this.b;
+                    this.b = j17 - 1;
+                    UnsafeUtil.m(null, j17, (byte) (j >>> 35));
+                    long j18 = this.b;
+                    this.b = j18 - 1;
+                    UnsafeUtil.m(null, j18, (byte) (((j >>> 28) & 127) | 128));
+                    long j19 = this.b;
+                    this.b = j19 - 1;
+                    UnsafeUtil.m(null, j19, (byte) (((j >>> 21) & 127) | 128));
+                    long j20 = this.b;
+                    this.b = j20 - 1;
+                    UnsafeUtil.m(null, j20, (byte) (((j >>> 14) & 127) | 128));
+                    long j21 = this.b;
+                    this.b = j21 - 1;
+                    UnsafeUtil.m(null, j21, (byte) (((j >>> 7) & 127) | 128));
+                    long j22 = this.b;
+                    this.b = j22 - 1;
+                    UnsafeUtil.m(null, j22, (byte) ((j & 127) | 128));
+                    break;
+                case 7:
+                    long j23 = this.b;
+                    this.b = j23 - 1;
+                    UnsafeUtil.m(null, j23, (byte) (j >>> 42));
+                    long j24 = this.b;
+                    this.b = j24 - 1;
+                    UnsafeUtil.m(null, j24, (byte) (((j >>> 35) & 127) | 128));
+                    long j25 = this.b;
+                    this.b = j25 - 1;
+                    UnsafeUtil.m(null, j25, (byte) (((j >>> 28) & 127) | 128));
+                    long j26 = this.b;
+                    this.b = j26 - 1;
+                    UnsafeUtil.m(null, j26, (byte) (((j >>> 21) & 127) | 128));
+                    long j27 = this.b;
+                    this.b = j27 - 1;
+                    UnsafeUtil.m(null, j27, (byte) (((j >>> 14) & 127) | 128));
+                    long j28 = this.b;
+                    this.b = j28 - 1;
+                    UnsafeUtil.m(null, j28, (byte) (((j >>> 7) & 127) | 128));
+                    long j29 = this.b;
+                    this.b = j29 - 1;
+                    UnsafeUtil.m(null, j29, (byte) ((j & 127) | 128));
+                    break;
+                case 8:
+                    long j30 = this.b;
+                    this.b = j30 - 1;
+                    UnsafeUtil.m(null, j30, (byte) (j >>> 49));
+                    long j31 = this.b;
+                    this.b = j31 - 1;
+                    UnsafeUtil.m(null, j31, (byte) (((j >>> 42) & 127) | 128));
+                    long j32 = this.b;
+                    this.b = j32 - 1;
+                    UnsafeUtil.m(null, j32, (byte) (((j >>> 35) & 127) | 128));
+                    long j33 = this.b;
+                    this.b = j33 - 1;
+                    UnsafeUtil.m(null, j33, (byte) (((j >>> 28) & 127) | 128));
+                    long j34 = this.b;
+                    this.b = j34 - 1;
+                    UnsafeUtil.m(null, j34, (byte) (((j >>> 21) & 127) | 128));
+                    long j35 = this.b;
+                    this.b = j35 - 1;
+                    UnsafeUtil.m(null, j35, (byte) (((j >>> 14) & 127) | 128));
+                    long j36 = this.b;
+                    this.b = j36 - 1;
+                    UnsafeUtil.m(null, j36, (byte) (((j >>> 7) & 127) | 128));
+                    long j37 = this.b;
+                    this.b = j37 - 1;
+                    UnsafeUtil.m(null, j37, (byte) ((j & 127) | 128));
+                    break;
+                case 9:
+                    long j38 = this.b;
+                    this.b = j38 - 1;
+                    UnsafeUtil.m(null, j38, (byte) (j >>> 56));
+                    long j39 = this.b;
+                    this.b = j39 - 1;
+                    UnsafeUtil.m(null, j39, (byte) (((j >>> 49) & 127) | 128));
+                    long j40 = this.b;
+                    this.b = j40 - 1;
+                    UnsafeUtil.m(null, j40, (byte) (((j >>> 42) & 127) | 128));
+                    long j41 = this.b;
+                    this.b = j41 - 1;
+                    UnsafeUtil.m(null, j41, (byte) (((j >>> 35) & 127) | 128));
+                    long j42 = this.b;
+                    this.b = j42 - 1;
+                    UnsafeUtil.m(null, j42, (byte) (((j >>> 28) & 127) | 128));
+                    long j43 = this.b;
+                    this.b = j43 - 1;
+                    UnsafeUtil.m(null, j43, (byte) (((j >>> 21) & 127) | 128));
+                    long j44 = this.b;
+                    this.b = j44 - 1;
+                    UnsafeUtil.m(null, j44, (byte) (((j >>> 14) & 127) | 128));
+                    long j45 = this.b;
+                    this.b = j45 - 1;
+                    UnsafeUtil.m(null, j45, (byte) (((j >>> 7) & 127) | 128));
+                    long j46 = this.b;
+                    this.b = j46 - 1;
+                    UnsafeUtil.m(null, j46, (byte) ((j & 127) | 128));
+                    break;
+                case 10:
+                    long j47 = this.b;
+                    this.b = j47 - 1;
+                    UnsafeUtil.m(null, j47, (byte) (j >>> 63));
+                    long j48 = this.b;
+                    this.b = j48 - 1;
+                    UnsafeUtil.m(null, j48, (byte) (((j >>> 56) & 127) | 128));
+                    long j49 = this.b;
+                    this.b = j49 - 1;
+                    UnsafeUtil.m(null, j49, (byte) (((j >>> 49) & 127) | 128));
+                    long j50 = this.b;
+                    this.b = j50 - 1;
+                    UnsafeUtil.m(null, j50, (byte) (((j >>> 42) & 127) | 128));
+                    long j51 = this.b;
+                    this.b = j51 - 1;
+                    UnsafeUtil.m(null, j51, (byte) (((j >>> 35) & 127) | 128));
+                    long j52 = this.b;
+                    this.b = j52 - 1;
+                    UnsafeUtil.m(null, j52, (byte) (((j >>> 28) & 127) | 128));
+                    long j53 = this.b;
+                    this.b = j53 - 1;
+                    UnsafeUtil.m(null, j53, (byte) (((j >>> 21) & 127) | 128));
+                    long j54 = this.b;
+                    this.b = j54 - 1;
+                    UnsafeUtil.m(null, j54, (byte) (((j >>> 14) & 127) | 128));
+                    long j55 = this.b;
+                    this.b = j55 - 1;
+                    UnsafeUtil.m(null, j55, (byte) (((j >>> 7) & 127) | 128));
+                    long j56 = this.b;
+                    this.b = j56 - 1;
+                    UnsafeUtil.m(null, j56, (byte) ((j & 127) | 128));
+                    break;
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void g(int i, int i2) {
+            U(15);
+            Y(i2);
+            c0(i, 0);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void j(int i, long j) {
+            U(15);
+            b0(j);
+            c0(i, 0);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void k(int i, int i2) {
+            U(10);
+            d0(i2);
+            c0(i, 0);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void m(int i, long j) {
+            U(13);
+            X(j);
+            c0(i, 1);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void n(int i, boolean z) {
+            U(6);
+            byte b = z ? (byte) 1 : (byte) 0;
+            long j = this.b;
+            this.b = j - 1;
+            UnsafeUtil.m(null, j, b);
+            c0(i, 0);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void p(int i) {
+            c0(i, 3);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.Writer
+        public final void r(int i) {
+            c0(i, 4);
+        }
+    }
+
+    public static byte S(long j) {
+        byte b;
+        if (((-128) & j) == 0) {
+            return (byte) 1;
+        }
+        if (j < 0) {
+            return (byte) 10;
+        }
+        if (((-34359738368L) & j) != 0) {
+            b = (byte) 6;
+            j >>>= 28;
+        } else {
+            b = 2;
+        }
+        if (((-2097152) & j) != 0) {
+            b = (byte) (b + 2);
+            j >>>= 14;
+        }
+        return (j & (-16384)) != 0 ? (byte) (b + 1) : b;
+    }
+
+    public static final void Z(BinaryWriter binaryWriter, int i, WireFormat.FieldType fieldType, Object obj) {
+        switch (fieldType.ordinal()) {
+            case 0:
+                binaryWriter.w(((Double) obj).doubleValue(), i);
+                return;
+            case 1:
+                binaryWriter.D(((Float) obj).floatValue(), i);
+                return;
+            case 2:
+                binaryWriter.e(i, ((Long) obj).longValue());
+                return;
+            case 3:
+                binaryWriter.e(i, ((Long) obj).longValue());
+                return;
+            case 4:
+                binaryWriter.g(i, ((Integer) obj).intValue());
+                return;
+            case 5:
+                binaryWriter.m(i, ((Long) obj).longValue());
+                return;
+            case 6:
+                binaryWriter.c(i, ((Integer) obj).intValue());
+                return;
+            case 7:
+                binaryWriter.n(i, ((Boolean) obj).booleanValue());
+                return;
+            case 8:
+                binaryWriter.d(i, (String) obj);
+                return;
+            case 9:
+            default:
+                throw new IllegalArgumentException("Unsupported map value type for: " + fieldType);
+            case 10:
+                binaryWriter.C(i, obj);
+                return;
+            case 11:
+                binaryWriter.K(i, (ByteString) obj);
+                return;
+            case 12:
+                binaryWriter.k(i, ((Integer) obj).intValue());
+                return;
+            case 13:
+                if (obj instanceof Internal.EnumLite) {
+                    binaryWriter.g(i, ((Internal.EnumLite) obj).g());
+                    return;
+                } else {
+                    if (!(obj instanceof Integer)) {
+                        throw new IllegalArgumentException("Unexpected type for enum in map.");
+                    }
+                    binaryWriter.g(i, ((Integer) obj).intValue());
+                    return;
+                }
+            case 14:
+                binaryWriter.c(i, ((Integer) obj).intValue());
+                return;
+            case 15:
+                binaryWriter.m(i, ((Long) obj).longValue());
+                return;
+            case 16:
+                binaryWriter.J(i, ((Integer) obj).intValue());
+                return;
+            case 17:
+                binaryWriter.j(i, ((Long) obj).longValue());
+                return;
+        }
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void A(int i, List list, boolean z) {
+        q(i, list, z);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final Writer.FieldOrder B() {
+        return Writer.FieldOrder.e;
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void D(float f, int i) {
+        c(i, Float.floatToRawIntBits(f));
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void E(int i, long j) {
+        e(i, j);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void F(int i, List list, boolean z) {
+        h(i, list, z);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void G(int i, List list, boolean z) {
+        if (!(list instanceof BooleanArrayList)) {
+            if (!z) {
+                for (int size = list.size() - 1; size >= 0; size--) {
+                    n(i, ((Boolean) list.get(size)).booleanValue());
+                }
+                return;
+            }
+            U(list.size() + 10);
+            int iT = T();
+            for (int size2 = list.size() - 1; size2 >= 0; size2--) {
+                V(((Boolean) list.get(size2)).booleanValue());
+            }
+            d0(T() - iT);
+            c0(i, 2);
+            return;
+        }
+        BooleanArrayList booleanArrayList = (BooleanArrayList) list;
+        if (!z) {
+            for (int i2 = booleanArrayList.f - 1; i2 >= 0; i2--) {
+                n(i, booleanArrayList.h(i2));
+            }
+            return;
+        }
+        U(booleanArrayList.f + 10);
+        int iT2 = T();
+        for (int i3 = booleanArrayList.f - 1; i3 >= 0; i3--) {
+            V(booleanArrayList.h(i3));
+        }
+        d0(T() - iT2);
+        c0(i, 2);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void H(int i, int i2) {
+        g(i, i2);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void I(int i, List list, boolean z) {
+        l(i, list, z);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void M(int i, MapEntryLite.Metadata metadata, Map map) {
+        for (Map.Entry entry : map.entrySet()) {
+            int iT = T();
+            Z(this, 2, metadata.b, entry.getValue());
+            Z(this, 1, metadata.f2658a, entry.getKey());
+            d0(T() - iT);
+            c0(i, 2);
+        }
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void N(int i, List list, Schema schema) {
+        for (int size = list.size() - 1; size >= 0; size--) {
+            O(i, list.get(size), schema);
+        }
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void P(int i, List list, Schema schema) {
+        for (int size = list.size() - 1; size >= 0; size--) {
+            L(i, list.get(size), schema);
+        }
+    }
+
+    public abstract int T();
+
+    public abstract void U(int i);
+
+    public abstract void V(boolean z);
+
+    public abstract void W(int i);
+
+    public abstract void X(long j);
+
+    public abstract void Y(int i);
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void a(int i, List list, boolean z) {
+        if (!(list instanceof FloatArrayList)) {
+            if (!z) {
+                for (int size = list.size() - 1; size >= 0; size--) {
+                    D(((Float) list.get(size)).floatValue(), i);
+                }
+                return;
+            }
+            U(a.c(4, 10, list));
+            int iT = T();
+            for (int size2 = list.size() - 1; size2 >= 0; size2--) {
+                W(Float.floatToRawIntBits(((Float) list.get(size2)).floatValue()));
+            }
+            d0(T() - iT);
+            c0(i, 2);
+            return;
+        }
+        FloatArrayList floatArrayList = (FloatArrayList) list;
+        if (!z) {
+            for (int i2 = floatArrayList.f - 1; i2 >= 0; i2--) {
+                D(floatArrayList.h(i2), i);
+            }
+            return;
+        }
+        U((floatArrayList.f * 4) + 10);
+        int iT2 = T();
+        for (int i3 = floatArrayList.f - 1; i3 >= 0; i3--) {
+            W(Float.floatToRawIntBits(floatArrayList.h(i3)));
+        }
+        d0(T() - iT2);
+        c0(i, 2);
+    }
+
+    public abstract void a0(int i);
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void b(int i, Object obj) {
+        c0(1, 4);
+        if (obj instanceof ByteString) {
+            K(3, (ByteString) obj);
+        } else {
+            C(3, obj);
+        }
+        k(2, i);
+        c0(1, 3);
+    }
+
+    public abstract void b0(long j);
+
+    public abstract void c0(int i, int i2);
+
+    public abstract void d0(int i);
+
+    public abstract void e0(long j);
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void f(int i, List list, boolean z) {
+        if (!(list instanceof IntArrayList)) {
+            if (!z) {
+                for (int size = list.size() - 1; size >= 0; size--) {
+                    g(i, ((Integer) list.get(size)).intValue());
+                }
+                return;
+            }
+            U(a.c(10, 10, list));
+            int iT = T();
+            for (int size2 = list.size() - 1; size2 >= 0; size2--) {
+                Y(((Integer) list.get(size2)).intValue());
+            }
+            d0(T() - iT);
+            c0(i, 2);
+            return;
+        }
+        IntArrayList intArrayList = (IntArrayList) list;
+        if (!z) {
+            for (int i2 = intArrayList.f - 1; i2 >= 0; i2--) {
+                g(i, intArrayList.getInt(i2));
+            }
+            return;
+        }
+        U((intArrayList.f * 10) + 10);
+        int iT2 = T();
+        for (int i3 = intArrayList.f - 1; i3 >= 0; i3--) {
+            Y(intArrayList.getInt(i3));
+        }
+        d0(T() - iT2);
+        c0(i, 2);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void h(int i, List list, boolean z) {
+        if (!(list instanceof IntArrayList)) {
+            if (!z) {
+                for (int size = list.size() - 1; size >= 0; size--) {
+                    c(i, ((Integer) list.get(size)).intValue());
+                }
+                return;
+            }
+            U(a.c(4, 10, list));
+            int iT = T();
+            for (int size2 = list.size() - 1; size2 >= 0; size2--) {
+                W(((Integer) list.get(size2)).intValue());
+            }
+            d0(T() - iT);
+            c0(i, 2);
+            return;
+        }
+        IntArrayList intArrayList = (IntArrayList) list;
+        if (!z) {
+            for (int i2 = intArrayList.f - 1; i2 >= 0; i2--) {
+                c(i, intArrayList.getInt(i2));
+            }
+            return;
+        }
+        U((intArrayList.f * 4) + 10);
+        int iT2 = T();
+        for (int i3 = intArrayList.f - 1; i3 >= 0; i3--) {
+            W(intArrayList.getInt(i3));
+        }
+        d0(T() - iT2);
+        c0(i, 2);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void i(int i, List list, boolean z) {
+        if (!(list instanceof IntArrayList)) {
+            if (!z) {
+                for (int size = list.size() - 1; size >= 0; size--) {
+                    k(i, ((Integer) list.get(size)).intValue());
+                }
+                return;
+            }
+            U(a.c(5, 10, list));
+            int iT = T();
+            for (int size2 = list.size() - 1; size2 >= 0; size2--) {
+                d0(((Integer) list.get(size2)).intValue());
+            }
+            d0(T() - iT);
+            c0(i, 2);
+            return;
+        }
+        IntArrayList intArrayList = (IntArrayList) list;
+        if (!z) {
+            for (int i2 = intArrayList.f - 1; i2 >= 0; i2--) {
+                k(i, intArrayList.getInt(i2));
+            }
+            return;
+        }
+        U((intArrayList.f * 5) + 10);
+        int iT2 = T();
+        for (int i3 = intArrayList.f - 1; i3 >= 0; i3--) {
+            d0(intArrayList.getInt(i3));
+        }
+        d0(T() - iT2);
+        c0(i, 2);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void l(int i, List list, boolean z) {
+        if (!(list instanceof LongArrayList)) {
+            if (!z) {
+                for (int size = list.size() - 1; size >= 0; size--) {
+                    e(i, ((Long) list.get(size)).longValue());
+                }
+                return;
+            }
+            U(a.c(10, 10, list));
+            int iT = T();
+            for (int size2 = list.size() - 1; size2 >= 0; size2--) {
+                e0(((Long) list.get(size2)).longValue());
+            }
+            d0(T() - iT);
+            c0(i, 2);
+            return;
+        }
+        LongArrayList longArrayList = (LongArrayList) list;
+        if (!z) {
+            for (int i2 = longArrayList.f - 1; i2 >= 0; i2--) {
+                e(i, longArrayList.h(i2));
+            }
+            return;
+        }
+        U((longArrayList.f * 10) + 10);
+        int iT2 = T();
+        for (int i3 = longArrayList.f - 1; i3 >= 0; i3--) {
+            e0(longArrayList.h(i3));
+        }
+        d0(T() - iT2);
+        c0(i, 2);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void o(int i, int i2) {
+        c(i, i2);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void q(int i, List list, boolean z) {
+        if (!(list instanceof LongArrayList)) {
+            if (!z) {
+                for (int size = list.size() - 1; size >= 0; size--) {
+                    m(i, ((Long) list.get(size)).longValue());
+                }
+                return;
+            }
+            U(a.c(8, 10, list));
+            int iT = T();
+            for (int size2 = list.size() - 1; size2 >= 0; size2--) {
+                X(((Long) list.get(size2)).longValue());
+            }
+            d0(T() - iT);
+            c0(i, 2);
+            return;
+        }
+        LongArrayList longArrayList = (LongArrayList) list;
+        if (!z) {
+            for (int i2 = longArrayList.f - 1; i2 >= 0; i2--) {
+                m(i, longArrayList.h(i2));
+            }
+            return;
+        }
+        U((longArrayList.f * 8) + 10);
+        int iT2 = T();
+        for (int i3 = longArrayList.f - 1; i3 >= 0; i3--) {
+            X(longArrayList.h(i3));
+        }
+        d0(T() - iT2);
+        c0(i, 2);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void s(int i, List list, boolean z) {
+        if (!(list instanceof IntArrayList)) {
+            if (!z) {
+                for (int size = list.size() - 1; size >= 0; size--) {
+                    J(i, ((Integer) list.get(size)).intValue());
+                }
+                return;
+            }
+            U(a.c(5, 10, list));
+            int iT = T();
+            for (int size2 = list.size() - 1; size2 >= 0; size2--) {
+                a0(((Integer) list.get(size2)).intValue());
+            }
+            d0(T() - iT);
+            c0(i, 2);
+            return;
+        }
+        IntArrayList intArrayList = (IntArrayList) list;
+        if (!z) {
+            for (int i2 = intArrayList.f - 1; i2 >= 0; i2--) {
+                J(i, intArrayList.getInt(i2));
+            }
+            return;
+        }
+        U((intArrayList.f * 5) + 10);
+        int iT2 = T();
+        for (int i3 = intArrayList.f - 1; i3 >= 0; i3--) {
+            a0(intArrayList.getInt(i3));
+        }
+        d0(T() - iT2);
+        c0(i, 2);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void t(int i, List list, boolean z) {
+        if (!(list instanceof DoubleArrayList)) {
+            if (!z) {
+                for (int size = list.size() - 1; size >= 0; size--) {
+                    w(((Double) list.get(size)).doubleValue(), i);
+                }
+                return;
+            }
+            U(a.c(8, 10, list));
+            int iT = T();
+            for (int size2 = list.size() - 1; size2 >= 0; size2--) {
+                X(Double.doubleToRawLongBits(((Double) list.get(size2)).doubleValue()));
+            }
+            d0(T() - iT);
+            c0(i, 2);
+            return;
+        }
+        DoubleArrayList doubleArrayList = (DoubleArrayList) list;
+        if (!z) {
+            for (int i2 = doubleArrayList.f - 1; i2 >= 0; i2--) {
+                w(doubleArrayList.h(i2), i);
+            }
+            return;
+        }
+        U((doubleArrayList.f * 8) + 10);
+        int iT2 = T();
+        for (int i3 = doubleArrayList.f - 1; i3 >= 0; i3--) {
+            X(Double.doubleToRawLongBits(doubleArrayList.h(i3)));
+        }
+        d0(T() - iT2);
+        c0(i, 2);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void u(int i, List list) {
+        for (int size = list.size() - 1; size >= 0; size--) {
+            K(i, (ByteString) list.get(size));
+        }
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void v(int i, List list) {
+        if (!(list instanceof LazyStringList)) {
+            for (int size = list.size() - 1; size >= 0; size--) {
+                d(i, (String) list.get(size));
+            }
+            return;
+        }
+        LazyStringList lazyStringList = (LazyStringList) list;
+        for (int size2 = list.size() - 1; size2 >= 0; size2--) {
+            Object raw = lazyStringList.getRaw(size2);
+            if (raw instanceof String) {
+                d(i, (String) raw);
+            } else {
+                K(i, (ByteString) raw);
+            }
+        }
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void w(double d, int i) {
+        m(i, Double.doubleToRawLongBits(d));
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void x(int i, long j) {
+        m(i, j);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void y(int i, List list, boolean z) {
+        if (!(list instanceof LongArrayList)) {
+            if (!z) {
+                for (int size = list.size() - 1; size >= 0; size--) {
+                    j(i, ((Long) list.get(size)).longValue());
+                }
+                return;
+            }
+            U(a.c(10, 10, list));
+            int iT = T();
+            for (int size2 = list.size() - 1; size2 >= 0; size2--) {
+                b0(((Long) list.get(size2)).longValue());
+            }
+            d0(T() - iT);
+            c0(i, 2);
+            return;
+        }
+        LongArrayList longArrayList = (LongArrayList) list;
+        if (!z) {
+            for (int i2 = longArrayList.f - 1; i2 >= 0; i2--) {
+                j(i, longArrayList.h(i2));
+            }
+            return;
+        }
+        U((longArrayList.f * 10) + 10);
+        int iT2 = T();
+        for (int i3 = longArrayList.f - 1; i3 >= 0; i3--) {
+            b0(longArrayList.h(i3));
+        }
+        d0(T() - iT2);
+        c0(i, 2);
+    }
+
+    @Override // androidx.datastore.preferences.protobuf.Writer
+    public final void z(int i, List list, boolean z) {
+        f(i, list, z);
+    }
+}

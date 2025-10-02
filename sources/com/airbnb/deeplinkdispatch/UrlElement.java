@@ -1,0 +1,28 @@
+package com.airbnb.deeplinkdispatch;
+
+import com.salesforce.marketingcloud.messages.iam.j;
+import kotlin.Metadata;
+import kotlin.text.Charsets;
+
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lcom/airbnb/deeplinkdispatch/UrlElement;", "", "deeplinkdispatch-base"}, k = 1, mv = {1, 8, 0}, xi = 48)
+/* loaded from: classes4.dex */
+public final class UrlElement {
+
+    /* renamed from: a, reason: collision with root package name */
+    public final byte f13298a;
+    public final byte[] b;
+
+    public UrlElement(byte b, byte[] bArr) {
+        this.f13298a = b;
+        this.b = bArr;
+    }
+
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("Type: ");
+        byte b = this.f13298a;
+        sb.append(((byte) (b & 1)) != 0 ? "root" : ((byte) (b & 2)) != 0 ? "scheme" : ((byte) (b & 4)) != 0 ? "host" : ((byte) (b & 8)) != 0 ? "path_segment" : j.h);
+        sb.append(", Value: ");
+        sb.append(new String(this.b, Charsets.f24671a));
+        return sb.toString();
+    }
+}

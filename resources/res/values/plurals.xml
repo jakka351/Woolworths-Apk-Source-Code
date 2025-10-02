@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="boost_all_fail_partial">
+        <item quantity="one">Unable to boost 1 offer.</item>
+        <item quantity="other">Unable to boost %1d offers.</item>
+    </plurals>
+    <plurals name="buy_again_add_to_list_title">
+        <item quantity="one">Save 1 product to list</item>
+        <item quantity="other">Save %d products to list</item>
+    </plurals>
+    <plurals name="buy_again_footer_products_selected">
+        <item quantity="one">1 product selected</item>
+        <item quantity="other">%d products selected</item>
+    </plurals>
+    <plurals name="buy_again_snackbar_products_added_to_cart">
+        <item quantity="one">1 product added to your cart</item>
+        <item quantity="other">%d products added to your cart</item>
+    </plurals>
+    <plurals name="cart_icon_button_content_description">
+        <item quantity="one">Cart, %d item in cart</item>
+        <item quantity="other">Cart, %d items in cart</item>
+    </plurals>
+    <plurals name="cart_menu_item_content_description">
+        <item quantity="one">Cart: %1$d item in Cart</item>
+        <item quantity="other">Cart: %1$d items in Cart</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Fast forward %d second</item>
+        <item quantity="other">Fast forward %d seconds</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Rewind %d second</item>
+        <item quantity="other">Rewind %d seconds</item>
+    </plurals>
+    <plurals name="input_text_countdown_content_description">
+        <item quantity="one">%d character remaining</item>
+        <item quantity="other">%d characters remaining</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d new notification</item>
+        <item quantity="other">%d new notifications</item>
+    </plurals>
+    <plurals name="my_lists_item_count">
+        <item quantity="one">1 item</item>
+        <item quantity="other">%1d items</item>
+    </plurals>
+    <plurals name="point_balance_content_description">
+        <item quantity="zero">Total of %1$d Rewards point</item>
+        <item quantity="one">Total of %1$d Rewards point</item>
+        <item quantity="other">Total of %1$d Rewards points</item>
+    </plurals>
+    <plurals name="product_boost_partial_failure">
+        <item quantity="one">Unable to boost 1 offer</item>
+        <item quantity="other">Unable to boost %1$s offers</item>
+    </plurals>
+    <plurals name="product_filters_see_x_results">
+        <item quantity="one">See %1$d Result</item>
+        <item quantity="other">See %1$d Results</item>
+    </plurals>
+    <plurals name="product_list_toggle_heading">
+        <item quantity="one">1 product</item>
+        <item quantity="other">%1d products</item>
+    </plurals>
+    <plurals name="ratings_distribution_talkback_text">
+        <item quantity="one">%1$s of reviews with %2$s star</item>
+        <item quantity="other">%1$s of reviews with %2$s stars</item>
+    </plurals>
+    <plurals name="recipe_list_total_count">
+        <item quantity="one">1 recipe</item>
+        <item quantity="other">%1d recipes</item>
+    </plurals>
+    <plurals name="review_submission_star_content_description">
+        <item quantity="one">Rate %1$s star</item>
+        <item quantity="other">Rate %1$s stars</item>
+    </plurals>
+    <plurals name="rewards_motivational_banner">
+        <item quantity="one">Only one more point to earn $10 off your shop</item>
+        <item quantity="other">Only %d more points to earn $10 off your shop</item>
+    </plurals>
+    <plurals name="rewards_points_earned_short">
+        <item quantity="one">pt</item>
+        <item quantity="other">pts</item>
+    </plurals>
+    <plurals name="search_header_item_count_text">
+        <item quantity="one">1 result</item>
+        <item quantity="other">%1$d results</item>
+    </plurals>
+    <plurals name="shop_lists_add_all_to_cart_failure_message">
+        <item quantity="one">Unable to add 1 product to cart</item>
+        <item quantity="other">Unable to add %1$d products to cart</item>
+    </plurals>
+    <plurals name="shop_lists_add_all_to_cart_success_message">
+        <item quantity="one">1 product added to cart</item>
+        <item quantity="other">%1$d products added to cart</item>
+    </plurals>
+    <plurals name="shop_lists_boost_all_button_text">
+        <item quantity="one">Boost</item>
+        <item quantity="other">Boost all</item>
+    </plurals>
+    <plurals name="shop_lists_boost_all_message">
+        <item quantity="one">1 offer to boost</item>
+        <item quantity="other">%1$d offers to boost</item>
+    </plurals>
+    <plurals name="shop_lists_items">
+        <item quantity="one">1 item</item>
+        <item quantity="other">%1d items</item>
+    </plurals>
+    <plurals name="shop_lists_magic_match_max_items_dialog_title">
+        <item quantity="one">Match up to %1d item at a time</item>
+        <item quantity="other">Match up to %1d items at a time</item>
+    </plurals>
+    <plurals name="shop_lists_product_moved_to_checked_list">
+        <item quantity="one">Product moved to Checked Items</item>
+        <item quantity="other">Products moved to Checked Items</item>
+    </plurals>
+    <plurals name="shop_lists_snap_message_created_with_items_added">
+        <item quantity="one">New list created with %1d item added</item>
+        <item quantity="other">New list created with %1d items added</item>
+    </plurals>
+    <plurals name="shop_lists_snap_message_items_added">
+        <item quantity="one">1 item has been added</item>
+        <item quantity="other">%1d items have been added</item>
+    </plurals>
+    <plurals name="shop_lists_watchlist_specials_count">
+        <item quantity="one">1 Special</item>
+        <item quantity="other">%1d Specials</item>
+    </plurals>
+    <plurals name="sng_activity_title_shopping_list">
+        <item quantity="zero">Scan&amp;Go List</item>
+        <item quantity="other">Scan&amp;Go List (%1d)</item>
+    </plurals>
+    <plurals name="sng_label_cart_count">
+        <item quantity="one">1 Item</item>
+        <item quantity="other">%d Items</item>
+    </plurals>
+    <plurals name="sng_label_cart_my_count">
+        <item quantity="one">My Items (%d)</item>
+        <item quantity="other">My Items (%d)</item>
+    </plurals>
+    <plurals name="sng_receipt_total_count">
+        <item quantity="one">Total (1 Item)</item>
+        <item quantity="other">Total (%d Items)</item>
+    </plurals>
+    <plurals name="sng_receipt_totaleft_count">
+        <item quantity="one">TOTAL (1 Item)</item>
+        <item quantity="other">TOTAL (%d Items)</item>
+    </plurals>
+    <plurals name="specials_by_type_item_content_description">
+        <item quantity="one">%1$s, %2$d item</item>
+        <item quantity="other">%1$s, %2$d items</item>
+    </plurals>
+    <plurals name="video_ad_timer_content_description">
+        <item quantity="one">Ad %1$d second\n</item>
+        <item quantity="other">Ad %1$d seconds\n</item>
+    </plurals>
+</resources>

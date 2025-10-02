@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/fragment_progress_dialog_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/loading_layout"
+        android:layout_width="@dimen/custom_spinner_size"
+        android:layout_height="@dimen/custom_spinner_size"
+        app:layout_constraintBottom_toTopOf="@+id/loading_message_text_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        layout="@layout/include_progress_dialog_view"/>
+    <TextView
+        android:gravity="center"
+        android:id="@+id/loading_message_text_view"
+        android:tag="binding_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loading_layout"
+        app:layout_constraintVertical_chainStyle="spread"
+        style="@style/LoadingMessage"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

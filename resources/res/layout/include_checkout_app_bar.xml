@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_bar"
+    android:tag="layout/include_checkout_app_bar_0"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    style="@style/Widget.Wow.AppBarLayout.Inverse">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:elevation="0dp"
+        app:title="@string/title_checkout"
+        style="@style/Widget.Wow.Toolbar.Inverse"/>
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/progress_steps_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</com.google.android.material.appbar.AppBarLayout>

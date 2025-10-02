@@ -1,0 +1,8 @@
+package io.noties.markwon.html;
+
+/* loaded from: classes7.dex */
+public abstract class MarkwonHtmlParser {
+
+    public interface FlushAction<T> {
+    }
+}

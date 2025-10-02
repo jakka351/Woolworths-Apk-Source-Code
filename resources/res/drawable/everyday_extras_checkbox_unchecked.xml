@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <stroke
+        android:width="2dp"
+        android:color="@color/everyday_extras_checkbox_stroke_default"/>
+    <corners android:radius="@dimen/everyday_extras_summary_checkbox_radius"/>
+</shape>

@@ -1,0 +1,31 @@
+console.log('local config script started');
+var version = 0.1;
+var oriientDevices = {'9755821b5f48b1d0': 'oriientPixel2', '71d03467ff496cb5': 'oriientLGQ6A7', '72668c58755fbe01': 'oriientLGQ6A8'};
+function getDeviceName() { return oriientDevices[deviceUuid]; };
+var deviceName = getDeviceName();
+var returnValues = {
+  'version': version,
+  'deviceName': deviceName,
+  'trackingChunkLengthSeconds': 900,
+  'writeToFileRecords': 100,
+  'controlTaskIntervalMin': 120,
+  'controlTaskMaxTimeMin': 2880,
+  'uploadTaskMaxDelayMin': 720,
+  'maxSessionLengthMin': 1440,
+  'chargerTaskIntervalMin': 15,
+  'geoAcceptedAccuracyMeters': 100,
+  'sensorTimestampsJumpThresholdSeconds': 30,
+  'sensorsDataBufferSize': 2000,
+  'geofenceLeaveToleranceMeters': 30.0,
+  'restConnectTimeoutSec': 30,
+  'restReadTimeoutSec': 30,
+  'shouldUseElog': false,
+  'eLogQueueSize': 1000,
+  'shouldUseTailTrimming': true,
+  'eLogConnectTimeoutMs': 10000,
+  'eLogReadTimeoutMs': 10000,
+  'elogLevel': 0,
+  'elogUrl': 'https://sdklog.oriient.me/api/log',
+};
+console.log('local config script ended');
+Device.onResult(JSON.stringify(returnValues));

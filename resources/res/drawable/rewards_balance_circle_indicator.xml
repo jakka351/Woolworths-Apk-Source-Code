@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/secondaryProgress">
+        <shape android:shape="oval">
+            <size
+                android:height="@dimen/rewards_balance_circle_indicator_size"
+                android:width="@dimen/rewards_balance_circle_indicator_size"/>
+            <solid android:color="#00000000"/>
+            <stroke
+                android:width="4dp"
+                android:color="@color/rewards_balance_circle_indicator_bar"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <rotate
+            android:fromDegrees="270"
+            android:toDegrees="270"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape
+                android:shape="ring"
+                android:useLevel="true"
+                android:innerRadius="30dp"
+                android:thickness="4dp">
+                <size
+                    android:height="@dimen/rewards_balance_circle_indicator_size"
+                    android:width="@dimen/rewards_balance_circle_indicator_size"/>
+                <solid android:color="?attr/colorPrimary"/>
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

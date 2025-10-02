@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<au.com.woolworths.views.BottomSheetWithHandle xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tag="layout/fragment_add_delivery_add_prompt_0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/add_delivery_add_prompt_compose_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</au.com.woolworths.views.BottomSheetWithHandle>

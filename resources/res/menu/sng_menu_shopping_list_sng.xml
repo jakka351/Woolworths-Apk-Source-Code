@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/sng_ic_search_white_24dp"
+        android:id="@+id/action_search_item"
+        android:visible="false"
+        android:orderInCategory="102"
+        android:title="@string/sng_menu_label_search"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_clear_all_items"
+        android:orderInCategory="103"
+        android:title="@string/sng_menu_label_clear_all"
+        app:showAsAction="never"/>
+</menu>

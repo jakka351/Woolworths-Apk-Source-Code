@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tag="layout/epoxy_item_checkout_rewards_unregistered_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/color_fill_rewards"
+    android:layout_marginHorizontal="@dimen/default_margin"
+    android:layout_marginVertical="@dimen/half_default_margin"/>

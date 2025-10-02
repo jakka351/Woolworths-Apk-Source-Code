@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:tag="layout/view_list_details_0"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:behavior_hideable="false">
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/overview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/totals_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,21 @@
+package com.woolworths.scanlibrary.ui.tap.tapon;
+
+import com.woolworths.scanlibrary.ui.message.MessageActivity;
+import com.woolworths.scanlibrary.ui.message.Messages;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.FunctionReferenceImpl;
+
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes7.dex */
+final /* synthetic */ class TapOnFragment$requestBluetoothOnWithPermissionCheck$2 extends FunctionReferenceImpl implements Function0<Unit> {
+    @Override // kotlin.jvm.functions.Function0
+    public final Object invoke() {
+        TapOnFragment tapOnFragment = (TapOnFragment) this.receiver;
+        tapOnFragment.getClass();
+        int i = MessageActivity.J;
+        MessageActivity.Companion.a(tapOnFragment, Messages.k);
+        return Unit.f24250a;
+    }
+}

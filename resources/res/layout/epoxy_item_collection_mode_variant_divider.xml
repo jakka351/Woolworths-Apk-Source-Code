@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tag="layout/epoxy_item_collection_mode_variant_divider_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/half_default_padding">
+    <include layout="@layout/include_horizontal_divider"/>
+</FrameLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/border_corner_radius"/>
+            <stroke
+                android:width="@dimen/border_thickness"
+                android:color="@color/payment_instrument_border"/>
+            <gradient
+                android:startColor="@color/payment_instrument_gradient_start_darker"
+                android:endColor="@color/payment_instrument_gradient_end_darker"
+                android:angle="270"/>
+        </shape>
+    </item>
+    <item>
+        <ripple android:color="@color/payment_instrument_gradient_start">
+            <item
+                android:id="@android:id/mask"
+                android:drawable="@color/stylecolor_selected"/>
+        </ripple>
+    </item>
+</layer-list>

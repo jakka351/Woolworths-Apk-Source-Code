@@ -1,0 +1,30 @@
+package com.scandit.datacapture.barcode;
+
+import com.scandit.datacapture.core.source.TorchState;
+import com.scandit.datacapture.core.source.TorchStateSerializer;
+import kotlin.jvm.internal.Intrinsics;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/* renamed from: com.scandit.datacapture.barcode.ka, reason: case insensitive filesystem */
+/* loaded from: classes6.dex */
+public final class C0702ka implements Nd {
+
+    /* renamed from: a, reason: collision with root package name */
+    final /* synthetic */ C0589d9 f17831a;
+
+    public C0702ka(C0589d9 c0589d9) {
+        this.f17831a = c0589d9;
+    }
+
+    @Override // com.scandit.datacapture.barcode.Nd
+    public final void a(Object value) throws JSONException {
+        Intrinsics.h(value, "value");
+        C0589d9 c0589d9 = this.f17831a;
+        String json = TorchStateSerializer.toJson((TorchState) value);
+        JSONObject jSONObject = new JSONObject();
+        jSONObject.put("key", c0589d9.a());
+        jSONObject.put("value", json);
+        c0589d9.a(jSONObject);
+    }
+}

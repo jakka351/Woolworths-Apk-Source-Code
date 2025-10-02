@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<au.com.woolworths.android.onesite.modules.customviews.loadingdialog.ProgressDialogView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:id="@+id/custom_progress_bar"
+    android:layout_width="@dimen/custom_spinner_size"
+    android:layout_height="@dimen/custom_spinner_size"
+    app:lottie_autoPlay="true"
+    app:lottie_fileName="wwspinner.json"
+    app:lottie_loop="true"/>

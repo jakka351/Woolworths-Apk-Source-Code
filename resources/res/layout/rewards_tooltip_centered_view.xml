@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@color/white"
+    android:gravity="center"
+    android:id="@+id/tooltip_text"
+    android:background="@drawable/tooltip_shape_background"
+    android:padding="@dimen/default_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>

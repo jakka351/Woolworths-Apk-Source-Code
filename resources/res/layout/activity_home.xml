@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigationDrawer"
+    android:tag="layout/activity_home_0"
+    android:focusable="true"
+    android:fitsSystemWindows="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/mainViewContainer"
+        android:tag="binding_1"
+        android:background="@color/sng_window_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/layout_toolbar"
+            layout="@layout/layout_toolbar"/>
+        <include
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_toolbar"
+            layout="@layout/layout_search_bar_view"/>
+        <FrameLayout
+            android:id="@+id/contentHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_bar"/>
+    </RelativeLayout>
+    <include
+        android:id="@+id/layout_navigation_drawer"
+        layout="@layout/layout_navigation_drawer"/>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textAppearance="@style/TextAppearance.Body.Medium"
+    android:tag="layout/item_product_nutrition_table_header_cell_0"
+    android:padding="@dimen/default_padding"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>

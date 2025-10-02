@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/sng_ic_scan_close"/>
+    <item android:id="@android:id/secondaryProgress">
+        <rotate
+            android:fromDegrees="270"
+            android:toDegrees="270"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape
+                android:shape="ring"
+                android:useLevel="true"
+                android:innerRadius="32dp"
+                android:thickness="4dp">
+                <solid android:color="@color/sng_color_secondary_accent"/>
+            </shape>
+        </rotate>
+    </item>
+    <item android:id="@android:id/progress">
+        <rotate
+            android:fromDegrees="270"
+            android:toDegrees="270"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape
+                android:shape="ring"
+                android:useLevel="true"
+                android:innerRadius="32dp"
+                android:thickness="4dp">
+                <solid android:color="@color/sng_scanner_timer_progress_color"/>
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

@@ -1,0 +1,135 @@
+package com.woolworths.shop.checkout.selections;
+
+import androidx.compose.runtime.internal.StabilityInferred;
+import au.com.woolworths.dynamic.page.ui.content.d;
+import au.com.woolworths.feature.rewards.everydayextras.signup.selections.a;
+import au.com.woolworths.shop.graphql.type.BroadcastBanner;
+import au.com.woolworths.shop.graphql.type.BroadcastBannerType;
+import au.com.woolworths.shop.graphql.type.Button;
+import au.com.woolworths.shop.graphql.type.ButtonStyle;
+import au.com.woolworths.shop.graphql.type.CheaperSubstitutesSection;
+import au.com.woolworths.shop.graphql.type.GraphQLBoolean;
+import au.com.woolworths.shop.graphql.type.GraphQLFloat;
+import au.com.woolworths.shop.graphql.type.GraphQLString;
+import au.com.woolworths.shop.graphql.type.InsetBanner;
+import au.com.woolworths.shop.graphql.type.InsetBannerAction;
+import au.com.woolworths.shop.graphql.type.InsetBannerActionPlacement;
+import au.com.woolworths.shop.graphql.type.InsetBannerActionType;
+import au.com.woolworths.shop.graphql.type.InsetBannerDisplayType;
+import au.com.woolworths.shop.graphql.type.ProductSubstitute;
+import au.com.woolworths.shop.graphql.type.ProductSubstitutesSection;
+import au.com.woolworths.shop.graphql.type.ProductToBeSubstituteSection;
+import au.com.woolworths.shop.graphql.type.Query;
+import au.com.woolworths.shop.graphql.type.SubstitutionPreferenceFooter;
+import au.com.woolworths.shop.graphql.type.SubstitutionPreferenceOption;
+import au.com.woolworths.shop.graphql.type.SubstitutionPreferenceOptionsSection;
+import au.com.woolworths.shop.graphql.type.SubstitutionPreferenceResponse;
+import com.apollographql.apollo.api.CompiledArgument;
+import com.apollographql.apollo.api.CompiledField;
+import com.apollographql.apollo.api.CompiledGraphQL;
+import com.apollographql.apollo.api.CustomScalarType;
+import com.google.android.gms.measurement.api.AppMeasurementSdk;
+import com.lexisnexisrisk.threatmetrix.rl.tmxprofiling.lqlqqlq;
+import com.salesforce.marketingcloud.UrlHandler;
+import com.salesforce.marketingcloud.notifications.NotificationMessage;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+import org.bouncycastle.jcajce.util.AnnotatedPrivateKey;
+
+@StabilityInferred
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\bÇ\u0002\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lcom/woolworths/shop/checkout/selections/SubstitutionPreferenceQuerySelections;", "", "shop-checkout_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes7.dex */
+public final class SubstitutionPreferenceQuerySelections {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final List f22563a;
+    public static final List b;
+    public static final List c;
+    public static final List d;
+    public static final List e;
+    public static final List f;
+    public static final List g;
+    public static final List h;
+    public static final List i;
+    public static final List j;
+    public static final List k;
+    public static final List l;
+    public static final List m;
+
+    static {
+        CustomScalarType customScalarType = GraphQLString.f11443a;
+        List listR = CollectionsKt.R(new CompiledField.Builder(AppMeasurementSdk.ConditionalUserProperty.NAME, CompiledGraphQL.b(customScalarType)).c(), new CompiledField.Builder("productId", CompiledGraphQL.b(customScalarType)).c(), new CompiledField.Builder("imageUrl", CompiledGraphQL.b(customScalarType)).c());
+        f22563a = listR;
+        CompiledField compiledFieldC = new CompiledField.Builder("title", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldG = d.g(NotificationMessage.NOTIF_KEY_SUB_TITLE, customScalarType);
+        BroadcastBannerType.e.getClass();
+        CompiledField compiledFieldC2 = new CompiledField.Builder("type", CompiledGraphQL.b(BroadcastBannerType.f)).c();
+        CompiledField compiledFieldC3 = new CompiledField.Builder("imageUrl", CompiledGraphQL.b(customScalarType)).c();
+        CustomScalarType customScalarType2 = GraphQLBoolean.f11439a;
+        List listR2 = CollectionsKt.R(compiledFieldC, compiledFieldG, compiledFieldC2, compiledFieldC3, new CompiledField.Builder("dismissible", customScalarType2).c(), d.g("bannerId", customScalarType), d.g("analyticsLabel", customScalarType));
+        b = listR2;
+        CompiledField.Builder builder = new CompiledField.Builder("banner", CompiledGraphQL.b(BroadcastBanner.f11060a));
+        builder.e = listR2;
+        List listQ = CollectionsKt.Q(builder.c());
+        c = listQ;
+        InsetBannerActionPlacement.e.getClass();
+        CompiledField compiledFieldC4 = new CompiledField.Builder("placement", CompiledGraphQL.b(InsetBannerActionPlacement.f)).c();
+        InsetBannerActionType.e.getClass();
+        List listR3 = CollectionsKt.R(compiledFieldC4, new CompiledField.Builder("type", CompiledGraphQL.b(InsetBannerActionType.f)).c(), new CompiledField.Builder(AnnotatedPrivateKey.LABEL, CompiledGraphQL.b(customScalarType)).c(), d.g("url", customScalarType));
+        d = listR3;
+        CompiledField compiledFieldC5 = new CompiledField.Builder("message", CompiledGraphQL.b(customScalarType)).c();
+        InsetBannerDisplayType.e.getClass();
+        CompiledField compiledFieldC6 = new CompiledField.Builder("displayType", CompiledGraphQL.b(InsetBannerDisplayType.f)).c();
+        CompiledField.Builder builder2 = new CompiledField.Builder(UrlHandler.ACTION, InsetBannerAction.f11510a);
+        builder2.e = listR3;
+        List listR4 = CollectionsKt.R(compiledFieldC5, compiledFieldC6, builder2.c());
+        e = listR4;
+        List listR5 = CollectionsKt.R(new CompiledField.Builder("id", CompiledGraphQL.b(customScalarType)).c(), new CompiledField.Builder("title", CompiledGraphQL.b(customScalarType)).c(), new CompiledField.Builder("isSelected", CompiledGraphQL.b(customScalarType2)).c(), new CompiledField.Builder("isEnabled", CompiledGraphQL.b(customScalarType2)).c(), d.g(lqlqqlq.mmm006Dm006Dm, customScalarType), new CompiledField.Builder("showProducts", CompiledGraphQL.b(customScalarType2)).c());
+        f = listR5;
+        CompiledField compiledFieldC7 = new CompiledField.Builder("title", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField.Builder builder3 = new CompiledField.Builder("insetBanner", InsetBanner.f11509a);
+        builder3.e = listR4;
+        CompiledField compiledFieldC8 = builder3.c();
+        CompiledField.Builder builder4 = new CompiledField.Builder("items", a.f(SubstitutionPreferenceOption.f11948a));
+        builder4.e = listR5;
+        List listR6 = CollectionsKt.R(compiledFieldC7, compiledFieldC8, builder4.c());
+        g = listR6;
+        List listR7 = CollectionsKt.R(new CompiledField.Builder(AppMeasurementSdk.ConditionalUserProperty.NAME, CompiledGraphQL.b(customScalarType)).c(), new CompiledField.Builder("quantity", CompiledGraphQL.b(GraphQLFloat.f11440a)).c(), new CompiledField.Builder("productId", CompiledGraphQL.b(customScalarType)).c(), new CompiledField.Builder("imageUrl", CompiledGraphQL.b(customScalarType)).c(), new CompiledField.Builder("isSelected", CompiledGraphQL.b(customScalarType2)).c());
+        h = listR7;
+        CompiledField.Builder builder5 = new CompiledField.Builder("substitutions", CompiledGraphQL.a(CompiledGraphQL.b(ProductSubstitute.f11788a)));
+        builder5.e = listR7;
+        List listQ2 = CollectionsKt.Q(builder5.c());
+        i = listQ2;
+        CompiledField compiledFieldC9 = new CompiledField.Builder(AnnotatedPrivateKey.LABEL, CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldG2 = d.g(UrlHandler.ACTION, customScalarType);
+        ButtonStyle.e.getClass();
+        List listR8 = CollectionsKt.R(compiledFieldC9, compiledFieldG2, new CompiledField.Builder("style", ButtonStyle.f).c(), new CompiledField.Builder("enabled", CompiledGraphQL.b(customScalarType2)).c());
+        j = listR8;
+        CompiledField.Builder builder6 = new CompiledField.Builder("button", CompiledGraphQL.b(Button.f11080a));
+        builder6.e = listR8;
+        List listQ3 = CollectionsKt.Q(builder6.c());
+        k = listQ3;
+        CompiledField.Builder builder7 = new CompiledField.Builder("productToBeSubstituteSection", CompiledGraphQL.b(ProductToBeSubstituteSection.f11791a));
+        builder7.e = listR;
+        CompiledField compiledFieldC10 = builder7.c();
+        CompiledField.Builder builder8 = new CompiledField.Builder("cheaperSubstitutesSection", CompiledGraphQL.b(CheaperSubstitutesSection.f11184a));
+        builder8.e = listQ;
+        CompiledField compiledFieldC11 = builder8.c();
+        CompiledField.Builder builder9 = new CompiledField.Builder("substitutionPreferenceOptionsSection", CompiledGraphQL.b(SubstitutionPreferenceOptionsSection.f11949a));
+        builder9.e = listR6;
+        CompiledField compiledFieldC12 = builder9.c();
+        CompiledField.Builder builder10 = new CompiledField.Builder("productSubstitutesSection", CompiledGraphQL.b(ProductSubstitutesSection.f11789a));
+        builder10.e = listQ2;
+        CompiledField compiledFieldC13 = builder10.c();
+        CompiledField.Builder builder11 = new CompiledField.Builder("substitutionPreferenceFooter", CompiledGraphQL.b(SubstitutionPreferenceFooter.f11946a));
+        builder11.e = listQ3;
+        List listR9 = CollectionsKt.R(compiledFieldC10, compiledFieldC11, compiledFieldC12, compiledFieldC13, builder11.c());
+        l = listR9;
+        CompiledField.Builder builder12 = new CompiledField.Builder("substitutionPreference", CompiledGraphQL.b(SubstitutionPreferenceResponse.f11950a));
+        new CompiledArgument.Builder(Query.U0);
+        builder12.d = au.com.woolworths.android.onesite.a.v();
+        builder12.e = listR9;
+        m = CollectionsKt.Q(builder12.c());
+    }
+}

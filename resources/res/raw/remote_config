@@ -1,0 +1,37 @@
+console.log('local config script started');
+var version = 0.4;
+var ELogApps = ['il.co.oriient.OriientDemoApp','me.oriient.test','me.oriient.test1','com.obmysoftware.ontime','me.oriient.testlocalconfig', 'me.oriient.IndoorGPS', 'me.oriient.IPSDemo.Sonae', 'me.oriient.ipsdemo.sonae'];
+var oriientDevices = {'9755821b5f48b1d0': 'oriientPixel2', '71d03467ff496cb5': 'oriientLGQ6A7', '72668c58755fbe01': 'oriientLGQ6A8'};
+function shouldUseElogFun() { return ELogApps.includes(bundleId); };
+function getDeviceName() { return oriientDevices[deviceUuid]; };
+var shouldUseElog = shouldUseElogFun();
+var deviceName = getDeviceName();
+var elogLevel = 0;
+var elogUrl = 'https://sdklog.oriient.me/api/log';
+var returnValues = {
+	'version': version, 
+	'shouldUseElog': shouldUseElog, 
+	'deviceName': deviceName, 
+	'elogLevel': elogLevel, 
+	'elogUrl': elogUrl, 
+	'defaultAcceptableAccuracyMeters': 10, 
+	'defaultLocationAccuracyMeters': 10, 
+	'mapsSearchRadiusMeters': 5000, 
+	'noMovementDelta': 0.1, 
+	'restConnectTimeoutSec': 30, 
+	'restReadTimeoutSec': 30, 
+	'sensorsDataBufferSize': 2000, 
+	'eLogQueueSize': 1000, 
+	'eLogConnectTimeoutMs': 10000, 
+	'eLogReadTimeoutMs': 10000, 
+	'minDistanceToRecalculateNavRouteMeters': 1.0,
+	'shouldUseTailTrimming': true,
+	'tailTrimming_maxPositionJumpMeters': 5,
+	'tailTrimming_AcceptableDistanceToRouteSegmentMeters': 3,
+	'tailTrimming_RouteSegmentLengthMeters': 0.2,
+	'tailTrimming_DistanceShrinkingRation': 0.5,
+	'tailTrimming_RouteRecalculationDistanceMeters': 2,
+	'geoAcceptedAccuracyMeters': 100
+};
+console.log('local config script ended');
+Device.onResult(JSON.stringify(returnValues));

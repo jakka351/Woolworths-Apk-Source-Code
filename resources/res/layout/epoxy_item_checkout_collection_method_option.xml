@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textAppearance="@style/TextAppearance.Body.Medium"
+    android:textColor="@color/themeable_content_color_selector"
+    android:gravity="center"
+    android:tag="layout/epoxy_item_checkout_collection_method_option_0"
+    android:background="@drawable/themeable_background_selector"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"/>

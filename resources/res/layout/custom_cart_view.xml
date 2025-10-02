@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/custom_cart_view_0"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/btnViewCart"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/sng_ic_trolley_sng"
+        android:contentDescription="@string/sng_content_desc_shopping_cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:id="@+id/cartItems"
+        android:background="@drawable/sng_solid_circle"
+        android:visibility="gone"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/sng_label_0"
+        android:layout_marginStart="42dp"
+        android:elevation="2dp"/>
+</RelativeLayout>

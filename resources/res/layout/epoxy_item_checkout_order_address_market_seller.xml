@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:tag="layout/epoxy_item_checkout_order_address_market_seller_0"
+    android:paddingBottom="@dimen/default_padding"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="72dp"
+    android:paddingEnd="@dimen/default_padding">
+    <TextView
+        android:textAppearance="@style/TextAppearance.Body.Medium"
+        android:id="@+id/title_text_view"
+        android:tag="binding_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textAppearance="@style/TextAppearance.Body"
+        android:id="@+id/address_text_view"
+        android:tag="binding_2"
+        android:paddingTop="@dimen/quarter_default_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

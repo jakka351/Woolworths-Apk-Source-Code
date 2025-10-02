@@ -1,0 +1,130 @@
+package com.woolworths.shop.catalogue.selections;
+
+import androidx.compose.runtime.internal.StabilityInferred;
+import au.com.woolworths.dynamic.page.ui.content.d;
+import au.com.woolworths.graphql.common.fragment.selections.ProductCardSelections;
+import au.com.woolworths.shop.graphql.type.CataloguePromotionGroupItem;
+import au.com.woolworths.shop.graphql.type.CataloguePromotionListing;
+import au.com.woolworths.shop.graphql.type.CataloguePromotionListingHeader;
+import au.com.woolworths.shop.graphql.type.CataloguePromotionListingItem;
+import au.com.woolworths.shop.graphql.type.GraphQLString;
+import au.com.woolworths.shop.graphql.type.ImageWithAlt;
+import au.com.woolworths.shop.graphql.type.ProductCard;
+import au.com.woolworths.shop.graphql.type.Query;
+import com.apollographql.apollo.api.CompiledArgument;
+import com.apollographql.apollo.api.CompiledField;
+import com.apollographql.apollo.api.CompiledFragment;
+import com.apollographql.apollo.api.CompiledGraphQL;
+import com.apollographql.apollo.api.CustomScalarType;
+import com.apollographql.apollo.api.ObjectType;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+
+@StabilityInferred
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\bÇ\u0002\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lcom/woolworths/shop/catalogue/selections/CataloguePromotionListingQuerySelections;", "", "catalogue_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes7.dex */
+public final class CataloguePromotionListingQuerySelections {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final List f21795a;
+    public static final List b;
+    public static final List c;
+    public static final List d;
+    public static final List e;
+    public static final List f;
+    public static final List g;
+    public static final List h;
+    public static final List i;
+    public static final List j;
+    public static final List k;
+    public static final List l;
+    public static final List m;
+
+    static {
+        CustomScalarType customScalarType = GraphQLString.f11443a;
+        List listR = CollectionsKt.R(new CompiledField.Builder("title", CompiledGraphQL.b(customScalarType)).c(), d.g("backgroundImageUrl", customScalarType), d.g("backgroundColor", customScalarType));
+        f21795a = listR;
+        CompiledField compiledFieldC = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder = new CompiledFragment.Builder("ProductCard", CollectionsKt.Q("ProductCard"));
+        List list = ProductCardSelections.A;
+        builder.b(list);
+        List listR2 = CollectionsKt.R(compiledFieldC, builder.a());
+        b = listR2;
+        CompiledField compiledFieldC2 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder2 = new CompiledFragment.Builder("ProductCard", CollectionsKt.Q("ProductCard"));
+        builder2.d = list;
+        List listR3 = CollectionsKt.R(compiledFieldC2, builder2.a());
+        c = listR3;
+        ObjectType objectType = ProductCard.f11717a;
+        CompiledField.Builder builder3 = new CompiledField.Builder("productHeroCardProduct", CompiledGraphQL.b(objectType));
+        builder3.e = listR3;
+        List listQ = CollectionsKt.Q(builder3.c());
+        d = listQ;
+        List listR4 = CollectionsKt.R(new CompiledField.Builder("altText", CompiledGraphQL.b(customScalarType)).c(), new CompiledField.Builder("imageUrl", CompiledGraphQL.b(customScalarType)).c());
+        e = listR4;
+        CompiledField compiledFieldC3 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder4 = new CompiledFragment.Builder("ProductCard", CollectionsKt.Q("ProductCard"));
+        builder4.d = list;
+        List listR5 = CollectionsKt.R(compiledFieldC3, builder4.a());
+        f = listR5;
+        CompiledField compiledFieldC4 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder5 = new CompiledFragment.Builder("ProductCard", CollectionsKt.Q("ProductCard"));
+        builder5.d = list;
+        List listR6 = CollectionsKt.R(compiledFieldC4, builder5.a());
+        g = listR6;
+        CompiledField.Builder builder6 = new CompiledField.Builder("productHeroCardProduct", CompiledGraphQL.b(objectType));
+        builder6.e = listR6;
+        List listQ2 = CollectionsKt.Q(builder6.c());
+        h = listQ2;
+        CompiledField compiledFieldC5 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder7 = new CompiledFragment.Builder("ProductCard", CollectionsKt.Q("ProductCard"));
+        builder7.d = listR5;
+        CompiledFragment compiledFragmentA = builder7.a();
+        CompiledFragment.Builder builder8 = new CompiledFragment.Builder("ProductHeroCard", CollectionsKt.Q("ProductHeroCard"));
+        builder8.d = listQ2;
+        List listR7 = CollectionsKt.R(compiledFieldC5, compiledFragmentA, builder8.a());
+        i = listR7;
+        CompiledField.Builder builder9 = new CompiledField.Builder("cataloguePromotionGroupBadge", ImageWithAlt.f11487a);
+        builder9.e = listR4;
+        CompiledField compiledFieldC6 = builder9.c();
+        CompiledField compiledFieldG = d.g("cataloguePromotionGroupBackgroundColor", customScalarType);
+        CompiledField.Builder builder10 = new CompiledField.Builder("cataloguePromotionGroupItems", CompiledGraphQL.a(CompiledGraphQL.b(CataloguePromotionGroupItem.f11163a)));
+        builder10.e = listR7;
+        List listR8 = CollectionsKt.R(compiledFieldC6, compiledFieldG, builder10.c());
+        j = listR8;
+        CompiledField compiledFieldC7 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder11 = new CompiledFragment.Builder("ProductCard", CollectionsKt.Q("ProductCard"));
+        builder11.d = listR2;
+        CompiledFragment compiledFragmentA2 = builder11.a();
+        CompiledFragment.Builder builder12 = new CompiledFragment.Builder("ProductHeroCard", CollectionsKt.Q("ProductHeroCard"));
+        builder12.d = listQ;
+        CompiledFragment compiledFragmentA3 = builder12.a();
+        CompiledFragment.Builder builder13 = new CompiledFragment.Builder("CataloguePromotionGroup", CollectionsKt.Q("CataloguePromotionGroup"));
+        builder13.d = listR8;
+        List listR9 = CollectionsKt.R(compiledFieldC7, compiledFragmentA2, compiledFragmentA3, builder13.a());
+        k = listR9;
+        CompiledField.Builder builder14 = new CompiledField.Builder("header", CataloguePromotionListingHeader.f11165a);
+        builder14.e = listR;
+        CompiledField compiledFieldC8 = builder14.c();
+        CompiledField.Builder builder15 = new CompiledField.Builder("items", d.j(CataloguePromotionListingItem.f11166a));
+        builder15.e = listR9;
+        List listR10 = CollectionsKt.R(compiledFieldC8, builder15.c());
+        l = listR10;
+        CompiledField.Builder builder16 = new CompiledField.Builder("cataloguePromotionListing", CataloguePromotionListing.f11164a);
+        new CompiledArgument.Builder(Query.W1);
+        CompiledArgument compiledArgument = new CompiledArgument();
+        new CompiledArgument.Builder(Query.Y1);
+        CompiledArgument compiledArgument2 = new CompiledArgument();
+        new CompiledArgument.Builder(Query.a2);
+        CompiledArgument compiledArgument3 = new CompiledArgument();
+        new CompiledArgument.Builder(Query.X1);
+        CompiledArgument compiledArgument4 = new CompiledArgument();
+        new CompiledArgument.Builder(Query.Z1);
+        CompiledArgument compiledArgument5 = new CompiledArgument();
+        new CompiledArgument.Builder(Query.V1);
+        builder16.d = CollectionsKt.R(compiledArgument, compiledArgument2, compiledArgument3, compiledArgument4, compiledArgument5, new CompiledArgument());
+        builder16.e = listR10;
+        m = CollectionsKt.Q(builder16.c());
+    }
+}

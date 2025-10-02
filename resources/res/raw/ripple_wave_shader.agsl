@@ -1,0 +1,79 @@
+/*
+ * Copyright (c) 2025 Woolworths. All rights reserved.
+ */
+// ripple_wave_shader.agsl
+
+// Uniform inputs
+uniform float2 center;        // Center of the gradient/rotation (in pixels)
+uniform float angle;          // Angle to rotate the gradient (in radians)
+uniform float2 resolution;    // Screen or drawing resolution (in pixels)
+
+uniform float3 color1;        // First gradient color
+uniform float3 color2;        // Second gradient color
+uniform float3 color3;        // Third gradient color
+uniform float3 color4;        // Fourth gradient color
+
+uniform float2 uOrigin;       // Origin point of the ripple wave
+uniform float uTime;          // Elapsed time (used to animate ripples)
+uniform float uAmplitude;     // Amplitude of the ripple wave
+uniform float uFrequency;     // Frequency of the ripple wave oscillation
+uniform float uDecay;         // Exponential decay factor for ripple strength
+uniform float uSpeed;         // Speed at which ripples travel
+uniform float uMaxOffset;     // Maximum allowed displacement due to ripple
+uniform shader uLayer;        // Background layer shader to sample from
+
+half4 main(float2 fragCoord) {
+    // Normalize UV coordinates relative to center
+    float2 uv = (fragCoord - center) / resolution;
+
+    // Apply radial rotation to UV coordinates
+    float sinA = sin(angle);
+    float cosA = cos(angle);
+    float2 rotatedUV = float2(
+        uv.x * cosA - uv.y * sinA,
+        uv.x * sinA + uv.y * cosA
+    );
+
+    // Compute a looped, animated angle-based gradient value
+    float angleGradient = mod(
+        (atan(rotatedUV.y, rotatedUV.x) + 3.141592) / (2.0 * 3.141592) + angle,
+        1.0
+    );
+
+    // Gradient color interpolation between color1 → color2 → color3 → color4
+    float3 gradientColor;
+    if (angleGradient < 0.33) {
+        float t = smoothstep(0.0, 0.33, angleGradient);
+        gradientColor = mix(color1, color2, t);
+    } else if (angleGradient < 0.66) {
+        float t = smoothstep(0.33, 0.66, angleGradient);
+        gradientColor = mix(color2, color3, t);
+    } else {
+        float t = smoothstep(0.66, 1.0, angleGradient);
+        gradientColor = mix(color3, color4, t);
+    }
+
+    // Calculate ripple wave displacement
+    float distance = length(fragCoord - uOrigin);
+    float delay = distance / uSpeed;
+    float t = max(0.0, uTime - delay);
+    float rippleAmount = uAmplitude * sin(uFrequency * t) * exp(-uDecay * t);
+
+    // Calculate directional ripple offset
+    float2 n = normalize(fragCoord - uOrigin);
+    float2 newPosition = fragCoord + rippleAmount * n;
+    float2 offset = clamp(newPosition - fragCoord, -uMaxOffset, uMaxOffset);
+    float2 finalPosition = fragCoord + offset;
+
+    // Sample the background layer using the displaced position
+    half4 layerColor = uLayer.eval(finalPosition);
+
+    // Combine ripple effect with gradient color
+    float3 finalColor = mix(layerColor.rgb, gradientColor, 1.0);
+
+    // Add glow effect based on ripple amplitude
+    finalColor += 0.3 * (rippleAmount / uAmplitude) * layerColor.a;
+
+    // Return final pixel color
+    return half4(finalColor, 1.0);
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textAppearance="@style/TextAppearance.Caption"
+    android:textColor="?android:attr/textColorSecondary"
+    android:id="@+id/footer_text"
+    android:tag="layout/epoxy_item_preference_details_toggle_group_footer_0"
+    android:paddingBottom="@dimen/default_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/default_padding"
+    android:paddingEnd="@dimen/default_padding"/>

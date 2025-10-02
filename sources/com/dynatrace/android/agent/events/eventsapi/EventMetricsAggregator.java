@@ -1,0 +1,8 @@
+package com.dynatrace.android.agent.events.eventsapi;
+
+/* loaded from: classes4.dex */
+public class EventMetricsAggregator {
+
+    public static class Builder {
+    }
+}

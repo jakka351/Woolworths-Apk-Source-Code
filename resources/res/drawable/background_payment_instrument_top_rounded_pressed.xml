@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="@dimen/border_corner_radius"
+                android:topRightRadius="@dimen/border_corner_radius"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"/>
+            <solid android:color="@color/payment_instrument_border"/>
+        </shape>
+    </item>
+    <item
+        android:left="@dimen/stroke_thickness"
+        android:top="@dimen/stroke_thickness"
+        android:right="@dimen/stroke_thickness"
+        android:bottom="@dimen/stroke_thickness">
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="@dimen/border_corner_radius"
+                android:topRightRadius="@dimen/border_corner_radius"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"/>
+            <gradient
+                android:startColor="@color/payment_instrument_gradient_start_darker"
+                android:endColor="@color/payment_instrument_gradient_end_darker"
+                android:angle="270"/>
+        </shape>
+    </item>
+    <item>
+        <ripple android:color="@color/payment_instrument_gradient_start">
+            <item
+                android:id="@android:id/mask"
+                android:drawable="@color/stylecolor_selected"/>
+        </ripple>
+    </item>
+</layer-list>

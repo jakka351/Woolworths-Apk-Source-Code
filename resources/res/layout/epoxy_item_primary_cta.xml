@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/primary_cta_button"
+    android:tag="layout/epoxy_item_primary_cta_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/one_and_half_default_margin"
+    android:layout_marginHorizontal="@dimen/default_margin"/>

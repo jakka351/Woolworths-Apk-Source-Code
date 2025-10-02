@@ -1,0 +1,84 @@
+{
+  "data": {
+    "getOnboardingContentPage": {
+      "header": {
+        "__typename": "OnboardingHeader",
+        "image": {
+          "__typename": "HostedIcon",
+          "url": "https://wowprdmobileappaae.blob.core.windows.net/public-assets/onboarding/onboarding_header.png"
+        },
+        "title": "Welcome to the Woolworths app"
+      },
+      "content": {
+        "rows": [
+          {
+            "title": "$10 off your first Direct to Boot order",
+            "subtitle": "Plus enjoy free delivery on your first online order. Terms & Conditions apply.",
+            "icon": {
+              "__typename": "HostedIcon",
+              "url": "https://wowprdmobileappaae.blob.core.windows.net/public-assets/onboarding/onboarding_voucher.png"
+            }
+          },
+          {
+            "subtitle": "Save with personalised offers, half-price specials and our weekly catalogue.",
+            "icon": {
+              "__typename": "HostedIcon",
+              "url": "https://wowprdmobileappaae.blob.core.windows.net/public-assets/onboarding/onboarding_halfprice.png"
+            },
+            "title": "Never miss a special"
+          },
+          {
+            "icon": {
+              "__typename": "HostedIcon",
+              "url": "https://wowprdmobileappaae.blob.core.windows.net/public-assets/onboarding/onboarding_edrcard.png"
+            },
+            "title": "Collect points on your shops",
+            "subtitle": "Link your Everyday Rewards card to boost, scan and get rewarded."
+          }
+        ],
+        "__typename": "OnboardingVerticalContent"
+      },
+      "footer": {
+        "button1": {
+          "__typename": "Button",
+          "altText": "Sign up",
+          "style": "PRIMARY",
+          "buttonAction": {
+            "type": "APPLOCAL",
+            "id": "SIGNUP",
+            "action": "SIGNUP"
+          },
+          "label": "Sign up",
+          "enabled": true,
+          "buttonId": "SIGNUP"
+        },
+        "button2": {
+          "__typename": "Button",
+          "style": "SECONDARY",
+          "enabled": true,
+          "buttonId": "LOGIN",
+          "altText": "Log in",
+          "buttonAction": {
+            "type": "APPLOCAL",
+            "action": "LOGIN",
+            "id": "LOGIN"
+          },
+          "label": "Log in"
+        },
+        "button3": {
+          "__typename": "Button",
+          "style": "INFO",
+          "enabled": true,
+          "buttonId": "GUEST",
+          "altText": "Continue as guest",
+          "buttonAction": {
+            "type": "APPLOCAL",
+            "action": "CONTINUE_AS_GUEST",
+            "id": "CONTINUE_AS_GUEST"
+          },
+          "label": "Continue as guest"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tag="layout/epoxy_item_edit_order_warning_accept_term_checkbox_0"
+    android:background="@drawable/shape_rounded_corners"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/color_black_50"
+    android:layout_marginHorizontal="@dimen/default_margin"
+    android:paddingHorizontal="@dimen/default_padding">
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:tag="binding_1"
+        android:padding="@dimen/default_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

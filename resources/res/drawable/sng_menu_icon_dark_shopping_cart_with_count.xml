@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:gravity="center"
+        android:drawable="@drawable/sng_ic_trolley_black_24dp"/>
+    <item
+        android:id="@+id/ic_item_count"
+        android:drawable="@color/transparent"/>
+</layer-list>

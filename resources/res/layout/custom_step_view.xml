@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/sng_tool_bar_color"
+    android:padding="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/completedIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/sng_ic_check_circle_black_24dp"
+            android:importantForAccessibility="no"/>
+        <com.woolworths.scanlibrary.util.widget.CircleView
+            android:id="@+id/progressCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:color="@color/sng_progress_step_pending_stage"
+            app:size="16dp"/>
+        <TextView
+            android:textColor="@color/sng_white"
+            android:id="@+id/stageNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <TextView
+        android:textColor="@color/sng_title_bar_text_color"
+        android:ellipsize="end"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/stageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        style="@style/H6"/>
+</LinearLayout>

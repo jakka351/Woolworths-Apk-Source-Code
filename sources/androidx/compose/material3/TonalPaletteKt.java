@@ -1,0 +1,91 @@
+package androidx.compose.material3;
+
+import androidx.compose.material3.tokens.PaletteTokens;
+import androidx.compose.ui.graphics.Color;
+import kotlin.Metadata;
+
+@Metadata(d1 = {"\u0000\u0002\n\u0000¨\u0006\u0000"}, d2 = {"material3_release"}, k = 2, mv = {1, 8, 0}, xi = 48)
+/* loaded from: classes2.dex */
+public final class TonalPaletteKt {
+    static {
+        int i = PaletteTokens.I;
+        int i2 = PaletteTokens.I;
+        int i3 = PaletteTokens.I;
+        int i4 = PaletteTokens.I;
+        int i5 = PaletteTokens.I;
+        int i6 = PaletteTokens.I;
+        int i7 = PaletteTokens.I;
+        int i8 = PaletteTokens.I;
+        int i9 = PaletteTokens.I;
+        int i10 = PaletteTokens.I;
+        int i11 = PaletteTokens.I;
+        int i12 = PaletteTokens.I;
+        int i13 = PaletteTokens.I;
+        int i14 = PaletteTokens.I;
+        int i15 = PaletteTokens.I;
+        int i16 = PaletteTokens.I;
+        int i17 = PaletteTokens.I;
+        int i18 = PaletteTokens.I;
+        int i19 = PaletteTokens.I;
+        int i20 = PaletteTokens.I;
+        int i21 = PaletteTokens.I;
+        int i22 = PaletteTokens.I;
+        int i23 = PaletteTokens.I;
+        int i24 = PaletteTokens.I;
+        int i25 = PaletteTokens.I;
+        int i26 = PaletteTokens.I;
+        int i27 = PaletteTokens.I;
+        int i28 = PaletteTokens.I;
+        int i29 = PaletteTokens.I;
+        int i30 = PaletteTokens.I;
+        int i31 = PaletteTokens.I;
+        int i32 = PaletteTokens.I;
+        int i33 = PaletteTokens.I;
+        int i34 = PaletteTokens.I;
+        int i35 = PaletteTokens.I;
+        int i36 = PaletteTokens.I;
+        int i37 = PaletteTokens.I;
+        int i38 = PaletteTokens.I;
+        int i39 = PaletteTokens.I;
+        int i40 = PaletteTokens.I;
+        int i41 = PaletteTokens.I;
+        int i42 = PaletteTokens.I;
+        int i43 = PaletteTokens.I;
+        int i44 = PaletteTokens.I;
+        int i45 = PaletteTokens.I;
+        int i46 = PaletteTokens.I;
+        int i47 = PaletteTokens.I;
+        int i48 = PaletteTokens.I;
+        int i49 = PaletteTokens.I;
+        int i50 = PaletteTokens.I;
+        int i51 = PaletteTokens.I;
+        int i52 = PaletteTokens.I;
+        int i53 = PaletteTokens.I;
+        int i54 = PaletteTokens.I;
+        int i55 = PaletteTokens.I;
+        int i56 = PaletteTokens.I;
+        int i57 = PaletteTokens.I;
+        int i58 = PaletteTokens.I;
+        int i59 = PaletteTokens.I;
+        int i60 = PaletteTokens.I;
+        int i61 = PaletteTokens.I;
+        int i62 = PaletteTokens.I;
+        int i63 = PaletteTokens.I;
+        int i64 = PaletteTokens.I;
+        int i65 = PaletteTokens.I;
+        int i66 = PaletteTokens.I;
+        int i67 = PaletteTokens.I;
+        int i68 = PaletteTokens.I;
+        int i69 = PaletteTokens.I;
+        int i70 = PaletteTokens.I;
+        int i71 = PaletteTokens.I;
+        int i72 = PaletteTokens.I;
+        int i73 = PaletteTokens.I;
+        int i74 = PaletteTokens.I;
+        int i75 = PaletteTokens.I;
+        int i76 = PaletteTokens.I;
+        int i77 = PaletteTokens.I;
+        int i78 = Color.l;
+        int i79 = Color.l;
+    }
+}

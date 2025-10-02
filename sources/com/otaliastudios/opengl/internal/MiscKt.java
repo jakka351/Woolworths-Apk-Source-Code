@@ -1,0 +1,13 @@
+package com.otaliastudios.opengl.internal;
+
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+@Metadata(d1 = {"\u0000\u0002\n\u0000¨\u0006\u0000"}, d2 = {"library_release"}, k = 2, mv = {1, 5, 1}, xi = 48)
+/* loaded from: classes6.dex */
+public final class MiscKt {
+    public static final float[] a(float[] matrix) {
+        Intrinsics.h(matrix, "matrix");
+        return (float[]) matrix.clone();
+    }
+}

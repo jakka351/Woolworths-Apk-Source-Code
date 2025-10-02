@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buttons_container"
+    android:tag="layout/include_product_details_bottom_buttons_layout_0"
+    android:background="@color/white"
+    android:paddingTop="@dimen/three_quarter_default_padding"
+    android:paddingBottom="@dimen/three_quarter_default_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/default_padding"
+    android:paddingEnd="@dimen/default_padding"
+    android:elevation="10dp"/>

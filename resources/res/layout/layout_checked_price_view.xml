@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<au.com.woolworths.views.CheckableConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/layout_checked_price_view_0"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <CheckedTextView
+        android:textAppearance="@style/TextAppearance.Overline.Fresh.Medium"
+        android:textColor="@color/themeable_content_color_selector"
+        android:id="@+id/currency_text_view"
+        android:tag="binding_1"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.5dp"
+        android:text="@string/product_currency_string"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <CheckedTextView
+        android:textAppearance="@style/TextAppearance.H6.Fresh.Bold"
+        android:textColor="@color/themeable_content_color_selector"
+        android:id="@+id/dollar_unit_text_view"
+        android:tag="binding_2"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        app:layout_constraintStart_toEndOf="@+id/currency_text_view"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <CheckedTextView
+        android:textAppearance="@style/TextAppearance.Overline.Fresh.Medium"
+        android:textColor="@color/themeable_content_color_selector"
+        android:id="@+id/cent_unit_text_view"
+        android:tag="binding_3"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.5dp"
+        app:layout_constraintStart_toEndOf="@+id/dollar_unit_text_view"
+        app:layout_constraintTop_toTopOf="parent"/>
+</au.com.woolworths.views.CheckableConstraintLayout>

@@ -1,0 +1,54 @@
+package au.com.woolworths.shop.lists.ui.shoppinglist.main;
+
+import android.view.View;
+import au.com.woolworths.product.models.ProductCard;
+import au.com.woolworths.shop.lists.ui.shoppinglist.models.ProductItemUiModel;
+import au.com.woolworths.shop.lists.ui.shoppinglist.models.ShoppingListItemUiModel;
+import au.com.woolworths.shop.lists.ui.shoppinglist.models.TextItemUiModel;
+import kotlin.Metadata;
+
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\bf\u0018\u00002\u00020\u0001ø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\u0002À\u0006\u0001"}, d2 = {"Lau/com/woolworths/shop/lists/ui/shoppinglist/main/ShoppingListItemListener;", "", "shop-lists_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes4.dex */
+public interface ShoppingListItemListener {
+    void B(ProductItemUiModel productItemUiModel);
+
+    void C(View view, ProductItemUiModel productItemUiModel);
+
+    void F(ProductItemUiModel productItemUiModel);
+
+    void H();
+
+    void J();
+
+    void K();
+
+    void L();
+
+    void M(ProductCard productCard);
+
+    void a(ProductItemUiModel productItemUiModel);
+
+    void b(TextItemUiModel textItemUiModel, String str);
+
+    void c(ProductItemUiModel productItemUiModel);
+
+    void d(ShoppingListItemUiModel shoppingListItemUiModel, boolean z);
+
+    void e(ProductCard productCard);
+
+    void f();
+
+    void k(TextItemUiModel textItemUiModel, boolean z);
+
+    void l(String str);
+
+    void n(TextItemUiModel textItemUiModel);
+
+    void o();
+
+    void u(String str);
+
+    void v(ProductItemUiModel productItemUiModel);
+
+    void y();
+}

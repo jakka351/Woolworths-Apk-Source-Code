@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/sng_spacing_small">
+    <com.woolworths.scanlibrary.util.widget.SquareImageView
+        android:id="@+id/productImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/sng_ic_product"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/sng_content_desc_product_image"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="8dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:paddingStart="@dimen/sng_general_spacing"
+        android:paddingEnd="@dimen/sng_general_spacing"
+        android:layout_toEndOf="@+id/productImage">
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/H5"/>
+        <com.woolworths.scanlibrary.util.widget.PriceView
+            android:id="@+id/priceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:showUnit="true"
+            app:textSize="48sp"
+            app:topMargin="10dp"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,136 @@
+package com.woolworths.shop.catalogue.selections;
+
+import androidx.compose.runtime.internal.StabilityInferred;
+import au.com.woolworths.dynamic.page.ui.content.d;
+import au.com.woolworths.feature.rewards.everydayextras.signup.selections.a;
+import au.com.woolworths.shop.graphql.type.Button;
+import au.com.woolworths.shop.graphql.type.CatalogueHome;
+import au.com.woolworths.shop.graphql.type.CatalogueHomeCardSneakPeek;
+import au.com.woolworths.shop.graphql.type.CatalogueHomeCardTracking;
+import au.com.woolworths.shop.graphql.type.CatalogueHomeCardTrackingValidity;
+import au.com.woolworths.shop.graphql.type.CatalogueHomeItem;
+import au.com.woolworths.shop.graphql.type.CatalogueHomeTerm;
+import au.com.woolworths.shop.graphql.type.GraphQLID;
+import au.com.woolworths.shop.graphql.type.GraphQLString;
+import au.com.woolworths.shop.graphql.type.Query;
+import com.apollographql.apollo.api.CompiledArgument;
+import com.apollographql.apollo.api.CompiledField;
+import com.apollographql.apollo.api.CompiledFragment;
+import com.apollographql.apollo.api.CompiledGraphQL;
+import com.apollographql.apollo.api.CustomScalarType;
+import com.apollographql.apollo.api.ObjectType;
+import com.salesforce.marketingcloud.notifications.NotificationMessage;
+import com.woolworths.shop.catalogue.fragment.selections.CatalogueButtonSelections;
+import com.woolworths.shop.catalogue.fragment.selections.CatalogueHomeCardSelections;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+
+@StabilityInferred
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\bÇ\u0002\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lcom/woolworths/shop/catalogue/selections/CatalogueHomeQuerySelections;", "", "catalogue_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes7.dex */
+public final class CatalogueHomeQuerySelections {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final List f21791a;
+    public static final List b;
+    public static final List c;
+    public static final List d;
+    public static final List e;
+    public static final List f;
+    public static final List g;
+    public static final List h;
+    public static final List i;
+    public static final List j;
+    public static final List k;
+    public static final List l;
+
+    static {
+        CustomScalarType customScalarType = GraphQLString.f11443a;
+        CompiledField compiledFieldC = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder = new CompiledFragment.Builder("Button", CollectionsKt.Q("Button"));
+        List list = CatalogueButtonSelections.f21786a;
+        builder.b(list);
+        List listR = CollectionsKt.R(compiledFieldC, builder.a());
+        f21791a = listR;
+        CompiledField compiledFieldC2 = new CompiledField.Builder("storeName", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldC3 = new CompiledField.Builder("postCode", CompiledGraphQL.b(customScalarType)).c();
+        ObjectType objectType = Button.f11080a;
+        CompiledField.Builder builder2 = new CompiledField.Builder("button", CompiledGraphQL.b(objectType));
+        builder2.e = listR;
+        List listR2 = CollectionsKt.R(compiledFieldC2, compiledFieldC3, builder2.c());
+        b = listR2;
+        List listR3 = CollectionsKt.R(new CompiledField.Builder("title", CompiledGraphQL.b(customScalarType)).c(), new CompiledField.Builder(NotificationMessage.NOTIF_KEY_SUB_TITLE, CompiledGraphQL.b(customScalarType)).c(), new CompiledField.Builder("dateDisplay", CompiledGraphQL.b(customScalarType)).c());
+        c = listR3;
+        CompiledField compiledFieldC4 = new CompiledField.Builder("id", CompiledGraphQL.b(GraphQLID.f11441a)).c();
+        CompiledField compiledFieldC5 = new CompiledField.Builder("postCode", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldC6 = new CompiledField.Builder("endDate", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldC7 = new CompiledField.Builder("publishDate", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldC8 = new CompiledField.Builder("startDate", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldC9 = new CompiledField.Builder("state", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldC10 = new CompiledField.Builder("type", CompiledGraphQL.b(customScalarType)).c();
+        CatalogueHomeCardTrackingValidity.e.getClass();
+        List listR4 = CollectionsKt.R(compiledFieldC4, compiledFieldC5, compiledFieldC6, compiledFieldC7, compiledFieldC8, compiledFieldC9, compiledFieldC10, new CompiledField.Builder("validity", CompiledGraphQL.b(CatalogueHomeCardTrackingValidity.f)).c());
+        d = listR4;
+        CompiledField compiledFieldC11 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder3 = new CompiledFragment.Builder("CatalogueHomeCard", CollectionsKt.R("CatalogueHomeSpecialsCard", "CatalogueHomeCatalogueCard"));
+        List list2 = CatalogueHomeCardSelections.f21787a;
+        builder3.b(list2);
+        CompiledFragment compiledFragmentA = builder3.a();
+        CompiledField compiledFieldC12 = new CompiledField.Builder("dateDisplay", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldG = d.g("pagePath", customScalarType);
+        CompiledField.Builder builder4 = new CompiledField.Builder("sneakPeek", CatalogueHomeCardSneakPeek.f11140a);
+        builder4.e = listR3;
+        CompiledField compiledFieldC13 = builder4.c();
+        CompiledField.Builder builder5 = new CompiledField.Builder("tracking", CompiledGraphQL.b(CatalogueHomeCardTracking.f11141a));
+        builder5.e = listR4;
+        List listR5 = CollectionsKt.R(compiledFieldC11, compiledFragmentA, compiledFieldC12, compiledFieldG, compiledFieldC13, builder5.c());
+        e = listR5;
+        CompiledField compiledFieldC14 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder6 = new CompiledFragment.Builder("CatalogueHomeCard", CollectionsKt.R("CatalogueHomeSpecialsCard", "CatalogueHomeCatalogueCard"));
+        builder6.d = list2;
+        List listR6 = CollectionsKt.R(compiledFieldC14, builder6.a());
+        f = listR6;
+        CompiledField compiledFieldC15 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder7 = new CompiledFragment.Builder("Button", CollectionsKt.Q("Button"));
+        builder7.d = list;
+        List listR7 = CollectionsKt.R(compiledFieldC15, builder7.a());
+        g = listR7;
+        List listR8 = CollectionsKt.R(new CompiledField.Builder("title", CompiledGraphQL.b(customScalarType)).c(), new CompiledField.Builder("body", CompiledGraphQL.b(customScalarType)).c());
+        h = listR8;
+        CompiledField.Builder builder8 = new CompiledField.Builder("button", CompiledGraphQL.b(objectType));
+        builder8.e = listR7;
+        CompiledField compiledFieldC16 = builder8.c();
+        CompiledField.Builder builder9 = new CompiledField.Builder("terms", a.f(CatalogueHomeTerm.f11147a));
+        builder9.e = listR8;
+        List listR9 = CollectionsKt.R(compiledFieldC16, builder9.c());
+        i = listR9;
+        CompiledField compiledFieldC17 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder10 = new CompiledFragment.Builder("CatalogueHomeChangeStore", CollectionsKt.Q("CatalogueHomeChangeStore"));
+        builder10.d = listR2;
+        CompiledFragment compiledFragmentA2 = builder10.a();
+        CompiledFragment.Builder builder11 = new CompiledFragment.Builder("CatalogueHomeCatalogueCard", CollectionsKt.Q("CatalogueHomeCatalogueCard"));
+        builder11.d = listR5;
+        CompiledFragment compiledFragmentA3 = builder11.a();
+        CompiledFragment.Builder builder12 = new CompiledFragment.Builder("CatalogueHomeSpecialsCard", CollectionsKt.Q("CatalogueHomeSpecialsCard"));
+        builder12.d = listR6;
+        CompiledFragment compiledFragmentA4 = builder12.a();
+        CompiledFragment.Builder builder13 = new CompiledFragment.Builder("CatalogueHomeTermsAndConditions", CollectionsKt.Q("CatalogueHomeTermsAndConditions"));
+        builder13.d = listR9;
+        List listR10 = CollectionsKt.R(compiledFieldC17, compiledFragmentA2, compiledFragmentA3, compiledFragmentA4, builder13.a());
+        j = listR10;
+        CompiledField.Builder builder14 = new CompiledField.Builder("items", CompiledGraphQL.b(CompiledGraphQL.a(CatalogueHomeItem.f11144a)));
+        builder14.e = listR10;
+        List listQ = CollectionsKt.Q(builder14.c());
+        k = listQ;
+        CompiledField.Builder builder15 = new CompiledField.Builder("catalogueHome", CatalogueHome.f11138a);
+        new CompiledArgument.Builder(Query.K1);
+        CompiledArgument compiledArgument = new CompiledArgument();
+        new CompiledArgument.Builder(Query.J1);
+        CompiledArgument compiledArgument2 = new CompiledArgument();
+        new CompiledArgument.Builder(Query.I1);
+        builder15.d = CollectionsKt.R(compiledArgument, compiledArgument2, new CompiledArgument());
+        builder15.e = listQ;
+        l = CollectionsKt.Q(builder15.c());
+    }
+}

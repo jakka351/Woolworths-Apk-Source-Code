@@ -1,0 +1,14 @@
+package androidx.compose.ui.platform;
+
+import androidx.annotation.RequiresApi;
+import androidx.compose.ui.graphics.RenderEffect;
+import kotlin.Metadata;
+
+@RequiresApi
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\bÃ\u0002\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Landroidx/compose/ui/platform/ViewLayerVerificationHelper31;", "", "ui_release"}, k = 1, mv = {1, 9, 0}, xi = 48)
+/* loaded from: classes2.dex */
+final class ViewLayerVerificationHelper31 {
+    public static void a(ViewLayer viewLayer, RenderEffect renderEffect) {
+        viewLayer.setRenderEffect(renderEffect != null ? renderEffect.a() : null);
+    }
+}

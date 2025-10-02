@@ -1,0 +1,248 @@
+package au.com.woolworths.android.onesite.analytics;
+
+import au.com.woolworths.android.onesite.models.notification.NotificationResult;
+import com.google.android.gms.actions.SearchIntents;
+import com.salesforce.marketingcloud.UrlHandler;
+import kotlin.Metadata;
+import kotlin.enums.EnumEntries;
+import kotlin.enums.EnumEntriesKt;
+
+/* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
+/* JADX WARN: Unknown enum class pattern. Please report as an issue! */
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\b\u0086\u0081\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001¨\u0006\u0002"}, d2 = {"Lau/com/woolworths/android/onesite/analytics/Category;", "", "base_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes.dex */
+public final class Category {
+    public static final Category A;
+    public static final Category B;
+    public static final Category C;
+    public static final Category D;
+    public static final Category E;
+    public static final Category F;
+    public static final Category G;
+    public static final Category H;
+    public static final Category I;
+    public static final Category J;
+    public static final Category K;
+    public static final Category L;
+    public static final Category M;
+    public static final Category N;
+    public static final Category O;
+    public static final Category P;
+    public static final Category Q;
+    public static final Category R;
+    public static final Category S;
+    public static final Category T;
+    public static final Category U;
+    public static final Category V;
+    public static final Category W;
+    public static final Category X;
+    public static final Category Y;
+    public static final Category Z;
+    public static final Category a0;
+    public static final Category b0;
+    public static final Category c0;
+    public static final Category d0;
+    public static final Category e0;
+    public static final Category f0;
+    public static final Category g;
+    public static final Category g0;
+    public static final Category h;
+    public static final Category h0;
+    public static final Category i;
+    public static final Category i0;
+    public static final Category j;
+    public static final Category j0;
+    public static final Category k;
+    public static final Category k0;
+    public static final Category l;
+    public static final Category l0;
+    public static final Category m;
+    public static final Category m0;
+    public static final Category n;
+    public static final Category n0;
+    public static final Category o;
+    public static final /* synthetic */ Category[] o0;
+    public static final Category p;
+    public static final /* synthetic */ EnumEntries p0;
+    public static final Category q;
+    public static final Category r;
+    public static final Category s;
+    public static final Category t;
+    public static final Category u;
+    public static final Category v;
+    public static final Category w;
+    public static final Category x;
+    public static final Category y;
+    public static final Category z;
+    public final String d;
+    public final String e;
+    public final String f;
+
+    static {
+        Category category = new Category("ACCORDION_CLOSE_CLICK", 0, "accordion", "close", "accordion_close");
+        Category category2 = new Category("ACCORDION_OPEN_CLICK", 1, "accordion", "open", "accordion_open");
+        Category category3 = new Category("ADOBE_AD_CLICK", 2, "ad", "click", "acs_content_click");
+        Category category4 = new Category("ADOBE_AD_IMPRESSION", 3, "ad", "impression", "acs_content_impression");
+        Category category5 = new Category("BANNER_CLICK", 4, "banner", "click", "banner_click");
+        g = category5;
+        Category category6 = new Category("BANNER_IMPRESSION", 5, "banner", "impression", "banner_impression");
+        h = category6;
+        Category category7 = new Category("BARCODE_SCAN", 6, "barcode", "scan");
+        i = category7;
+        String str = "bottom-bar";
+        String str2 = "click";
+        Category category8 = new Category("BOTTOM_BAR_CLICK", 7, str, str2);
+        Category category9 = new Category("BOTTOM_BAR_SWIPE_DOWN", 8, str, "swipedown");
+        Category category10 = new Category("BOTTOM_BAR_SWIPE_UP", 9, str, "swipeup");
+        Category category11 = new Category("BOTTOM_SHEET_CLICK", 10, "bottomsheet", "click", "bottomsheet_click");
+        j = category11;
+        Category category12 = new Category("BOTTOM_SHEET_IMPRESSION", 11, "bottomsheet", "impression", "bottomsheet_impression");
+        k = category12;
+        Category category13 = new Category("BOTTOM_SHEET_SWIPE", 12, "bottomsheet", "swipe", "bottomsheet_swipe");
+        l = category13;
+        Category category14 = new Category("BRANCH_CLICK", 13, "branch", "click", "branch_click");
+        Category category15 = new Category("BUTTON_CLICK", 14, "button", "click", "button_click");
+        m = category15;
+        Category category16 = new Category("CAROUSEL_IMPRESSION", 15, "carousel", "impression", "carousel_impression");
+        Category category17 = new Category("CAROUSEL_SWIPE", 16, "carousel", "swipe", "carousel_swipe");
+        n = category17;
+        Category category18 = new Category("CHEAPER_SUBSTITUTION_BANNER_CLOSED", 17, "Checkout Substitutions", "button_click", "cheaper_substitutions_banner_closed");
+        o = category18;
+        Category category19 = new Category("CHECKBOX_CHECK", 18, "checkbox", "check", "checkbox_check");
+        p = category19;
+        Category category20 = new Category("CHECKBOX_UNCHECK", 19, "checkbox", "uncheck", "checkbox_uncheck");
+        q = category20;
+        Category category21 = new Category("COACHMARK_CLICK", 20, "coachmark", "click", "coachmark_click");
+        Category category22 = new Category("COACHMARK_IMPRESSION", 21, "coachmark", "impression", "coachmark_impression");
+        r = category22;
+        Category category23 = new Category("DEEPLINK_CLICK", 22, "deeplink", "click", "deeplink_click");
+        s = category23;
+        Category category24 = new Category("DEEPLINK_RESOLUTION_FAIL", 23, "deeplink", "resolution", "deeplink_resolution_fail");
+        Category category25 = new Category("DEEPLINK_RESOLUTION_SUCCESS", 24, "deeplink", "resolution", "deeplink_resolution_success");
+        Category category26 = new Category("DEEPLINK_VISIT", 25, "deeplink", "visit", "deeplink_visit");
+        t = category26;
+        Category category27 = new Category("DIALOG_IMPRESSION", 26, "dialog", "impression", "dialog_impression");
+        u = category27;
+        Category category28 = new Category("DROPDOWN_SELECT", 27, "dropdown", "select");
+        Category category29 = new Category("ERROR_IMPRESSION", 28, "error", "impression", "error_impression");
+        v = category29;
+        Category category30 = new Category("FREETEXT_CLICK", 29, "freetext", "click", "freetext_click");
+        w = category30;
+        Category category31 = new Category("FREETEXT_SWIPE", 30, "freetext", "swipe", "freetext_swipe");
+        x = category31;
+        Category category32 = new Category("GOOGLE_AD_CLICK", 31, "banner", "click", "acs_ad_click");
+        y = category32;
+        Category category33 = new Category("GOOGLE_AD_IMPRESSION", 32, "banner", "impression", "acs_ad_impression");
+        z = category33;
+        Category category34 = new Category("IMAGE_CLICK", 33, "image", "click", "image_click");
+        Category category35 = new Category("INFO_CLICK", 34, "info", "click", "info_click");
+        A = category35;
+        Category category36 = new Category("INFO_IMPRESSION", 35, "info", "impression", "info_impression");
+        B = category36;
+        Category category37 = new Category("INPUT_FIELD_CLICK", 36, "input", "click", "input_click");
+        C = category37;
+        Category category38 = new Category("LINK_CLICK", 37, "link", "click", "link_click");
+        D = category38;
+        Category category39 = new Category("LOCATION_TRACKING_OFF", 38, "location", "off", "location_off");
+        E = category39;
+        Category category40 = new Category("LOCATION_TRACKING_ON", 39, "location", "on", "location_on");
+        F = category40;
+        Category category41 = new Category("NOTIFICATION_CLICK", 40, "notification", "click", "notification_click");
+        G = category41;
+        Category category42 = new Category("NOTIFICATION_IMPRESSION", 41, "notification", "impression", "notification_impression");
+        H = category42;
+        Category category43 = new Category("OFFER_ACTIVATION_FAIL", 42, "offer", "activation", "offer_activation_fail");
+        I = category43;
+        Category category44 = new Category("OFFER_ACTIVATION_SUCCESS", 43, "offer", "activation", "offer_activation_success");
+        J = category44;
+        Category category45 = new Category("OFFER_DETAILS_CTA_CLICK", 44, "offer page", "button_click", "offer_shop_click");
+        K = category45;
+        Category category46 = new Category("OFFER_IMPRESSION", 45, "offer", "impression", "offer_impression");
+        L = category46;
+        Category category47 = new Category("OFFER_TILE_CTA_CLICK", 46, "offer tile", "button_click", "offer_shop_click");
+        M = category47;
+        Category category48 = new Category("ORDER_EDIT_DRIVER_INSTRUCTION_FAIL", 47, "order", "edit_driver_instruction", "cmo_edit_driver_instructions_fail");
+        N = category48;
+        Category category49 = new Category("ORDER_EDIT_DRIVER_INSTRUCTION_SUCCESS", 48, "order", "edit_driver_instruction", "cmo_edit_driver_instructions_success");
+        O = category49;
+        Category category50 = new Category("ORDER_LEAVE_UNATTENDED_FAIL", 49, "order", "toggle_leave_unattended", "cmo_togle_leave_unattended_fail");
+        P = category50;
+        Category category51 = new Category("ORDER_LEAVE_UNATTENDED_SUCCESS", 50, "order", "toggle_leave_unattended", "cmo_togle_leave_unattended_success");
+        Q = category51;
+        Category category52 = new Category("PERK_CARD_IMPRESSION", 51, "perk", "impression", "perk_impression");
+        Category category53 = new Category("PERSONALISED_OFFERS_BANNER_CLICK", 52, "offer personalisation", "banner_click", "offer_personalisation_click");
+        R = category53;
+        Category category54 = new Category("PICKER_CHANGE", 53, "picker", "change");
+        Category category55 = new Category("PRODUCT_CLICK", 54, "product", "click", "product_click");
+        S = category55;
+        Category category56 = new Category("PRODUCT_IMPRESSION", 55, "product", "impression", "product_impression");
+        Category category57 = new Category("PRODUCT_SWIPE", 56, "product", "swipe", "product_swipe");
+        T = category57;
+        Category category58 = new Category("PROOF_OF_DELIVERY_BANNER_IMPRESSION", 57, "Proof of delivery", "banner_impression", "order_proof_of_delivery_banner_impression");
+        U = category58;
+        Category category59 = new Category("PROOF_OF_DELIVERY_CLOSE_IMAGE", 58, "Proof of delivery", "button_click", "order_proof_of_delivery_close_image");
+        V = category59;
+        Category category60 = new Category("PROOF_OF_DELIVERY_EXPAND_IMAGE", 59, "Proof of delivery", "image_click", "order_proof_of_delivery_expand_image");
+        W = category60;
+        Category category61 = new Category("PROOF_OF_DELIVERY_IMPRESSION", 60, "Proof of delivery", "image_impression", "order_proof_of_delivery_impression");
+        X = category61;
+        Category category62 = new Category("QUICK_ACTION", 61, "quick-action", str2);
+        Y = category62;
+        Category category63 = new Category("QUICK_LINK_CLICK", 62, "quick_link", "link_click", "quick_link_click");
+        Z = category63;
+        Category category64 = new Category("REDEMPTION_SETTINGS_UPDATE", 63, "button", "click", "redemption_settings_update");
+        Category category65 = new Category("REFRESH_SWIPE", 64, "refresh", "swipe", "refresh_swipe");
+        a0 = category65;
+        Category category66 = new Category("REGISTRATION_CARD", 65, "button", "click", "tap item on homepage registration card item");
+        b0 = category66;
+        Category category67 = new Category("RESPONSE_ERROR", 66, "response", "error", "response_error");
+        c0 = category67;
+        Category category68 = new Category("RESPONSE_SUCCESS", 67, "response", "success", "response_success");
+        Category category69 = new Category("SEARCH_CLICK", 68, "search", "click", "search_click");
+        Category category70 = new Category("SEARCH_QUERY", 69, "search", SearchIntents.EXTRA_QUERY, "search_query");
+        d0 = category70;
+        Category category71 = new Category("SHARE_CLICK", 70, "share_button", "click", "share_button_click");
+        e0 = category71;
+        Category category72 = new Category("SNACKBAR_CLICK", 71, "snackbar", "click", "snackbar_click");
+        f0 = category72;
+        Category category73 = new Category("SNACKBAR_IMPRESSION", 72, "snackbar", "impression", "snackbar_impression");
+        g0 = category73;
+        Category category74 = new Category("SWITCH_OFF", 73, "switch", "off", "switch_off");
+        h0 = category74;
+        Category category75 = new Category("SWITCH_ON", 74, "switch", "on", "switch_on");
+        i0 = category75;
+        Category category76 = new Category("VOC_IMPRESSION", 75, "voc survey", "impression", "impression");
+        j0 = category76;
+        Category category77 = new Category("VOICE_PRODUCT_FINDER_CLICK", 76, "voice product finder", "button_click", "voiceproductfinder_buttonclick");
+        k0 = category77;
+        Category category78 = new Category("VOICE_PRODUCT_FINDER_SEARCH_IMPRESSION", 77, "voice product finder", "impression", "impression");
+        Category category79 = new Category("WARNING_CLICK", 78, NotificationResult.Notification.WARNING, str2);
+        Category category80 = new Category("WARNING_IMPRESSION", 79, NotificationResult.Notification.WARNING, "impression", "warning_impression");
+        l0 = category80;
+        Category category81 = new Category("WATCHLIST_SAVE_CLICK", 80, "watchlist", "button_click", "watchlist_buttonclick");
+        m0 = category81;
+        Category category82 = new Category("WATCHLIST_SAVE_SNACKBAR_IMPRESSION", 81, "watchlist", "snackbar_impression", "watchlist_snackbarimpression");
+        n0 = category82;
+        Category[] categoryArr = {category, category2, category3, category4, category5, category6, category7, category8, category9, category10, category11, category12, category13, category14, category15, category16, category17, category18, category19, category20, category21, category22, category23, category24, category25, category26, category27, category28, category29, category30, category31, category32, category33, category34, category35, category36, category37, category38, category39, category40, category41, category42, category43, category44, category45, category46, category47, category48, category49, category50, category51, category52, category53, category54, category55, category56, category57, category58, category59, category60, category61, category62, category63, category64, category65, category66, category67, category68, category69, category70, category71, category72, category73, category74, category75, category76, category77, category78, category79, category80, category81, category82};
+        o0 = categoryArr;
+        p0 = EnumEntriesKt.a(categoryArr);
+    }
+
+    public Category(String str, int i2, String str2, String str3, String str4) {
+        this.d = str2;
+        this.e = str3;
+        this.f = str4;
+    }
+
+    public static Category valueOf(String str) {
+        return (Category) Enum.valueOf(Category.class, str);
+    }
+
+    public static Category[] values() {
+        return (Category[]) o0.clone();
+    }
+
+    public /* synthetic */ Category(String str, int i2, String str2, String str3) {
+        this(str, i2, str2, str3, UrlHandler.ACTION);
+    }
+}

@@ -1,0 +1,13 @@
+package kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors;
+
+import java.util.LinkedHashSet;
+import kotlin.jvm.functions.Function0;
+
+/* loaded from: classes7.dex */
+class DeserializedMemberScope$NoReorderImplementation$$Lambda$8 implements Function0 {
+    @Override // kotlin.jvm.functions.Function0
+    public final Object invoke() {
+        new LinkedHashSet();
+        throw null;
+    }
+}

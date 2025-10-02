@@ -1,0 +1,114 @@
+package au.com.woolworths.analytics.rewards.orders;
+
+import au.com.woolworths.analytics.Screen;
+import java.util.Map;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.SourceDebugExtension;
+
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0004\bÆ\u0002\u0018\u00002\u00020\u0001:\u0003\u0002\u0003\u0004¨\u0006\u0005"}, d2 = {"Lau/com/woolworths/analytics/rewards/orders/ResendGiftCardAnalytics;", "", "ResendGiftCard", "ResendGiftCardSuccess", "ResendGiftCardFailed", "specs-rewards"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes2.dex */
+public final class ResendGiftCardAnalytics {
+
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001:\u0001\u0002¨\u0006\u0003"}, d2 = {"Lau/com/woolworths/analytics/rewards/orders/ResendGiftCardAnalytics$ResendGiftCard;", "Lau/com/woolworths/analytics/Screen;", "Action", "specs-rewards"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @SourceDebugExtension
+    public static final class ResendGiftCard implements Screen {
+
+        @Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lau/com/woolworths/analytics/rewards/orders/ResendGiftCardAnalytics$ResendGiftCard$Action;", "", "specs-rewards"}, k = 1, mv = {2, 1, 0}, xi = 48)
+        public static final class Action {
+        }
+
+        @Override // au.com.woolworths.analytics.Event
+        /* renamed from: d */
+        public final String getE() {
+            return null;
+        }
+
+        public final boolean equals(Object obj) {
+            if (!(obj instanceof Screen)) {
+                return false;
+            }
+            Screen screen = (Screen) obj;
+            return Intrinsics.c(null, screen.getD()) && Intrinsics.c(null, screen.getE()) && Intrinsics.c(null, screen.getData());
+        }
+
+        @Override // au.com.woolworths.analytics.Event
+        public final Map getData() {
+            return null;
+        }
+
+        @Override // au.com.woolworths.analytics.Screen
+        /* renamed from: getName */
+        public final String getD() {
+            return null;
+        }
+
+        public final int hashCode() {
+            throw null;
+        }
+    }
+
+    @Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lau/com/woolworths/analytics/rewards/orders/ResendGiftCardAnalytics$ResendGiftCardFailed;", "Lau/com/woolworths/analytics/Screen;", "specs-rewards"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    public static final class ResendGiftCardFailed implements Screen {
+        @Override // au.com.woolworths.analytics.Event
+        /* renamed from: d */
+        public final String getE() {
+            return null;
+        }
+
+        public final boolean equals(Object obj) {
+            if (!(obj instanceof Screen)) {
+                return false;
+            }
+            Screen screen = (Screen) obj;
+            return Intrinsics.c(null, screen.getD()) && Intrinsics.c(null, screen.getE()) && Intrinsics.c(null, screen.getData());
+        }
+
+        @Override // au.com.woolworths.analytics.Event
+        public final Map getData() {
+            return null;
+        }
+
+        @Override // au.com.woolworths.analytics.Screen
+        /* renamed from: getName */
+        public final String getD() {
+            return null;
+        }
+
+        public final int hashCode() {
+            throw null;
+        }
+    }
+
+    @Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lau/com/woolworths/analytics/rewards/orders/ResendGiftCardAnalytics$ResendGiftCardSuccess;", "Lau/com/woolworths/analytics/Screen;", "specs-rewards"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    public static final class ResendGiftCardSuccess implements Screen {
+        @Override // au.com.woolworths.analytics.Event
+        /* renamed from: d */
+        public final String getE() {
+            return null;
+        }
+
+        public final boolean equals(Object obj) {
+            if (!(obj instanceof Screen)) {
+                return false;
+            }
+            Screen screen = (Screen) obj;
+            return Intrinsics.c(null, screen.getD()) && Intrinsics.c(null, screen.getE()) && Intrinsics.c(null, screen.getData());
+        }
+
+        @Override // au.com.woolworths.analytics.Event
+        public final Map getData() {
+            return null;
+        }
+
+        @Override // au.com.woolworths.analytics.Screen
+        /* renamed from: getName */
+        public final String getD() {
+            return null;
+        }
+
+        public final int hashCode() {
+            throw null;
+        }
+    }
+}

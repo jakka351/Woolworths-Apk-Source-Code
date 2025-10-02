@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<au.com.woolworths.views.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enabled="true"
+    android:tag="layout/epoxy_item_collection_mode_variant_footnote_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:checked="false">
+    <CheckedTextView
+        android:textAppearance="@style/TextAppearance.Caption"
+        android:textColor="@color/themeable_content_color_selector"
+        android:id="@+id/variant_footnote_text_view"
+        android:tag="binding_1"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/three_quarter_default_margin"/>
+</au.com.woolworths.views.CheckableLinearLayout>

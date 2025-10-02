@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/product_review_navigation"
+    app:startDestination="@+id/productReviewFragment">
+    <fragment
+        android:name="au.com.woolworths.shop.cart.ui.productreview.ProductReviewFragment"
+        android:id="@+id/productReviewFragment">
+        <argument
+            android:name="source"
+            app:argType="au.com.woolworths.android.onesite.navigation.Activities$ProductsReviewActivity$Source"/>
+        <action
+            android:id="@+id/action_productReviewFragment_to_Alternative"
+            app:destination="@+id/productReviewAlternativeFragment"/>
+    </fragment>
+    <fragment
+        android:name="au.com.woolworths.shop.cart.ui.productalternative.ProductReviewAlternativeFragment"
+        android:id="@+id/productReviewAlternativeFragment">
+        <argument
+            android:name="productId"
+            app:argType="string"/>
+    </fragment>
+</navigation>

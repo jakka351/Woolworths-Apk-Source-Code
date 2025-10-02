@@ -1,0 +1,26 @@
+package au.com.woolworths.feature.shop.instore.cart;
+
+import au.com.woolworths.base.shopapp.navigation.ShopAppNavigator;
+import au.com.woolworths.product.models.ProductCard;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.FunctionReferenceImpl;
+import kotlin.jvm.internal.Intrinsics;
+
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes3.dex */
+final /* synthetic */ class InstoreCartActivity$onCreate$1$1$2$1 extends FunctionReferenceImpl implements Function1<ProductCard, Unit> {
+    @Override // kotlin.jvm.functions.Function1
+    public final Object invoke(Object obj) {
+        ProductCard p0 = (ProductCard) obj;
+        Intrinsics.h(p0, "p0");
+        ShopAppNavigator shopAppNavigator = ((InstoreCartActivity) this.receiver).x;
+        if (shopAppNavigator != null) {
+            shopAppNavigator.c(p0);
+            return Unit.f24250a;
+        }
+        Intrinsics.p("shopAppNavigator");
+        throw null;
+    }
+}

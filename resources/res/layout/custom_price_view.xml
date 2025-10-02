@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemPriceView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/labelDollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sng_dollar_sign"
+        android:layout_alignParentStart="true"
+        style="@style/DefaultTextViewStyle"/>
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/txtItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="1dp"
+        android:layout_toEndOf="@+id/labelDollar"
+        style="@style/DefaultTextViewStyle"/>
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/txtItemPriceCents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/txtItemPrice"
+        style="@style/DefaultTextViewStyle"/>
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/txtItemPriceCents"
+        style="@style/DefaultTextViewStyle"/>
+</RelativeLayout>

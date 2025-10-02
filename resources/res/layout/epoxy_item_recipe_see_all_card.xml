@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/epoxy_item_recipe_see_all_card_0"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/recipe_slider_see_all_content_description">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/recipe_card_fixed_width"
+        android:layout_height="@dimen/recipe_card_fixed_height">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:rotation="90"
+            android:backgroundTint="@color/white"
+            app:borderWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maxImageSize="56dp"
+            app:srcCompat="@drawable/ic_chevron_point_up"
+            app:tint="?attr/colorPrimary"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

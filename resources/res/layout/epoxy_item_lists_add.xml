@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/epoxy_item_lists_add_0"
+    android:background="?attr/selectableItemBackground"
+    android:paddingTop="@dimen/three_quarter_default_padding"
+    android:paddingBottom="@dimen/three_quarter_default_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/list_icon_image"
+        android:background="@drawable/ic_shop_lists_icon_bg"
+        android:layout_width="@dimen/shop_lists_icon_size"
+        android:layout_height="@dimen/shop_lists_icon_size"
+        android:scaleType="center"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="@dimen/three_quarter_default_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_shop_lists_add"/>
+    <TextView
+        android:textAppearance="@style/TextAppearance.Subtitle2"
+        android:id="@+id/text_view_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/shop_lists_add_list"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/list_icon_image"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

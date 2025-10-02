@@ -1,0 +1,38 @@
+package com.woolworths.shop.cart.selections;
+
+import androidx.compose.runtime.internal.StabilityInferred;
+import au.com.woolworths.android.onesite.a;
+import au.com.woolworths.graphql.common.fragment.selections.ProductReviewResponseSelections;
+import au.com.woolworths.shop.graphql.type.GraphQLString;
+import au.com.woolworths.shop.graphql.type.ProductReviewResponse;
+import au.com.woolworths.shop.graphql.type.Query;
+import com.apollographql.apollo.api.CompiledArgument;
+import com.apollographql.apollo.api.CompiledField;
+import com.apollographql.apollo.api.CompiledFragment;
+import com.apollographql.apollo.api.CompiledGraphQL;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+
+@StabilityInferred
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\bÇ\u0002\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lcom/woolworths/shop/cart/selections/ProductReviewQuerySelections;", "", "shop-cart_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes7.dex */
+public final class ProductReviewQuerySelections {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final List f21640a;
+    public static final List b;
+
+    static {
+        CompiledField compiledFieldC = new CompiledField.Builder("__typename", CompiledGraphQL.b(GraphQLString.f11443a)).c();
+        CompiledFragment.Builder builder = new CompiledFragment.Builder("ProductReviewResponse", CollectionsKt.Q("ProductReviewResponse"));
+        builder.b(ProductReviewResponseSelections.k);
+        List listR = CollectionsKt.R(compiledFieldC, builder.a());
+        f21640a = listR;
+        CompiledField.Builder builder2 = new CompiledField.Builder("productReview", CompiledGraphQL.b(ProductReviewResponse.f11779a));
+        new CompiledArgument.Builder(Query.T0);
+        builder2.d = a.v();
+        builder2.e = listR;
+        b = CollectionsKt.Q(builder2.c());
+    }
+}

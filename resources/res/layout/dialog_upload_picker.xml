@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/dialog_upload_picker_0"
+    android:paddingTop="@dimen/default_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/default_margin"
+    android:paddingEnd="@dimen/default_margin">
+    <Button
+        android:id="@+id/btn_files"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/picker_button_files"
+        app:icon="@drawable/ic_outline_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?attr/materialButtonOutlinedStyle"/>
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/half_default_margin"
+        android:text="@string/picker_button_photo"
+        app:icon="@drawable/ic_outline_camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_files"
+        style="?attr/materialButtonOutlinedStyle"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

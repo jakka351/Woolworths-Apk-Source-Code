@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="confetti_buy_more_save_more">
+        <item>#178841</item>
+        <item>#FFDA00</item>
+    </array>
+    <array name="confetti_colors">
+        <item>#D44500</item>
+        <item>#FFDA00</item>
+        <item>#00AB4E</item>
+        <item>#125430</item>
+        <item>#E6007E</item>
+        <item>#ED1D24</item>
+    </array>
+    <array name="confetti_member_price">
+        <item>#FD6400</item>
+        <item>#FFCC5C</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>Normal</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </array>
+    <array name="funds_confetti_colors">
+        <item>#FFAD8B</item>
+        <item>#38454F</item>
+        <item>#FF5200</item>
+        <item>#38454F</item>
+        <item>#CFE2D8</item>
+        <item>#92FF5200</item>
+    </array>
+    <array name="md_ambient_shadow_drawables_z18">
+        <item>@null</item>
+        <item>@drawable/md_ambient_shadow_z1_x2</item>
+        <item>@drawable/md_ambient_shadow_z2_x2</item>
+        <item>@drawable/md_ambient_shadow_z3_x2</item>
+        <item>@drawable/md_ambient_shadow_z4_x2</item>
+        <item>@drawable/md_ambient_shadow_z5_x2</item>
+        <item>@drawable/md_ambient_shadow_z6_x2</item>
+        <item>@drawable/md_ambient_shadow_z7_x2</item>
+        <item>@drawable/md_ambient_shadow_z8_x2</item>
+        <item>@drawable/md_ambient_shadow_z9_x2</item>
+        <item>@drawable/md_ambient_shadow_z10_x2</item>
+        <item>@drawable/md_ambient_shadow_z11_x2</item>
+        <item>@drawable/md_ambient_shadow_z12_x2</item>
+        <item>@drawable/md_ambient_shadow_z13_x2</item>
+        <item>@drawable/md_ambient_shadow_z14_x2</item>
+        <item>@drawable/md_ambient_shadow_z15_x2</item>
+        <item>@drawable/md_ambient_shadow_z16_x2</item>
+        <item>@drawable/md_ambient_shadow_z17_x2</item>
+        <item>@drawable/md_ambient_shadow_z18_x2</item>
+    </array>
+    <array name="md_spot_shadow_drawables_z18">
+        <item>@null</item>
+        <item>@drawable/md_spot_shadow_z1_x2</item>
+        <item>@drawable/md_spot_shadow_z2_x2</item>
+        <item>@drawable/md_spot_shadow_z3_x2</item>
+        <item>@drawable/md_spot_shadow_z4_x2</item>
+        <item>@drawable/md_spot_shadow_z5_x2</item>
+        <item>@drawable/md_spot_shadow_z6_x2</item>
+        <item>@drawable/md_spot_shadow_z7_x2</item>
+        <item>@drawable/md_spot_shadow_z8_x2</item>
+        <item>@drawable/md_spot_shadow_z9_x2</item>
+        <item>@drawable/md_spot_shadow_z10_x2</item>
+        <item>@drawable/md_spot_shadow_z11_x2</item>
+        <item>@drawable/md_spot_shadow_z12_x2</item>
+        <item>@drawable/md_spot_shadow_z13_x2</item>
+        <item>@drawable/md_spot_shadow_z14_x2</item>
+        <item>@drawable/md_spot_shadow_z15_x2</item>
+        <item>@drawable/md_spot_shadow_z16_x2</item>
+        <item>@drawable/md_spot_shadow_z17_x2</item>
+        <item>@drawable/md_spot_shadow_z18_x2</item>
+    </array>
+    <array name="region_entries">
+        <item>Australia</item>
+        <item>New Zealand</item>
+    </array>
+    <array name="region_values">
+        <item>AU</item>
+        <item>NZ</item>
+    </array>
+    <array name="shop_list_icon_color_names">
+        <item>Green Colour</item>
+        <item>Blue Colour</item>
+        <item>Orange Colour</item>
+        <item>Red Colour</item>
+        <item>Pink Colour</item>
+        <item>Grey Colour</item>
+    </array>
+    <array name="shop_list_icon_colors">
+        <item>@color/shop_list_green</item>
+        <item>@color/shop_list_blue</item>
+        <item>@color/shop_list_orange</item>
+        <item>@color/shop_list_red</item>
+        <item>@color/shop_list_magenta</item>
+        <item>@color/shop_list_charcoal</item>
+    </array>
+    <array name="sng_pref_scanner_timer_list_titles">
+        <item>5 seconds</item>
+        <item>10 seconds</item>
+        <item>20 seconds</item>
+        <item>30 seconds</item>
+        <item>Never</item>
+    </array>
+    <array name="sng_pref_scanner_timer_list_values">
+        <item>5000</item>
+        <item>10000</item>
+        <item>20000</item>
+        <item>30000</item>
+        <item>-1</item>
+    </array>
+    <array name="sng_stages">
+        <item>Payment</item>
+        <item>Exit</item>
+    </array>
+    <array name="sng_state_list">
+        <item>NSW</item>
+        <item>VIC</item>
+        <item>QLD</item>
+        <item>SA</item>
+        <item>ACT</item>
+        <item>WA</item>
+        <item>TAS</item>
+        <item>NT</item>
+    </array>
+    <array name="sng_state_read_list">
+        <item>New South Wales</item>
+        <item>Victoria</item>
+        <item>Queensland</item>
+        <item>South Australia</item>
+        <item>Australian Capital Territory</item>
+        <item>Western Australia</item>
+        <item>Tasmania</item>
+        <item>Northern Territory</item>
+    </array>
+    <array name="web_links">
+        <item>@string/web_link_wow_my_account</item>
+        <item>@string/web_link_wow_my_orders</item>
+    </array>
+</resources>

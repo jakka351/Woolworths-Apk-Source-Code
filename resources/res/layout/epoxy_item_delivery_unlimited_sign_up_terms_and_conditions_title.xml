@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textAppearance="@style/TextAppearance.Subtitle1.Fresh.Medium"
+    android:gravity="center"
+    android:id="@+id/title_text_view"
+    android:tag="layout/epoxy_item_delivery_unlimited_sign_up_terms_and_conditions_title_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/default_padding"/>

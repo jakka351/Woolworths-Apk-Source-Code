@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/layout_product_boost_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textAppearance="@style/TextAppearance.Caption"
+        android:textColor="?android:attr/textColorSecondary"
+        android:id="@+id/rewards_offer_display_expiry_text_view"
+        android:tag="binding_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/three_quarter_default_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <include
+        android:id="@+id/boost_label_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/three_quarter_default_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rewards_offer_display_expiry_text_view"
+        app:layout_goneMarginTop="@dimen/no_margin"
+        layout="@layout/include_tintable_text"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/boosting_animation_view"
+        android:tag="binding_2"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="@dimen/three_quarter_default_margin"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rewards_offer_display_expiry_text_view"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="anim_boosting.json"
+        app:lottie_loop="false"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/epoxy_item_edit_order_warning_image_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/image"
+        android:tag="binding_1"
+        android:layout_width="174dp"
+        android:layout_height="108dp"
+        android:importantForAccessibility="no"/>
+</FrameLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="0dp"
+                android:topRightRadius="0dp"
+                android:bottomLeftRadius="@dimen/border_corner_radius"
+                android:bottomRightRadius="@dimen/border_corner_radius"/>
+            <solid android:color="@color/selected_instrument_border"/>
+        </shape>
+    </item>
+    <item
+        android:left="@dimen/stroke_thickness"
+        android:right="@dimen/stroke_thickness"
+        android:bottom="@dimen/stroke_thickness">
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="0dp"
+                android:topRightRadius="0dp"
+                android:bottomLeftRadius="@dimen/border_corner_radius"
+                android:bottomRightRadius="@dimen/border_corner_radius"/>
+            <solid android:color="@color/selected_instrument_background"/>
+        </shape>
+    </item>
+</layer-list>

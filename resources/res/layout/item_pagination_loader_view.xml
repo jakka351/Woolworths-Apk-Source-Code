@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tag="layout/item_pagination_loader_view_0"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/pagination_loader_view_height">
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/pagination_error_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/pagination_error_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/pagination_error_try_again_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/three_quarter_default_margin"
+            android:text="@string/try_again_button_text"
+            style="@style/Button.Primary.Flat"/>
+    </LinearLayout>
+</RelativeLayout>

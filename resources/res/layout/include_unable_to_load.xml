@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/unable_to_load_layout"
+    android:tag="layout/include_unable_to_load_0"
+    style="@style/ErrorLayoutStyle">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="0x7f0803f9"/>
+    <TextView
+        android:id="@+id/unable_to_load_text_view"
+        android:text="@string/search_unable_to_load_results"
+        style="@style/Subhead.ErrorLayoutText"/>
+    <TextView
+        android:id="@+id/unable_to_load_try_again"
+        style="@style/Button.ErrorLayoutButton"/>
+</LinearLayout>

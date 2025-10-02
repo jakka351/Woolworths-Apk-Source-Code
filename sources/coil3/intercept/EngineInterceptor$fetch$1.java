@@ -1,0 +1,40 @@
+package coil3.intercept;
+
+import coil3.ComponentRegistry;
+import coil3.EventListener;
+import coil3.fetch.Fetcher;
+import coil3.request.ImageRequest;
+import coil3.request.Options;
+import kotlin.Metadata;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+@Metadata(k = 3, mv = {2, 0, 0}, xi = 48)
+@DebugMetadata(c = "coil3.intercept.EngineInterceptor", f = "EngineInterceptor.kt", l = {158}, m = "fetch")
+/* loaded from: classes.dex */
+final class EngineInterceptor$fetch$1 extends ContinuationImpl {
+    public EngineInterceptor p;
+    public ComponentRegistry q;
+    public ImageRequest r;
+    public Object s;
+    public Options t;
+    public EventListener u;
+    public Fetcher v;
+    public int w;
+    public /* synthetic */ Object x;
+    public final /* synthetic */ EngineInterceptor y;
+    public int z;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public EngineInterceptor$fetch$1(EngineInterceptor engineInterceptor, ContinuationImpl continuationImpl) {
+        super(continuationImpl);
+        this.y = engineInterceptor;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object obj) {
+        this.x = obj;
+        this.z |= Integer.MIN_VALUE;
+        return this.y.d(null, null, null, null, null, this);
+    }
+}

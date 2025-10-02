@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textAppearance="@style/TextAppearance.Subtitle1.Fresh.Medium"
+    android:tag="layout/epoxy_item_parking_step_title_0"
+    android:paddingTop="@dimen/one_and_half_padding"
+    android:paddingBottom="@dimen/half_default_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/parking_step_title"
+    android:paddingHorizontal="@dimen/default_padding"/>

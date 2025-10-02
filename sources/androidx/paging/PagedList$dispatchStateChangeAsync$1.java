@@ -1,0 +1,80 @@
+package androidx.paging;
+
+import com.google.android.gms.ads.RequestConfiguration;
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.Iterator;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.collections.CollectionsKt;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.CoroutineSingletons;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Lambda;
+import kotlin.jvm.internal.SourceDebugExtension;
+import kotlinx.coroutines.CoroutineScope;
+
+@Metadata(d1 = {"\u0000\u0010\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001\"\b\b\u0000\u0010\u0002*\u00020\u0003*\u00020\u0004H\u008a@"}, d2 = {"<anonymous>", "", RequestConfiguration.MAX_AD_CONTENT_RATING_T, "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {1, 8, 0}, xi = 48)
+@DebugMetadata(c = "androidx.paging.PagedList$dispatchStateChangeAsync$1", f = "PagedList.kt", l = {}, m = "invokeSuspend")
+@SourceDebugExtension
+/* loaded from: classes2.dex */
+final class PagedList$dispatchStateChangeAsync$1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    public final /* synthetic */ ContiguousPagedList p;
+    public final /* synthetic */ LoadType q;
+    public final /* synthetic */ LoadState r;
+
+    @Metadata(d1 = {"\u0000&\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u0001\"\b\b\u0000\u0010\u0002*\u00020\u00032\u001e\u0010\u0004\u001a\u001a\u0012\u0016\u0012\u0014\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\b\u0012\u0004\u0012\u00020\t0\u00060\u0005H\n¢\u0006\u0004\b\n\u0010\u000b"}, d2 = {"<anonymous>", "", RequestConfiguration.MAX_AD_CONTENT_RATING_T, "", "it", "Ljava/lang/ref/WeakReference;", "Lkotlin/Function2;", "Landroidx/paging/LoadType;", "Landroidx/paging/LoadState;", "", "invoke", "(Ljava/lang/ref/WeakReference;)Ljava/lang/Boolean;"}, k = 3, mv = {1, 8, 0}, xi = 48)
+    /* renamed from: androidx.paging.PagedList$dispatchStateChangeAsync$1$1, reason: invalid class name */
+    final class AnonymousClass1 extends Lambda implements Function1<WeakReference<Function2<? super LoadType, ? super LoadState, ? extends Unit>>, Boolean> {
+        public static final AnonymousClass1 h = new AnonymousClass1(1);
+
+        @Override // kotlin.jvm.functions.Function1
+        public final Object invoke(Object obj) {
+            WeakReference it = (WeakReference) obj;
+            Intrinsics.h(it, "it");
+            return Boolean.valueOf(it.get() == null);
+        }
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public PagedList$dispatchStateChangeAsync$1(ContiguousPagedList contiguousPagedList, LoadType loadType, LoadState loadState, Continuation continuation) {
+        super(2, continuation);
+        this.p = contiguousPagedList;
+        this.q = loadType;
+        this.r = loadState;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Continuation create(Object obj, Continuation continuation) {
+        return new PagedList$dispatchStateChangeAsync$1(this.p, this.q, this.r, continuation);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public final Object invoke(Object obj, Object obj2) {
+        PagedList$dispatchStateChangeAsync$1 pagedList$dispatchStateChangeAsync$1 = (PagedList$dispatchStateChangeAsync$1) create((CoroutineScope) obj, (Continuation) obj2);
+        Unit unit = Unit.f24250a;
+        pagedList$dispatchStateChangeAsync$1.invokeSuspend(unit);
+        return unit;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object obj) {
+        CoroutineSingletons coroutineSingletons = CoroutineSingletons.d;
+        ResultKt.b(obj);
+        ArrayList arrayList = this.p.l;
+        CollectionsKt.g0(arrayList, AnonymousClass1.h);
+        Iterator it = arrayList.iterator();
+        while (it.hasNext()) {
+            Function2 function2 = (Function2) ((WeakReference) it.next()).get();
+            if (function2 != null) {
+                function2.invoke(this.q, this.r);
+            }
+        }
+        return Unit.f24250a;
+    }
+}

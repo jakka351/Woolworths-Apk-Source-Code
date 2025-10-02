@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/epoxy_item_delivery_unlimited_0"
+    android:paddingTop="@dimen/three_quarter_default_margin"
+    android:paddingBottom="@dimen/three_quarter_default_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground">
+    <TextView
+        android:textAppearance="@style/TextAppearance.Subtitle2"
+        android:id="@+id/inline_label_title"
+        android:tag="binding_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:paddingHorizontal="@dimen/default_padding"
+        app:layout_constraintEnd_toStartOf="@+id/free_trial_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textAppearance="@style/TextAppearance.Caption"
+        android:textColor="?android:attr/textColorSecondary"
+        android:id="@+id/caption"
+        android:tag="binding_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/half_quarter_margin"
+        android:paddingStart="@dimen/default_padding"
+        android:paddingEnd="@dimen/default_padding"
+        android:layout_marginEnd="@dimen/default_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inline_label_title"
+        app:layout_constraintTop_toBottomOf="@+id/inline_label_title"/>
+    <include
+        android:id="@+id/free_trial_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/default_padding"
+        app:layout_constraintBottom_toBottomOf="@+id/inline_label_title"
+        app:layout_constraintStart_toEndOf="@+id/inline_label_title"
+        app:layout_constraintTop_toTopOf="@+id/inline_label_title"
+        layout="@layout/include_brand_label"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

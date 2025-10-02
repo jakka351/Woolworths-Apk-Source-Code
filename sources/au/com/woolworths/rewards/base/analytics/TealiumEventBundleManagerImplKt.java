@@ -1,0 +1,15 @@
+package au.com.woolworths.rewards.base.analytics;
+
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+import kotlin.collections.EmptyList;
+
+@Metadata(d1 = {"\u0000\u0002\n\u0000¨\u0006\u0000"}, d2 = {"base-rewards-app_release"}, k = 2, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes4.dex */
+public final class TealiumEventBundleManagerImplKt {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final List f9359a = CollectionsKt.R("screen.Name", "screen.Type", "app.Section");
+    public static final EmptyList b = EmptyList.d;
+}

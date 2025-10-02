@@ -1,0 +1,133 @@
+package au.com.woolworths.shop.onboarding.sdui.selections;
+
+import androidx.compose.runtime.internal.StabilityInferred;
+import au.com.woolworths.shop.graphql.type.Button;
+import au.com.woolworths.shop.graphql.type.GraphQLString;
+import au.com.woolworths.shop.graphql.type.IconAsset;
+import au.com.woolworths.shop.graphql.type.OnboardingContent;
+import au.com.woolworths.shop.graphql.type.OnboardingContentPage;
+import au.com.woolworths.shop.graphql.type.OnboardingFooter;
+import au.com.woolworths.shop.graphql.type.OnboardingHeader;
+import au.com.woolworths.shop.graphql.type.OnboardingRow;
+import au.com.woolworths.shop.onboarding.sdui.fragment.selections.OnboardingCtaFragmentSelections;
+import com.apollographql.apollo.api.CompiledField;
+import com.apollographql.apollo.api.CompiledFragment;
+import com.apollographql.apollo.api.CompiledGraphQL;
+import com.apollographql.apollo.api.CustomScalarType;
+import com.apollographql.apollo.api.ObjectType;
+import com.apollographql.apollo.api.UnionType;
+import com.salesforce.marketingcloud.notifications.NotificationMessage;
+import com.scandit.datacapture.barcode.pick.serialization.BarcodePickDeserializer;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+
+@StabilityInferred
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\bÇ\u0002\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lau/com/woolworths/shop/onboarding/sdui/selections/GetOnboardingContentPageQuerySelections;", "", "onboarding-sdui_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes4.dex */
+public final class GetOnboardingContentPageQuerySelections {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final List f12536a;
+    public static final List b;
+    public static final List c;
+    public static final List d;
+    public static final List e;
+    public static final List f;
+    public static final List g;
+    public static final List h;
+    public static final List i;
+    public static final List j;
+    public static final List k;
+    public static final List l;
+    public static final List m;
+    public static final List n;
+    public static final List o;
+    public static final List p;
+
+    static {
+        CustomScalarType customScalarType = GraphQLString.f11443a;
+        List listQ = CollectionsKt.Q(new CompiledField.Builder("url", CompiledGraphQL.b(customScalarType)).c());
+        f12536a = listQ;
+        List listQ2 = CollectionsKt.Q(new CompiledField.Builder("coreIconName", CompiledGraphQL.b(customScalarType)).c());
+        b = listQ2;
+        CompiledField compiledFieldC = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder = new CompiledFragment.Builder("HostedIcon", CollectionsKt.Q("HostedIcon"));
+        builder.d = listQ;
+        CompiledFragment compiledFragmentA = builder.a();
+        CompiledFragment.Builder builder2 = new CompiledFragment.Builder("CoreIcon", CollectionsKt.Q("CoreIcon"));
+        builder2.d = listQ2;
+        List listR = CollectionsKt.R(compiledFieldC, compiledFragmentA, builder2.a());
+        c = listR;
+        UnionType unionType = IconAsset.f11477a;
+        CompiledField.Builder builder3 = new CompiledField.Builder("image", unionType);
+        builder3.e = listR;
+        List listR2 = CollectionsKt.R(builder3.c(), new CompiledField.Builder("title", CompiledGraphQL.b(customScalarType)).c());
+        d = listR2;
+        List listQ3 = CollectionsKt.Q(new CompiledField.Builder("url", CompiledGraphQL.b(customScalarType)).c());
+        e = listQ3;
+        List listQ4 = CollectionsKt.Q(new CompiledField.Builder("coreIconName", CompiledGraphQL.b(customScalarType)).c());
+        f = listQ4;
+        CompiledField compiledFieldC2 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder4 = new CompiledFragment.Builder("HostedIcon", CollectionsKt.Q("HostedIcon"));
+        builder4.d = listQ3;
+        CompiledFragment compiledFragmentA2 = builder4.a();
+        CompiledFragment.Builder builder5 = new CompiledFragment.Builder("CoreIcon", CollectionsKt.Q("CoreIcon"));
+        builder5.d = listQ4;
+        List listR3 = CollectionsKt.R(compiledFieldC2, compiledFragmentA2, builder5.a());
+        g = listR3;
+        CompiledField.Builder builder6 = new CompiledField.Builder(BarcodePickDeserializer.FIELD_ICON, CompiledGraphQL.b(unionType));
+        builder6.e = listR3;
+        List listR4 = CollectionsKt.R(builder6.c(), new CompiledField.Builder("title", CompiledGraphQL.b(customScalarType)).c(), new CompiledField.Builder(NotificationMessage.NOTIF_KEY_SUB_TITLE, CompiledGraphQL.b(customScalarType)).c());
+        h = listR4;
+        CompiledField.Builder builder7 = new CompiledField.Builder("rows", CompiledGraphQL.b(CompiledGraphQL.a(OnboardingRow.f11628a)));
+        builder7.e = listR4;
+        List listQ5 = CollectionsKt.Q(builder7.c());
+        i = listQ5;
+        CompiledField compiledFieldC3 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder8 = new CompiledFragment.Builder("OnboardingVerticalContent", CollectionsKt.Q("OnboardingVerticalContent"));
+        builder8.d = listQ5;
+        List listR5 = CollectionsKt.R(compiledFieldC3, builder8.a());
+        j = listR5;
+        CompiledField compiledFieldC4 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder9 = new CompiledFragment.Builder("Button", CollectionsKt.Q("Button"));
+        List list = OnboardingCtaFragmentSelections.c;
+        builder9.b(list);
+        List listR6 = CollectionsKt.R(compiledFieldC4, builder9.a());
+        k = listR6;
+        CompiledField compiledFieldC5 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder10 = new CompiledFragment.Builder("Button", CollectionsKt.Q("Button"));
+        builder10.d = list;
+        List listR7 = CollectionsKt.R(compiledFieldC5, builder10.a());
+        l = listR7;
+        CompiledField compiledFieldC6 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder11 = new CompiledFragment.Builder("Button", CollectionsKt.Q("Button"));
+        builder11.d = list;
+        List listR8 = CollectionsKt.R(compiledFieldC6, builder11.a());
+        m = listR8;
+        ObjectType objectType = Button.f11080a;
+        CompiledField.Builder builder12 = new CompiledField.Builder("button1", CompiledGraphQL.b(objectType));
+        builder12.e = listR6;
+        CompiledField compiledFieldC7 = builder12.c();
+        CompiledField.Builder builder13 = new CompiledField.Builder("button2", objectType);
+        builder13.e = listR7;
+        CompiledField compiledFieldC8 = builder13.c();
+        CompiledField.Builder builder14 = new CompiledField.Builder("button3", objectType);
+        builder14.e = listR8;
+        List listR9 = CollectionsKt.R(compiledFieldC7, compiledFieldC8, builder14.c());
+        n = listR9;
+        CompiledField.Builder builder15 = new CompiledField.Builder("header", OnboardingHeader.f11627a);
+        builder15.e = listR2;
+        CompiledField compiledFieldC9 = builder15.c();
+        CompiledField.Builder builder16 = new CompiledField.Builder("content", CompiledGraphQL.b(OnboardingContent.f11624a));
+        builder16.e = listR5;
+        CompiledField compiledFieldC10 = builder16.c();
+        CompiledField.Builder builder17 = new CompiledField.Builder("footer", CompiledGraphQL.b(OnboardingFooter.f11626a));
+        builder17.e = listR9;
+        List listR10 = CollectionsKt.R(compiledFieldC9, compiledFieldC10, builder17.c());
+        o = listR10;
+        CompiledField.Builder builder18 = new CompiledField.Builder("getOnboardingContentPage", CompiledGraphQL.b(OnboardingContentPage.f11625a));
+        builder18.e = listR10;
+        p = CollectionsKt.Q(builder18.c());
+    }
+}

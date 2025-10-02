@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white_color"
+    android:padding="@dimen/sng_spacing_small"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:id="@+id/totalDiscountAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:layout_marginStart="@dimen/sng_spacing_small"
+        android:layout_marginEnd="@dimen/sng_general_spacing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:id="@+id/lblTotalSavings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sng_receipt_total_savings"
+        android:maxLines="1"
+        android:fontFamily="sans-serif"
+        android:layout_marginStart="@dimen/sng_general_spacing"
+        android:layout_marginEnd="@dimen/sng_general_spacing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/totalDiscountAmount"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

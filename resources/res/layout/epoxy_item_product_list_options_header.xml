@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textAppearance="@style/TextAppearance.Body.Medium"
+    android:textColor="?attr/colorPrimaryVariant"
+    android:gravity="center_vertical"
+    android:id="@+id/filter_by_title"
+    android:tag="layout/epoxy_item_product_list_options_header_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/default_padding"
+    android:paddingEnd="@dimen/default_padding"
+    android:layout_marginVertical="@dimen/three_quarter_default_margin"/>

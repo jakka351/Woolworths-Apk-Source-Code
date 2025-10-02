@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textAppearance="@style/TextAppearance.Subtitle2"
+    android:ellipsize="end"
+    android:id="@+id/delivery_address_result"
+    android:tag="layout/epoxy_item_delivery_address_search_result_0"
+    android:background="?attr/selectableItemBackground"
+    android:padding="@dimen/default_margin"
+    android:paddingTop="@dimen/half_default_padding"
+    android:paddingBottom="@dimen/half_default_padding"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxLines="2"
+    android:paddingStart="@dimen/default_padding"
+    android:paddingEnd="@dimen/default_padding"/>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<au.com.woolworths.views.CheckableConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/product_list_options_sort_by"
+    android:tag="layout/epoxy_item_product_list_options_sort_0"
+    android:background="@drawable/themeable_background_selector"
+    android:padding="@dimen/quarter_default_padding"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall">
+    <CheckedTextView
+        android:textAppearance="@style/TextAppearance.Body.Medium"
+        android:textColor="@color/themeable_content_color_selector"
+        android:gravity="center"
+        android:id="@+id/product_list_options_sort_by_title"
+        android:tag="binding_1"
+        android:duplicateParentState="true"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/product_list_options_sort_by_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+    <CheckedTextView
+        android:textAppearance="@style/TextAppearance.Caption"
+        android:textColor="@color/themeable_content_color_selector"
+        android:gravity="center"
+        android:id="@+id/product_list_options_sort_by_subtitle"
+        android:tag="binding_2"
+        android:duplicateParentState="true"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_list_options_sort_by_title"/>
+</au.com.woolworths.views.CheckableConstraintLayout>

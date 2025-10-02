@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/everyday_extras_checkbox_error_background"/>
+            <corners android:radius="@dimen/everyday_extras_summary_checkbox_radius"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dp"
+                android:color="@color/everyday_extras_subscription_error"/>
+            <corners android:radius="@dimen/everyday_extras_summary_checkbox_radius"/>
+        </shape>
+    </item>
+</layer-list>

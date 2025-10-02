@@ -1,0 +1,11 @@
+package android.support.v4.media;
+
+import androidx.annotation.RequiresApi;
+
+@RequiresApi
+/* loaded from: classes2.dex */
+class MediaDescriptionCompatApi23 {
+
+    public static class Builder {
+    }
+}

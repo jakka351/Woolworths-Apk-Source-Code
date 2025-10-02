@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<au.com.woolworths.views.CheckableConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:enabled="true"
+    android:id="@+id/collection_mode_variant_condition"
+    android:tag="layout/epoxy_item_collection_mode_variant_condition_0"
+    android:focusable="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/quarter_default_margin"
+    android:checked="false">
+    <ImageView
+        android:id="@+id/variant_detail_icon"
+        android:duplicateParentState="true"
+        android:layout_width="13dp"
+        android:layout_height="10dp"
+        android:src="@drawable/ic_tick_green"
+        android:adjustViewBounds="true"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:tint="@color/themeable_content_color_selector"/>
+    <CheckedTextView
+        android:textAppearance="@style/TextAppearance.Caption"
+        android:textColor="@color/themeable_content_color_selector"
+        android:id="@+id/variant_detail_text_view"
+        android:tag="binding_1"
+        android:duplicateParentState="true"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/half_default_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/variant_detail_icon"
+        app:layout_constraintTop_toTopOf="parent"/>
+</au.com.woolworths.views.CheckableConstraintLayout>

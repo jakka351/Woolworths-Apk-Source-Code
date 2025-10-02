@@ -1,0 +1,131 @@
+package com.woolworths.shop.buyagain.selections;
+
+import androidx.compose.runtime.internal.StabilityInferred;
+import au.com.woolworths.dynamic.page.ui.content.d;
+import au.com.woolworths.feature.rewards.everydayextras.signup.selections.a;
+import au.com.woolworths.graphql.common.fragment.selections.ProductCardSelections;
+import au.com.woolworths.shop.graphql.type.Button;
+import au.com.woolworths.shop.graphql.type.ButtonStyle;
+import au.com.woolworths.shop.graphql.type.BuyAgainFilterStatus;
+import au.com.woolworths.shop.graphql.type.BuyAgainFooter;
+import au.com.woolworths.shop.graphql.type.BuyAgainHeader;
+import au.com.woolworths.shop.graphql.type.BuyAgainProductList;
+import au.com.woolworths.shop.graphql.type.Chip;
+import au.com.woolworths.shop.graphql.type.GraphQLBoolean;
+import au.com.woolworths.shop.graphql.type.GraphQLID;
+import au.com.woolworths.shop.graphql.type.GraphQLInt;
+import au.com.woolworths.shop.graphql.type.GraphQLString;
+import au.com.woolworths.shop.graphql.type.ProductList;
+import au.com.woolworths.shop.graphql.type.ProductListFeed;
+import au.com.woolworths.shop.graphql.type.Query;
+import au.com.woolworths.shop.graphql.type.TextWithAlt;
+import com.apollographql.apollo.api.CompiledArgument;
+import com.apollographql.apollo.api.CompiledField;
+import com.apollographql.apollo.api.CompiledFragment;
+import com.apollographql.apollo.api.CompiledGraphQL;
+import com.apollographql.apollo.api.CustomScalarType;
+import com.apollographql.apollo.api.EnumType;
+import com.apollographql.apollo.api.ObjectType;
+import com.salesforce.marketingcloud.UrlHandler;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+import org.bouncycastle.i18n.TextBundle;
+import org.bouncycastle.jcajce.util.AnnotatedPrivateKey;
+
+@StabilityInferred
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\bÇ\u0002\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lcom/woolworths/shop/buyagain/selections/BuyAgainProductListQuerySelections;", "", "shop-buy-again_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes7.dex */
+public final class BuyAgainProductListQuerySelections {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final List f21519a;
+    public static final List b;
+    public static final List c;
+    public static final List d;
+    public static final List e;
+    public static final List f;
+    public static final List g;
+    public static final List h;
+    public static final List i;
+    public static final List j;
+    public static final List k;
+    public static final List l;
+
+    static {
+        CustomScalarType customScalarType = GraphQLString.f11443a;
+        List listQ = CollectionsKt.Q(new CompiledField.Builder("totalProductsText", CompiledGraphQL.b(customScalarType)).c());
+        f21519a = listQ;
+        CompiledField compiledFieldC = new CompiledField.Builder(AnnotatedPrivateKey.LABEL, CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldG = d.g(UrlHandler.ACTION, customScalarType);
+        ButtonStyle.e.getClass();
+        EnumType enumType = ButtonStyle.f;
+        CompiledField compiledFieldC2 = new CompiledField.Builder("style", enumType).c();
+        CustomScalarType customScalarType2 = GraphQLBoolean.f11439a;
+        List listR = CollectionsKt.R(compiledFieldC, compiledFieldG, compiledFieldC2, new CompiledField.Builder("enabled", CompiledGraphQL.b(customScalarType2)).c());
+        b = listR;
+        List listR2 = CollectionsKt.R(new CompiledField.Builder(AnnotatedPrivateKey.LABEL, CompiledGraphQL.b(customScalarType)).c(), d.g(UrlHandler.ACTION, customScalarType), a.d("style", enumType), new CompiledField.Builder("enabled", CompiledGraphQL.b(customScalarType2)).c());
+        c = listR2;
+        ObjectType objectType = Button.f11080a;
+        CompiledField.Builder builder = new CompiledField.Builder("saveToListBtn", objectType);
+        builder.e = listR;
+        CompiledField compiledFieldC3 = builder.c();
+        CompiledField.Builder builder2 = new CompiledField.Builder("addToCartBtn", objectType);
+        builder2.e = listR2;
+        List listR3 = CollectionsKt.R(compiledFieldC3, builder2.c());
+        d = listR3;
+        CompiledField compiledFieldC4 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder3 = new CompiledFragment.Builder("ProductCard", CollectionsKt.Q("ProductCard"));
+        builder3.b(ProductCardSelections.A);
+        List listR4 = CollectionsKt.R(compiledFieldC4, builder3.a());
+        e = listR4;
+        CompiledField compiledFieldC5 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder4 = new CompiledFragment.Builder("ProductCard", CollectionsKt.Q("ProductCard"));
+        builder4.d = listR4;
+        List listR5 = CollectionsKt.R(compiledFieldC5, builder4.a());
+        f = listR5;
+        List listR6 = CollectionsKt.R(new CompiledField.Builder(TextBundle.TEXT_ENTRY, CompiledGraphQL.b(customScalarType)).c(), new CompiledField.Builder("altText", CompiledGraphQL.b(customScalarType)).c());
+        g = listR6;
+        CompiledField compiledFieldC6 = new CompiledField.Builder("id", CompiledGraphQL.b(GraphQLID.f11441a)).c();
+        CompiledField compiledFieldC7 = new CompiledField.Builder("isSelected", CompiledGraphQL.b(customScalarType2)).c();
+        CompiledField.Builder builder5 = new CompiledField.Builder(TextBundle.TEXT_ENTRY, CompiledGraphQL.b(TextWithAlt.f11967a));
+        builder5.e = listR6;
+        CompiledField compiledFieldC8 = builder5.c();
+        CustomScalarType customScalarType3 = GraphQLInt.f11442a;
+        List listR7 = CollectionsKt.R(compiledFieldC6, compiledFieldC7, compiledFieldC8, new CompiledField.Builder("count", customScalarType3).c());
+        h = listR7;
+        CompiledField compiledFieldG2 = d.g("totalNumberOfProducts", customScalarType3);
+        CompiledField compiledFieldG3 = d.g("nextPage", customScalarType3);
+        CompiledField.Builder builder6 = new CompiledField.Builder("productsFeed", d.j(ProductListFeed.f11751a));
+        builder6.e = listR5;
+        CompiledField compiledFieldC9 = builder6.c();
+        CompiledField.Builder builder7 = new CompiledField.Builder("chips", CompiledGraphQL.a(CompiledGraphQL.b(Chip.f11271a)));
+        builder7.e = listR7;
+        List listR8 = CollectionsKt.R(compiledFieldG2, compiledFieldG3, compiledFieldC9, builder7.c());
+        i = listR8;
+        List listR9 = CollectionsKt.R(d.g("message", customScalarType), new CompiledField.Builder("revertedFilterChipIds", a.e(customScalarType)).c());
+        j = listR9;
+        CompiledField.Builder builder8 = new CompiledField.Builder("header", CompiledGraphQL.b(BuyAgainHeader.f11085a));
+        builder8.e = listQ;
+        CompiledField compiledFieldC10 = builder8.c();
+        CompiledField.Builder builder9 = new CompiledField.Builder("footer", CompiledGraphQL.b(BuyAgainFooter.f11084a));
+        builder9.e = listR3;
+        CompiledField compiledFieldC11 = builder9.c();
+        CompiledField.Builder builder10 = new CompiledField.Builder("buyAgainProducts", CompiledGraphQL.b(ProductList.f11749a));
+        builder10.e = listR8;
+        CompiledField compiledFieldC12 = builder10.c();
+        CompiledField.Builder builder11 = new CompiledField.Builder("filterStatus", BuyAgainFilterStatus.f11083a);
+        builder11.e = listR9;
+        List listR10 = CollectionsKt.R(compiledFieldC10, compiledFieldC11, compiledFieldC12, builder11.c());
+        k = listR10;
+        CompiledField.Builder builder12 = new CompiledField.Builder("buyAgainProductList", CompiledGraphQL.b(BuyAgainProductList.f11086a));
+        new CompiledArgument.Builder(Query.j);
+        CompiledArgument compiledArgument = new CompiledArgument();
+        new CompiledArgument.Builder(Query.i);
+        CompiledArgument compiledArgument2 = new CompiledArgument();
+        new CompiledArgument.Builder(Query.h);
+        builder12.d = CollectionsKt.R(compiledArgument, compiledArgument2, new CompiledArgument());
+        builder12.e = listR10;
+        l = CollectionsKt.Q(builder12.c());
+    }
+}

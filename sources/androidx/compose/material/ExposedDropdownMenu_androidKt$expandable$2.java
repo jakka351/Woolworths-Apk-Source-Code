@@ -1,0 +1,32 @@
+package androidx.compose.material;
+
+import androidx.compose.ui.semantics.SemanticsPropertiesKt;
+import androidx.compose.ui.semantics.SemanticsPropertyReceiver;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Lambda;
+
+@Metadata(d1 = {"\u0000\f\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n¢\u0006\u0002\b\u0003"}, d2 = {"<anonymous>", "", "Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;", "invoke"}, k = 3, mv = {1, 9, 0}, xi = 48)
+/* loaded from: classes2.dex */
+final class ExposedDropdownMenu_androidKt$expandable$2 extends Lambda implements Function1<SemanticsPropertyReceiver, Unit> {
+    @Override // kotlin.jvm.functions.Function1
+    public final Object invoke(Object obj) {
+        SemanticsPropertyReceiver semanticsPropertyReceiver = (SemanticsPropertyReceiver) obj;
+        SemanticsPropertiesKt.k(semanticsPropertyReceiver, null);
+        final Function0 function0 = null;
+        SemanticsPropertiesKt.h(semanticsPropertyReceiver, null, new Function0<Boolean>() { // from class: androidx.compose.material.ExposedDropdownMenu_androidKt$expandable$2.1
+            {
+                super(0);
+            }
+
+            @Override // kotlin.jvm.functions.Function0
+            public final Object invoke() {
+                function0.invoke();
+                return Boolean.TRUE;
+            }
+        });
+        return Unit.f24250a;
+    }
+}

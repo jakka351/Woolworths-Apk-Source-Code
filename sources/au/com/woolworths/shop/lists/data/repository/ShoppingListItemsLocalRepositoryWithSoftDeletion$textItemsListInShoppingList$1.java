@@ -1,0 +1,27 @@
+package au.com.woolworths.shop.lists.data.repository;
+
+import kotlin.Metadata;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+@DebugMetadata(c = "au.com.woolworths.shop.lists.data.repository.ShoppingListItemsLocalRepositoryWithSoftDeletion", f = "ShoppingListItemsLocalRepositoryWithSoftDeletion.kt", l = {69}, m = "textItemsListInShoppingList")
+/* loaded from: classes4.dex */
+final class ShoppingListItemsLocalRepositoryWithSoftDeletion$textItemsListInShoppingList$1 extends ContinuationImpl {
+    public /* synthetic */ Object p;
+    public final /* synthetic */ ShoppingListItemsLocalRepositoryWithSoftDeletion q;
+    public int r;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public ShoppingListItemsLocalRepositoryWithSoftDeletion$textItemsListInShoppingList$1(ShoppingListItemsLocalRepositoryWithSoftDeletion shoppingListItemsLocalRepositoryWithSoftDeletion, ContinuationImpl continuationImpl) {
+        super(continuationImpl);
+        this.q = shoppingListItemsLocalRepositoryWithSoftDeletion;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object obj) {
+        this.p = obj;
+        this.r |= Integer.MIN_VALUE;
+        return this.q.b(null, this);
+    }
+}

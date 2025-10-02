@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/sectionError"
+    android:tag="layout/view_addcard_error_0"
+    android:background="@drawable/sng_background_checkout_error_top_rounded_default_sng"
+    android:paddingTop="@dimen/sng_general_spacing"
+    android:paddingBottom="@dimen/sng_general_spacing"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/errorImageView"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="@dimen/sng_general_spacing"
+        android:layout_marginRight="@dimen/sng_general_spacing"
+        android:src="0x7f08058a"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/sng_checkout_error_title"
+        android:gravity="center_vertical"
+        android:id="@+id/txtAddCreditCardError"
+        android:tag="binding_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/sng_general_spacing"/>
+</LinearLayout>

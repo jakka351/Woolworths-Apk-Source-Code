@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fulfilment_window_navigation"
+    app:startDestination="@+id/fulfilment_window">
+    <fragment
+        android:name="au.com.woolworths.shop.checkout.ui.fulfilmentwindows.FulfilmentWindowsFragment"
+        android:id="@+id/fulfilment_window">
+        <argument
+            android:name="fulfilmentWindowSource"
+            android:defaultValue="UPFRONT_FULFILMENT"
+            app:argType="au.com.woolworths.shop.checkout.ui.fulfilmentwindows.FulfilmentWindowSource"/>
+    </fragment>
+</navigation>

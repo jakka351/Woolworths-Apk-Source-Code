@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/default_padding"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textAppearance="@style/TextAppearance.Body.Medium"
+        android:id="@+id/market_address_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/market_address_content"
+        app:layout_constraintEnd_toStartOf="@+id/market_address_action_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView
+        android:textAppearance="@style/TextAppearance.Body"
+        android:id="@+id/market_address_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/market_address_title"
+        app:layout_constraintEnd_toStartOf="@+id/market_address_action_button"
+        app:layout_constraintStart_toStartOf="@+id/market_address_title"
+        app:layout_constraintTop_toBottomOf="@+id/market_address_title"/>
+    <Button
+        android:id="@+id/market_address_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Button.Primary.Flat"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

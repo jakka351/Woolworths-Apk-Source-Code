@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tag="layout/item_e_receipt_details_group_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/quarter_default_margin"
+    android:layout_marginStart="@dimen/half_default_margin"
+    android:layout_marginEnd="@dimen/half_default_margin">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/epoxy_model_group_child_container"
+        android:paddingTop="@dimen/three_quarter_default_padding"
+        android:paddingBottom="@dimen/default_padding"
+        android:inflatedId="@+id/epoxy_model_group_child_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/default_padding"
+        android:paddingEnd="@dimen/default_padding"/>
+</com.google.android.material.card.MaterialCardView>

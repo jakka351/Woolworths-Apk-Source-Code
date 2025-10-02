@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:tag="layout/epoxy_item_checkout_fulfilment_windows_option_0"
+    android:background="@drawable/themeable_background_selector"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="98dp"
+    android:layout_height="wrap_content"
+    android:paddingVertical="6dp">
+    <CheckedTextView
+        android:textAppearance="@style/TextAppearance.Body.Medium"
+        android:textColor="@color/themeable_content_color_selector"
+        android:gravity="center"
+        android:tag="binding_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"/>
+    <CheckedTextView
+        android:textAppearance="@style/TextAppearance.Caption"
+        android:textColor="@color/themeable_content_color_selector"
+        android:gravity="center"
+        android:tag="binding_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"/>
+    <CheckedTextView
+        android:textAppearance="@style/TextAppearance.Caption"
+        android:textColor="@color/themeable_content_color_selector"
+        android:gravity="center"
+        android:tag="binding_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"/>
+</LinearLayout>

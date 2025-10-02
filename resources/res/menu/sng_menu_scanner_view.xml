@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/sng_menu_icon_white_shopping_cart_with_count"
+        android:id="@+id/menu_item_cart"
+        android:title="@string/sng_label_shopping_cart"
+        app:showAsAction="ifRoom"/>
+</menu>

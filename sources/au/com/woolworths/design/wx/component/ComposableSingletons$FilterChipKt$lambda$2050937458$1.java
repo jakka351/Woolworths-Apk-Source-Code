@@ -1,0 +1,30 @@
+package au.com.woolworths.design.wx.component;
+
+import androidx.compose.foundation.layout.RowScope;
+import androidx.compose.material.TextKt;
+import androidx.compose.runtime.Composer;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function3;
+import kotlin.jvm.internal.Intrinsics;
+
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+/* renamed from: au.com.woolworths.design.wx.component.ComposableSingletons$FilterChipKt$lambda$-2050937458$1, reason: invalid class name */
+/* loaded from: classes3.dex */
+public final class ComposableSingletons$FilterChipKt$lambda$2050937458$1 implements Function3<RowScope, Composer, Integer, Unit> {
+    public static final ComposableSingletons$FilterChipKt$lambda$2050937458$1 d = new ComposableSingletons$FilterChipKt$lambda$2050937458$1();
+
+    @Override // kotlin.jvm.functions.Function3
+    public final Object invoke(Object obj, Object obj2, Object obj3) {
+        RowScope FilterChip = (RowScope) obj;
+        Composer composer = (Composer) obj2;
+        int iIntValue = ((Number) obj3).intValue();
+        Intrinsics.h(FilterChip, "$this$FilterChip");
+        if ((iIntValue & 17) == 16 && composer.c()) {
+            composer.j();
+        } else {
+            TextKt.b("Chip", null, 0L, 0L, null, 0L, null, null, 0L, 0, false, 0, 0, null, null, composer, 6, 0, 131070);
+        }
+        return Unit.f24250a;
+    }
+}

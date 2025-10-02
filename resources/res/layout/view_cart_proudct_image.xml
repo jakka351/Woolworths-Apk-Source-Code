@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tag="layout/view_cart_proudct_image_0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.woolworths.scanlibrary.util.widget.SquareImageView
+        android:id="@+id/imgThumbnail"
+        android:padding="@dimen/sng_spacing_small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/sng_content_desc_product_image"/>
+    <TextView
+        android:textSize="14sp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/txtDescription"
+        android:padding="@dimen/sng_general_spacing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:lines="3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        style="@style/H5"/>
+</RelativeLayout>

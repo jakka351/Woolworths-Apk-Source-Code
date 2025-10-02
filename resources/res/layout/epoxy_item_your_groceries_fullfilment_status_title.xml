@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:tag="layout/epoxy_item_your_groceries_fullfilment_status_title_0"
+    android:background="?attr/colorSurface"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textAppearance="@style/TextAppearance.Subtitle1.Fresh.Medium"
+        android:textColor="?android:attr/textColorPrimary"
+        android:tag="binding_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingHorizontal="@dimen/default_padding"
+        android:paddingVertical="@dimen/three_quarter_default_padding"/>
+    <ImageButton
+        android:layout_gravity="center"
+        android:id="@+id/leave_unattended_info_button"
+        android:tag="binding_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingHorizontal="@dimen/default_padding"
+        android:paddingVertical="@dimen/three_quarter_default_padding"
+        app:srcCompat="@drawable/ic_tool_tip"
+        app:tint="?attr/colorPrimary"
+        style="?attr/borderlessButtonStyle"/>
+</LinearLayout>

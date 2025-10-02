@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/item_rewards_offers_filter_group_0"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.chip.ChipGroup
+        android:orientation="horizontal"
+        android:id="@+id/epoxy_model_group_child_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/half_default_margin"
+        android:paddingStart="@dimen/default_padding"
+        android:paddingEnd="@dimen/default_padding"
+        app:chipSpacing="6dp"
+        app:selectionRequired="true"
+        app:singleLine="true"
+        app:singleSelection="true"/>
+</HorizontalScrollView>

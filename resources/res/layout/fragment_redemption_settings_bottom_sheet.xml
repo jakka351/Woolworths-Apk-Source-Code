@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/fragment_redemption_settings_bottom_sheet_0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="480dp">
+    <ImageView
+        android:id="@+id/grab_handle_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/half_default_margin"
+        android:src="@drawable/bottom_sheet_grab_handle"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textAppearance="@style/TextAppearance.Subtitle2.Medium"
+        android:gravity="center"
+        android:id="@+id/bottom_sheet_title_text_view"
+        android:tag="binding_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:text="@string/rewards_redeemed_settings_bottom_sheet_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grab_handle_image_view"/>
+    <androidx.fragment.app.FragmentContainerView
+        android:name="au.com.woolworths.feature.rewards.redemptionsettings.RewardsRedemptionSettingsFragment"
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_sheet_title_text_view"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

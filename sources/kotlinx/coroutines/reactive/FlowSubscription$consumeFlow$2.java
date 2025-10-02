@@ -1,0 +1,16 @@
+package kotlinx.coroutines.reactive;
+
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.jvm.internal.SourceDebugExtension;
+import kotlinx.coroutines.flow.FlowCollector;
+
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+@SourceDebugExtension
+/* loaded from: classes7.dex */
+final class FlowSubscription$consumeFlow$2<T> implements FlowCollector {
+    @Override // kotlinx.coroutines.flow.FlowCollector
+    public final Object emit(Object obj, Continuation continuation) {
+        throw null;
+    }
+}

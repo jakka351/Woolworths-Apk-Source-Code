@@ -1,0 +1,1720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="101447"
+    android:versionName="25.19.0"
+    android:compileSdkVersion="36"
+    android:compileSdkVersionCodename="16"
+    android:requiredSplitTypes="base__abi,base__density"
+    android:splitTypes=""
+    package="com.woolworths"
+    platformBuildVersionCode="36"
+    platformBuildVersionName="16">
+    <uses-sdk
+        android:minSdkVersion="28"
+        android:targetSdkVersion="35"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+    <uses-feature
+        android:glEsVersion="0x20000"
+        android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false"/>
+    <queries>
+        <package android:name="com.google.android.webview"/>
+        <package android:name="com.android.webview"/>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <package android:name="com.woolworths.debug"/>
+        <package android:name="com.woolworths"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <package android:name="com.venmo"/>
+        <package android:name="com.paypal.android.p2pmobile"/>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <package android:name="com.google.android.apps.maps"/>
+        <intent>
+            <action android:name="android.intent.action.INSERT"/>
+            <data android:mimeType="vnd.android.cursor.dir/event"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="sms"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.DIAL"/>
+            <data android:path="tel:"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.NETWORK_SETUP_WIZARD"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS"/>
+    <permission
+        android:name="com.woolworths.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.woolworths.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false"/>
+    <application
+        android:theme="@style/WowTheme"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="au.com.woolworths.android.onesite.app.ShopApplication"
+        android:windowSoftInputMode="adjustResize"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:supportsRtl="false"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/backup_android_12">
+        <profileable android:shell="true"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/SHOP_MAPS_API_KEY"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/SHOP_GMS_ADS_APP_ID"/>
+        <meta-data
+            android:name="google_analytics_automatic_screen_reporting_enabled"
+            android:value="false"/>
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="@string/SHOP_BRANCH_API_KEY"/>
+        <meta-data
+            android:name="io.branch.sdk.BranchKey.test"
+            android:value="@string/SHOP_BRANCH_API_KEY_TEST"/>
+        <meta-data
+            android:name="io.branch.sdk.TestMode"
+            android:value="@bool/branch_test_mode"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="au.com.woolworths.android.onesite.modules.checkout.paypal.BraintreeResultActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <data android:scheme="com.woolworths.braintree"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.Wow.Invisible"
+            android:name="au.com.woolworths.foundation.shop.deeplink.resolver.ui.ShopAppDeepLinkHandlerActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:autoRemoveFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="com.woolworths.shop"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https"/>
+                <data android:scheme="http"/>
+                <data android:host="www.woolworths.com.au"/>
+                <data android:path=""/>
+                <data android:path="/"/>
+                <data android:pathPrefix="/shop/mylists/reorder"/>
+                <data android:pathPrefix="/shop/productdetails"/>
+                <data android:pathPrefix="/shop/catalogue"/>
+                <data android:pathPrefix="/shop/discover/everyday-market"/>
+                <data android:pathPrefix="/shop/recipes"/>
+                <data android:pathPrefix="/shop/recipes/collections"/>
+                <data android:pathAdvancedPattern="/shop/articles/.+"/>
+                <data android:pathAdvancedPattern="/shop/ideas/.+"/>
+                <data android:pathAdvancedPattern="/shop/videos/.+"/>
+                <data android:pathAdvancedPattern="/shop/services/.+"/>
+                <data android:pathAdvancedPattern="/shop/help/.+"/>
+                <data android:pathAdvancedPattern="/shop/about/.+"/>
+                <data android:pathAdvancedPattern="/shop/everyday/.+"/>
+                <data android:pathAdvancedPattern="/shop/events/.+"/>
+                <data android:pathAdvancedPattern="/shop/brands/.+"/>
+                <data android:pathPrefix="/shop/guides"/>
+                <data android:pathPrefix="/shop/myaccount/yourgroceries"/>
+                <data android:pathPrefix="/shop/myaccount/myorders"/>
+                <data android:path="/shop/discover/christmas"/>
+                <data android:path="/shop/discover/shopping-online"/>
+                <data android:path="/shop/recipes"/>
+                <data android:path="/shop/recipes/saved-recipes"/>
+                <data android:path="/shop/shopping"/>
+                <data android:pathPrefix="/shop/shopping"/>
+                <data android:pathPrefix="/shop/browse"/>
+                <data android:pathPrefix="/shop/search"/>
+                <data android:path="/shop/search"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.Wow.Invisible"
+            android:name="au.com.woolworths.android.onesite.app.deeplink.ShopAppBranchDeepLinkActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter android:autoVerify="true">
+                <data android:scheme="https"/>
+                <data android:host="@string/branch_link"/>
+                <data android:host="@string/branch_alternate_link"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.auth0.android.provider.RedirectActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="@string/auth0_scheme"
+                    android:host="@string/auth0_domain"
+                    android:pathPrefix="/android/com.woolworths/callback"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="au.com.woolworths.feature.shop.signup.SignUpActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.woolworths.com.au"/>
+                <data android:scheme="app"/>
+                <data android:pathPrefix="/android/com.woolworths/signup/callback"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="au.com.woolworths.feature.shop.login.LoginActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.woolworths.com.au"/>
+                <data android:scheme="app"/>
+                <data android:pathPrefix="/android/com.woolworths/callback"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="au.com.woolworths.android.onesite.app.notification.WOWFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.woolworths.androidx-startup">
+            <meta-data
+                android:name="me.oriient.ipssdk.realtime.IPSRealtimeInitProvider"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="okhttp3.internal.platform.PlatformInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <activity
+            android:theme="@style/DialogActivity"
+            android:name="com.cyberfend.cyfsecurity.CCADialogActivity"
+            android:excludeFromRecents="true"/>
+        <activity
+            android:theme="@style/Theme.Wow.Splash"
+            android:name="au.com.woolworths.android.onesite.modules.splash.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity-alias
+            android:label="@string/app_name"
+            android:name="au.com.woolworths.android.onesite.Launcher"
+            android:exported="true"
+            android:targetActivity="au.com.woolworths.android.onesite.modules.splash.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.android.onesite.modules.main.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/checkout_title"
+            android:name="au.com.woolworths.android.onesite.modules.checkout.ui.CheckoutActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/Theme.Wow"
+            android:name="au.com.woolworths.android.onesite.modules.search.searchscreen.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/Theme.Wow.Splash"
+            android:name="au.com.woolworths.android.onesite.modules.shortcuts.ShortcutsTrampolineActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            android:autoRemoveFromRecents="true"/>
+        <activity
+            android:theme="@style/Theme.Rewards"
+            android:name="au.com.woolworths.feature.rewards.everydayextras.signup.EverydayExtrasSignUpActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Invisible"
+            android:name="au.com.woolworths.feature.rewards.everydayextras.signup.compose.finalglance.FinalGlanceBottomSheetActivity"
+            android:exported="true"
+            android:launchMode="singleTask"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/payment_summary_label"
+            android:name="au.com.woolworths.feature.shop.myorders.details.yourgroceries.paymentsummary.YourGroceriesPaymentSummaryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/orders_page_title"
+            android:name="au.com.woolworths.feature.shop.myorders.orders.OrdersActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.myorders.details.OrderDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.myorders.details.help.OrderDetailsHelpActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.myorders.details.help.HelpAndSupportActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/parking_guide_screen_title"
+            android:name="au.com.woolworths.feature.shop.myorders.details.parking.ParkingGuideActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/cancel_order_title"
+            android:name="au.com.woolworths.feature.shop.myorders.details.cancel.OrderCancellationPromptActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.myorders.editdriverinstruction.EditDriverInstructionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/change_my_order_conditions_page_label"
+            android:name="au.com.woolworths.feature.shop.myorders.editorderconditions.EditOrderConditionsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/your_groceries_label"
+            android:name="au.com.woolworths.feature.shop.myorders.details.yourgroceries.YourGroceriesActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.myorders.details.infomodal.ProgressStepperInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.myorders.details.infomodal.ProgressStepperInfoUpliftActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.myorders.details.proofofdelivery.ProofOfDeliveryActivity"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name="au.com.woolworths.feature.shop.myorders.details.location.PickupOrderLocationTrackingService"
+            android:stopWithTask="true"
+            android:foregroundServiceType="location"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.myorders.details.infomodal.ApplicableDeliveryMethodActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.product.list.ComposeProductListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/have_you_forgotten_title"
+            android:name="au.com.woolworths.feature.shop.haveyouforgotten.HaveYouForgottenActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/title_marketplace"
+            android:name="au.com.woolworths.feature.shop.marketplace.ui.main.MarketplaceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.product.list.legacy.LegacyProductListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.product.list.legacy.ComposeProductListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.lists.ui.shoppinglist.main.ShoppingListDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.lists.ui.pastshops.PastShopsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.lists.ui.substitutions.ViewSimilarProductsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.lists.ui.lists.sng.SngListsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.lists.ui.guest.onboarding.ShopListGuestOnboardingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Invisible"
+            android:name="au.com.woolworths.shop.lists.ui.snapalist.main.ProcessorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Invisible"
+            android:name="au.com.woolworths.shop.lists.ui.magicmatch.MagicMatchActivity"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name="com.google.android.gms.metadata.ModuleDependencies"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES"/>
+            </intent-filter>
+            <meta-data
+                android:name="photopicker_activity:0:required"
+                android:value=""/>
+        </service>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.notification.preferences.ShopNotificationPreferencesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Light"
+            android:name="au.com.woolworths.shop.rewards.ShopRewardsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Light"
+            android:name="au.com.woolworths.shop.rewards.RewardsActivityLegacy"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Light"
+            android:name="au.com.woolworths.shop.rewards.priming.RewardsSetupPrimingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Light"
+            android:name="au.com.woolworths.shop.rewards.promo.PromoAppActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Light"
+            android:name="au.com.woolworths.feature.shop.foryou.settings.RewardsSettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.CardOverlay"
+            android:name="au.com.woolworths.feature.rewards.card.overlay.RewardsCardOverlayActivity"/>
+        <activity android:name="au.com.woolworths.base.wallet.ocr.RewardsWalletOcrActivity"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.splash.SngInitializerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden">
+            <intent-filter>
+                <data android:mimeType="application/com.woolworths.scango"/>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/SngAppTheme"
+            android:label="@string/sng_app_name"
+            android:name="com.woolworths.scanlibrary.ui.entry.SngEntryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.scanner.ScannerActivityOld"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/SngAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.scanner.ScannerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme.Translucent"
+            android:name="com.woolworths.scanlibrary.ui.scanner.additem.AddItemActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.tandc.TermsConditionsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.home.HomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/SngAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.message.MessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/PreferencesTheme"
+            android:label="@string/sng_title_activity_settings"
+            android:name="com.woolworths.scanlibrary.ui.menu.setting.UserSettingsActivity"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.cart.ShoppingCartActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.weighted.WeightedArticleSelectionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.checkout.CheckOutActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.productInfo.ProductInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.menu.myaccount.MyAccountActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.tap.TapActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:label="@string/sng_title_activity_onboarding_add_card"
+            android:name="com.woolworths.scanlibrary.ui.payment.addfirstcard.AddPaymentActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.payment.updatecard.UpdateCreditCardActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.menu.contactus.ContactUsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.transaction.TransactionListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.receipt.ReceiptActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.parking.ParkingVoucherActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="com.woolworths.scanlibrary.ui.onboarding.OnBoardingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.exit.ExitScanCodeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.productsearch.SearchActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.stores.AvailableStoresActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/SngAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.stores.AvailableStoreListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/DefaultAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.metrowifi.UseMetroWifiActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/SngAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.payment.setup.AddPaymentSetupActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/SngAppTheme"
+            android:name="com.woolworths.scanlibrary.ui.setupcomplete.SetupCompleteActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="com.woolworths.scanlibrary.ui.reward.SngRewardsSetupActivity"
+            android:screenOrientation="portrait"/>
+        <receiver
+            android:name="com.woolworths.scanlibrary.services.DefaultNotificationReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.woolworths.scanlibrary.messaging.notification"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="Buy Again"
+            android:name="au.com.woolworths.shop.buyagain.ui.BuyAgainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.DeliveryUnlimitedSignup"
+            android:name="au.com.woolworths.shop.deliveryunlimited.signup.landing.DeliveryUnlimitedSignUpLandingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.deliveryunlimited.signup.selectplan.SelectPlanActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.deliveryunlimited.signup.confirmsubscription.ConfirmSubscriptionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="au.com.woolworths.shop.deliveryunlimited.signup.payment.PaymentActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.deliveryunlimited.signup.confirmation.ConfirmationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.instore.navigation.productfinder.ProductFinderActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.instore.navigation.map.ui.InstoreMapActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name="au.com.woolworths.feature.shop.instore.navigation.map.services.PositioningService"
+            android:foregroundServiceType="location"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.android.onesite.modules.deliveryaddress.managefulldeliveryaddresses.ManageFullDeliveryAddressesActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.android.onesite.modules.deliveryaddress.search.DeliveryAddressSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/Theme.Wow"
+            android:label="@string/app_name"
+            android:name="au.com.woolworths.android.onesite.modules.onboarding.collectionmodesetup.CollectionModeSetupActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Rewards"
+            android:label="@string/app_name"
+            android:name="au.com.woolworths.android.onesite.modules.rewards.RewardsSetupMoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow"
+            android:name="au.com.woolworths.android.onesite.modules.customviews.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="au.com.woolworths.feature.rewards.account.settings.AccountSettingsActivityOld"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="au.com.woolworths.feature.rewards.account.settings.v2.AccountSettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="au.com.woolworths.feature.rewards.account.sso.RewardsMagicLinkActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Light"
+            android:name="au.com.woolworths.feature.rewards.account.authentication.RewardsAuthenticationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Light"
+            android:name="au.com.woolworths.feature.rewards.account.authentication.RewardsAuthenticationActivityNew"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="au.com.woolworths.feature.rewards.account.closeaccount.CloseAccountActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Invisible"
+            android:name="au.com.woolworths.feature.rewards.account.preferences.RewardsPreferenceDetailsBottomSheetActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Invisible"
+            android:name="au.com.woolworths.feature.rewards.account.preferences.RewardsPreferenceDetailsBottomSheetActivityLegacy"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name="au.com.woolworths.feature.rewards.account.preferences.RewardsPreferenceDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="au.com.woolworths.feature.rewards.account.preferences.RewardsPreferenceDetailsActivityLegacy"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Light"
+            android:name="au.com.woolworths.feature.rewards.account.callback.RewardsCallbackUrlActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/title_activity_branded_shop"
+            android:name="au.com.woolworths.feature.shop.brandedshop.BrandedShopActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Black"
+            android:name="au.com.woolworths.feature.shop.barcode.scanner.BarcodeScannerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Black"
+            android:name="au.com.woolworths.feature.shop.barcode.scanner.BarcodeScannerLegacyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow"
+            android:label="Product Details"
+            android:name="au.com.woolworths.shop.product.details.ProductDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.product.list.v2.ProductListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.product.navigation.ui.subcategory.SubCategoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.contentpage.ContentPageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/catalogue_intro_toolbar_title"
+            android:name="au.com.woolworths.feature.shop.catalogue.intro.CatalogueIntroActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.catalogue.storeselector.CatalogueStoreSelectorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/catalogue_home_title"
+            android:name="au.com.woolworths.feature.shop.catalogue.home.CatalogueHomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/catalogue_terms_n_conditions"
+            android:name="au.com.woolworths.feature.shop.catalogue.termsandconditions.TermsAndConditionsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow"
+            android:name="au.com.woolworths.feature.shop.catalogue.details.CatalogueDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow"
+            android:label="@string/catalogue_product_list_title"
+            android:name="au.com.woolworths.feature.shop.catalogue.productlist.CatalogueProductListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/catalogue_browse_title"
+            android:name="au.com.woolworths.feature.shop.catalogue.browse.CatalogueBrowseActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow"
+            android:name="au.com.woolworths.feature.shop.catalogue.listing.category.CategoryListingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow"
+            android:name="au.com.woolworths.feature.shop.catalogue.listing.promotion.PromotionListingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.catalogue.listing.promotion.details.PromotionDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/product_details_screen_title"
+            android:name="au.com.woolworths.product.details.LegacyProductDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.addtolist.edit.CreateUpdateShoppingListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.ask.olive.ui.AskOliveActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/Theme.Core"
+            android:label="@string/title_activity_country_selector"
+            android:name="au.com.woolworths.feature.shop.countryselector.CountrySelectorActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.bundles.BundlesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/order_confirmation_title"
+            android:name="au.com.woolworths.shop.checkout.ui.confirmation.OrderConfirmationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.checkout.ui.fulfilmentwindows.FulfilmentWindowsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/Theme.Wow"
+            android:name="au.com.woolworths.shop.checkout.ui.idverification.IdVerificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/Theme.Wow"
+            android:name="au.com.woolworths.shop.checkout.ui.substitution.SubstitutionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.checkout.ui.timeselector.TimeSelectorActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="Cart"
+            android:name="au.com.woolworths.feature.shop.instore.cart.InstoreCartActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wx"
+            android:name="au.com.woolworths.feature.shop.account.ui.delete.DeleteAccountActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.account.ui.details.AccountDetailsActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/freshmag_content_activity_label"
+            android:name="au.com.woolworths.feature.shop.recipes.freshmag.content.presentation.FreshMagContentActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.recipes.freshmag.home.presentation.FreshMagHomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.recipes.recipes.list.RecipeListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.recipes.recipes.homepage.savedrecipes.SavedRecipesActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wx"
+            android:name="au.com.woolworths.feature.shop.recipes.details.RecipeDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="Cart"
+            android:name="au.com.woolworths.shop.cart.ui.CartActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.cart.ui.productreview.ProductsReviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.storelocator.details.StoreDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/store_locator_title"
+            android:name="au.com.woolworths.feature.shop.storelocator.StoreLocatorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.storelocator.legacy.pickup.PickUpLocatorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.storelocator.legacy.pickup.locationresult.PickUpLocationResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.storelocator.legacy.pickup.details.StoreDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/store_locator_title"
+            android:name="au.com.woolworths.feature.shop.storelocator.legacy.StoreLocatorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/mode_selector_screen_title"
+            android:name="au.com.woolworths.feature.shop.modeselector.ModeSelectorActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.product.availability.ProductAvailabilityActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="au.com.woolworths.shop.ratings.and.reviews.reviewsdetails.RatingsAndReviewsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:label="Write Review"
+            android:name="au.com.woolworths.shop.ratings.and.reviews.submitreviews.SubmitReviewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="au.com.woolworths.feature.rewards.offers.detail.RewardsOfferDetailsActivityLegacy"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wx"
+            android:name="au.com.woolworths.feature.rewards.offers.detail.OfferDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="au.com.woolworths.feature.rewards.offers.listpage.OfferListPageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Light"
+            android:name="au.com.woolworths.feature.rewards.offers.spinsurprise.SpinSurpriseGameActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Light"
+            android:name="au.com.woolworths.feature.rewards.redemptionsettings.RewardsRedemptionSettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Invisible"
+            android:name="au.com.woolworths.feature.rewards.redemptionsettings.RewardsRedemptionSettingsBottomSheetActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Light"
+            android:name="au.com.woolworths.feature.rewards.redemptionsettings.securitypreferences.SecurityPreferencesActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Invisible"
+            android:name="au.com.woolworths.feature.rewards.redemptionsettings.securitypreferences.SecurityPreferencesSecureDollarsActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:theme="@style/Theme.Rewards.Invisible"
+            android:name="au.com.woolworths.sdui.rewards.appmodal.RewardsAppModalActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.dynamic.page.ui.DynamicPageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light.NoActionBar"
+            android:name="au.com.woolworths.feature.shop.onboarding.OnboardingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.shop.receipts.ShopReceiptListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow"
+            android:name="au.com.woolworths.feature.shop.voc.freetext.VocFreeTextActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.voc.webview.VocSurveyWebViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.promotion.banner.ui.PromotionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.delivery.address.addaddressmanually.AddDeliveryAddressManuallyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.editorder.errorscreen.EditOrderErrorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.editorder.review.CmoReviewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wx"
+            android:name="au.com.woolworths.feature.shop.healthylifefoodtracker.FoodTrackerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.imagegallery.ProductImageGalleryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shop.onboarding.sdui.OnboardingSduiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:label="@string/recipe_search_page_label"
+            android:name="au.com.woolworths.feature.shop.recipes.search.RecipeSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible"/>
+        <meta-data
+            android:name="android.webkit.WebView.MetricsOptOut"
+            android:value="true"/>
+        <activity
+            android:theme="@style/Theme.Wow"
+            android:name="au.com.woolworths.feature.shop.weblink.WebLinkActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:theme="@style/Theme.Wow"
+            android:label="Shipping Calculator"
+            android:name="au.com.woolworths.feature.shop.shippingcalculator.ShippingCalculatorActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/Theme.Wx"
+            android:name="au.com.woolworths.feature.shared.instore.wifi.ui.InstoreWifiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Wow.Light"
+            android:name="au.com.woolworths.feature.shared.instore.wifi.ui.JoinWifiActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="au.com.woolworths.feature.shared.receipt.details.EReceiptDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name="com.swrve.sdk.SwrveFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@style/Theme.Wow.Invisible"
+            android:name="au.com.woolworths.feature.shared.feedback.ui.FeedbackFormActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="au.com.woolworths.feature.shared.feedback.ui.Feedback2FormActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="au.com.woolworths.feature.shared.web.file.uploader.permission.CameraPermissionActivity"
+            android:exported="false"/>
+        <activity android:name="au.com.woolworths.feature.shared.copy.to.clipboard.CopyToClipboardActionActivity"/>
+        <activity
+            android:theme="@style/Theme.Transparent"
+            android:name="au.com.woolworths.feature.shared.notification.optin.NotificationOptInActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:autoRemoveFromRecents="true"/>
+        <activity
+            android:theme="@style/Theme.Wow.Invisible"
+            android:name="au.com.woolworths.feature.shared.force.upgrade.ConfigActionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:theme="@style/Theme.Wx"
+            android:name="au.com.woolworths.feature.shop.inbox.InboxActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="au.com.woolworths.shop.auth.keycloak.ui.KeycloakAuthActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="nz.co.woolworths.mobile"
+                    android:host="auth"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.Wx"
+            android:name="au.com.woolworths.feature.shop.video.FullPageVideoPlayerActivity"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.woolworths.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+        <activity
+            android:theme="@style/Theme.Wx.Transparent"
+            android:name="au.com.woolworths.foundation.swrve.embedded.campaign.standardcampaign.StandardCampaignActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:autoRemoveFromRecents="true"/>
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true"/>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/title_activity_s_d_k"
+            android:name="com.cisco.or.sdk.activity.SDKActivity"/>
+        <activity
+            android:theme="@style/Theme.InAppMessage"
+            android:name="com.swrve.sdk.SwrveInAppMessageActivity"
+            android:exported="false"
+            android:launchMode="singleTask"/>
+        <activity
+            android:theme="@style/Swrve.LightTheme"
+            android:name="com.swrve.sdk.SwrvePermissionRequesterActivity"
+            android:exported="false"/>
+        <activity
+            android:name="au.com.woolworths.foundation.barcode.reader.view.BarcodeReaderActivity"
+            android:exported="true"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:label="@string/mcsdk_notification_activity_label"
+            android:name="com.salesforce.marketingcloud.notifications.NotificationOpenActivity"
+            android:taskAffinity="com.woolworths.NotificationOpenActivity"
+            android:launchMode="singleInstance"/>
+        <activity
+            android:theme="@style/McSdk.Modal"
+            android:label="@string/mcsdk_iam_activity_label"
+            android:name="com.salesforce.marketingcloud.messages.iam.IamModalActivity"/>
+        <activity
+            android:theme="@style/McSdk.Banner"
+            android:label="@string/mcsdk_iam_activity_label"
+            android:name="com.salesforce.marketingcloud.messages.iam.IamBannerActivity"/>
+        <activity
+            android:theme="@style/McSdk.Fullscreen"
+            android:label="@string/mcsdk_iam_activity_label"
+            android:name="com.salesforce.marketingcloud.messages.iam.IamFullscreenActivity"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/McSdk.Fullscreen"
+            android:label="@string/mcsdk_iam_activity_label"
+            android:name="com.salesforce.marketingcloud.messages.iam.IamFullImageFillActivity"
+            android:configChanges="screenSize|orientation"/>
+        <receiver
+            android:name="com.salesforce.marketingcloud.location.LocationReceiver"
+            android:exported="false"/>
+        <service
+            android:name="com.salesforce.marketingcloud.MCService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <service
+            android:name="com.salesforce.marketingcloud.NotificationOpenedService"
+            android:exported="false"/>
+        <receiver
+            android:name="com.salesforce.marketingcloud.MCReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="com.woolworths.com.salesforce.marketingcloud.WAKE_FOR_ALARM"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.salesforce.marketingcloud.messages.push.MCFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter android:priority="-1">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.salesforce.marketingcloud.MCInitContentProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:authorities="com.woolworths.com.salesforce.marketingcloud.initprovider"/>
+        <service
+            android:name="org.altbeacon.beacon.service.BeaconService"
+            android:foregroundServiceType="location"/>
+        <activity
+            android:label="@string/oss_license_title"
+            android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"/>
+        <activity android:name="com.google.android.gms.oss.licenses.OssLicensesActivity"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.auth0.android.provider.AuthenticationActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@style/MedalliaSDKTheme"
+            android:name="com.medallia.digital.mobilesdk.MedalliaFullFormActivity"
+            android:exported="false"
+            android:configChanges="screenSize|uiMode|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/MedalliaSDKTheme"
+            android:name="com.medallia.digital.mobilesdk.MedalliaModalFormActivity"
+            android:exported="false"
+            android:configChanges="screenSize|uiMode|orientation|keyboardHidden"/>
+        <service
+            android:name="androidx.camera.core.impl.MetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+        </service>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity
+            android:name="com.braintreepayments.api.BraintreeDeepLinkActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="com.woolworths.braintree.deeplinkhandler"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.adobe.marketing.mobile.ExtensionDiscoveryService"
+            android:exported="false">
+            <meta-data
+                android:name="com.adobe.marketing.mobile.identity.IdentityExtension"
+                android:value="Extension"/>
+            <meta-data
+                android:name="com.adobe.marketing.mobile.internal.configuration.ConfigurationExtension"
+                android:value="Extension"/>
+        </service>
+        <receiver
+            android:name="com.swrve.sdk.SwrveNotificationEngageReceiver"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/Swrve.Theme.Transparent"
+            android:name="com.swrve.sdk.SwrveNotificationEngageActivity"
+            android:exported="false"
+            android:launchMode="singleInstance"/>
+        <service
+            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider
+            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+            android:exported="false"
+            android:authorities="com.woolworths.mlkitinitprovider"
+            android:initOrder="99"/>
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule"/>
+        <service
+            android:name="me.oriient.internal.services.uploadingManager.scheduling.DataUploadScheduledJob"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
+        <receiver
+            android:name="me.oriient.internal.services.uploadingManager.scheduling.DataUploadReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="me.oriient.ipssdk.TRACKING_UPLOAD_CONTROL"/>
+                <action android:name="me.oriient.ipssdk.TRACKING_UPLOAD_CHARGER"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="genericidp"
+                    android:host="firebase.auth"
+                    android:path="/"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="recaptcha"
+                    android:host="firebase.auth"
+                    android:path="/"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+            android:enabled="true"
+            android:exported="false">
+            <meta-data
+                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl"/>
+        </service>
+        <activity
+            android:theme="@style/Theme.Hidden"
+            android:name="androidx.credentials.playservices.HiddenActivity"
+            android:enabled="true"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden"
+            android:fitsSystemWindows="true"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"/>
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:exported="true"
+            android:visibleToInstantApps="true"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+            <meta-data
+                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+                android:value="true"/>
+        </receiver>
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false"
+            android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:exported="false"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:enableOnBackInvokedCallback="false"/>
+        <provider
+            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+            android:exported="false"
+            android:authorities="com.woolworths.mobileadsinitprovider"
+            android:initOrder="100"/>
+        <service
+            android:name="com.google.android.gms.ads.AdService"
+            android:enabled="true"
+            android:exported="false"/>
+        <activity
+            android:name="com.google.android.gms.ads.OutOfContextTestingActivity"
+            android:exported="false"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.ads.NotificationHandlerActivity"
+            android:exported="false"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING"
+            android:value="true"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION"
+            android:value="true"/>
+        <activity
+            android:name="androidx.compose.ui.tooling.PreviewActivity"
+            android:exported="true"/>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable.BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+        <provider
+            android:name="com.salesforce.marketingcloud.sfmcsdk.SFMCSdkInitContentProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:authorities="com.woolworths.com.salesforce.marketingcloud.sfmcsdk.initprovider"/>
+        <receiver
+            android:name="com.salesforce.marketingcloud.sfmcsdk.SFMCSdkReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.salesforce.marketingcloud.sfmcsdk.SFMCSdkJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.woolworths.firebaseinitprovider"
+            android:initOrder="100"
+            android:directBootAware="true"/>
+        <uses-library
+            android:name="android.ext.adservices"
+            android:required="false"/>
+        <provider
+            android:name="leakcanary.internal.PlumberInstaller"
+            android:enabled="@bool/leak_canary_plumber_auto_install"
+            android:exported="false"
+            android:authorities="com.woolworths.plumber-installer"/>
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false">
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct"/>
+        </service>
+        <provider
+            android:name="com.scandit.datacapture.core.internal.sdk.init.CoreLibraryLoaderContentProvider"
+            android:exported="false"
+            android:authorities="com.woolworths.corelibraryloadercontentprovider"
+            android:initOrder="11"/>
+        <provider
+            android:name="com.scandit.datacapture.barcode.internal.sdk.init.BarcodeLibraryLoaderContentProvider"
+            android:exported="false"
+            android:authorities="com.woolworths.barcodelibraryloadercontentprovider"
+            android:initOrder="10"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false"/>
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name="io.card.payment.DataEntryActivity"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.jakewharton.processphoenix.ProcessPhoenix"
+            android:process=":phoenix"/>
+        <activity
+            android:theme="@style/Theme.PlayCore.Transparent"
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:exported="false"
+            android:stateNotNeeded="true"/>
+        <meta-data
+            android:name="com.android.vending.splits.required"
+            android:value="true"/>
+        <meta-data
+            android:name="com.android.stamp.source"
+            android:value="https://play.google.com/store"/>
+        <meta-data
+            android:name="com.android.stamp.type"
+            android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data
+            android:name="com.android.vending.splits"
+            android:resource="@xml/splits0"/>
+        <meta-data
+            android:name="com.android.vending.derived.apk.id"
+            android:value="3"/>
+    </application>
+</manifest>

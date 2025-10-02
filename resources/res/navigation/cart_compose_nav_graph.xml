@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cart_nav_graph"
+    app:startDestination="@+id/cartFragment">
+    <fragment
+        android:name="au.com.woolworths.shop.cart.ui.cart.CartFragment"
+        android:id="@+id/cartFragment">
+        <action
+            android:id="@+id/action_cartFragment_to_cartSectionOptionsBottomSheet"
+            app:destination="@+id/cartSectionOptionsBottomSheet"/>
+    </fragment>
+    <dialog
+        android:label="CartSectionOptionsBottomSheet"
+        android:name="au.com.woolworths.shop.cart.ui.CartSectionOptionsBottomSheet"
+        android:id="@+id/cartSectionOptionsBottomSheet">
+        <argument
+            android:name="sectionTitle"
+            app:argType="string"/>
+        <argument
+            android:name="isMarketplace"
+            app:argType="boolean"/>
+    </dialog>
+</navigation>

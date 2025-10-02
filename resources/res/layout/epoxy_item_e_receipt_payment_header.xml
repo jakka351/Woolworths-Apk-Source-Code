@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/epoxy_item_e_receipt_payment_header_0"
+    android:paddingTop="@dimen/quarter_default_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textAppearance="@style/TextAppearance.Body.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/payment_label"
+        android:layout_marginEnd="@dimen/default_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/chevron"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:textAppearance="@style/TextAppearance.Body.Medium"
+        android:id="@+id/chevron"
+        android:tag="binding_1"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_width="32dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_arrow_down"
+        android:scaleType="center"
+        android:contentDescription="@string/payment_expand_toggle_content_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

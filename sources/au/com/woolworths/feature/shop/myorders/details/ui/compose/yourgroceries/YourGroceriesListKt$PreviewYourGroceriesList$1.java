@@ -1,0 +1,41 @@
+package au.com.woolworths.feature.shop.myorders.details.ui.compose.yourgroceries;
+
+import androidx.compose.runtime.Composer;
+import androidx.compose.runtime.internal.ComposableLambdaKt;
+import au.com.woolworths.design.core.ui.component.stable.SurfaceKt;
+import au.com.woolworths.design.core.ui.foundation.CoreTheme;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.internal.SourceDebugExtension;
+
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes3.dex */
+final class YourGroceriesListKt$PreviewYourGroceriesList$1 implements Function2<Composer, Integer, Unit> {
+
+    @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+    @SourceDebugExtension
+    /* renamed from: au.com.woolworths.feature.shop.myorders.details.ui.compose.yourgroceries.YourGroceriesListKt$PreviewYourGroceriesList$1$1, reason: invalid class name */
+    final class AnonymousClass1 implements Function2<Composer, Integer, Unit> {
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(Object obj, Object obj2) {
+            Composer composer = (Composer) obj;
+            if ((((Number) obj2).intValue() & 3) != 2 || !composer.c()) {
+                throw null;
+            }
+            composer.j();
+            return Unit.f24250a;
+        }
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public final Object invoke(Object obj, Object obj2) {
+        Composer composer = (Composer) obj;
+        if ((((Number) obj2).intValue() & 3) == 2 && composer.c()) {
+            composer.j();
+        } else {
+            SurfaceKt.b(null, null, CoreTheme.b(composer).e.f4848a.c, 0L, null, null, ComposableLambdaKt.c(-2067323962, new AnonymousClass1(), composer), composer, 59);
+        }
+        return Unit.f24250a;
+    }
+}

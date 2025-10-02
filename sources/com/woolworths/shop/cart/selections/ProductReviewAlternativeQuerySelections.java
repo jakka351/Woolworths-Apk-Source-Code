@@ -1,0 +1,130 @@
+package com.woolworths.shop.cart.selections;
+
+import androidx.compose.runtime.internal.StabilityInferred;
+import au.com.woolworths.dynamic.page.ui.content.d;
+import au.com.woolworths.feature.rewards.everydayextras.signup.selections.a;
+import au.com.woolworths.graphql.common.fragment.selections.ProductCardSelections;
+import au.com.woolworths.sdui.shop.fragment.selections.AnalyticsFieldsSelections;
+import au.com.woolworths.shop.graphql.type.Analytics;
+import au.com.woolworths.shop.graphql.type.Badge;
+import au.com.woolworths.shop.graphql.type.BadgeType;
+import au.com.woolworths.shop.graphql.type.CartProductQuantityInfo;
+import au.com.woolworths.shop.graphql.type.ContentCta;
+import au.com.woolworths.shop.graphql.type.GraphQLBoolean;
+import au.com.woolworths.shop.graphql.type.GraphQLFloat;
+import au.com.woolworths.shop.graphql.type.GraphQLInt;
+import au.com.woolworths.shop.graphql.type.GraphQLString;
+import au.com.woolworths.shop.graphql.type.ProductCard;
+import au.com.woolworths.shop.graphql.type.ProductReviewAlternativeInfoBottomSheet;
+import au.com.woolworths.shop.graphql.type.ProductReviewAlternativeResponse;
+import au.com.woolworths.shop.graphql.type.ProductReviewCard;
+import au.com.woolworths.shop.graphql.type.Query;
+import com.apollographql.apollo.api.CompiledArgument;
+import com.apollographql.apollo.api.CompiledField;
+import com.apollographql.apollo.api.CompiledFragment;
+import com.apollographql.apollo.api.CompiledGraphQL;
+import com.apollographql.apollo.api.CustomScalarType;
+import com.apollographql.apollo.api.ObjectType;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+import org.bouncycastle.jcajce.util.AnnotatedPrivateKey;
+
+@StabilityInferred
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\bÇ\u0002\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lcom/woolworths/shop/cart/selections/ProductReviewAlternativeQuerySelections;", "", "shop-cart_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes7.dex */
+public final class ProductReviewAlternativeQuerySelections {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final List f21639a;
+    public static final List b;
+    public static final List c;
+    public static final List d;
+    public static final List e;
+    public static final List f;
+    public static final List g;
+    public static final List h;
+    public static final List i;
+    public static final List j;
+    public static final List k;
+
+    static {
+        CustomScalarType customScalarType = GraphQLString.f11443a;
+        CompiledField compiledFieldC = new CompiledField.Builder(AnnotatedPrivateKey.LABEL, CompiledGraphQL.b(customScalarType)).c();
+        BadgeType.e.getClass();
+        List listR = CollectionsKt.R(compiledFieldC, new CompiledField.Builder("type", CompiledGraphQL.b(BadgeType.f)).c());
+        f21639a = listR;
+        CustomScalarType customScalarType2 = GraphQLFloat.f11440a;
+        List listR2 = CollectionsKt.R(new CompiledField.Builder("minimum", CompiledGraphQL.b(customScalarType2)).c(), new CompiledField.Builder("maximum", CompiledGraphQL.b(customScalarType2)).c(), new CompiledField.Builder("increment", CompiledGraphQL.b(customScalarType2)).c(), new CompiledField.Builder("default", CompiledGraphQL.b(customScalarType2)).c(), d.g("unit", customScalarType));
+        b = listR2;
+        CompiledField compiledFieldC2 = new CompiledField.Builder("title", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldC3 = new CompiledField.Builder("productId", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldC4 = new CompiledField.Builder("quantity", CompiledGraphQL.b(customScalarType2)).c();
+        CompiledField compiledFieldC5 = new CompiledField.Builder("imageUrl", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField.Builder builder = new CompiledField.Builder("badge", Badge.f11042a);
+        builder.e = listR;
+        CompiledField compiledFieldC6 = builder.c();
+        CompiledField.Builder builder2 = new CompiledField.Builder("quantityInfo", CartProductQuantityInfo.f11115a);
+        builder2.e = listR2;
+        List listR3 = CollectionsKt.R(compiledFieldC2, compiledFieldC3, compiledFieldC4, compiledFieldC5, compiledFieldC6, builder2.c(), new CompiledField.Builder("price", GraphQLInt.f11442a).c(), d.g("unitPrice", customScalarType), new CompiledField.Builder("isAvailable", CompiledGraphQL.b(GraphQLBoolean.f11439a)).c());
+        c = listR3;
+        CompiledField compiledFieldC7 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder3 = new CompiledFragment.Builder("ProductCard", CollectionsKt.Q("ProductCard"));
+        builder3.b(ProductCardSelections.A);
+        List listR4 = CollectionsKt.R(compiledFieldC7, builder3.a());
+        d = listR4;
+        CompiledField compiledFieldC8 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder4 = new CompiledFragment.Builder("Analytics", CollectionsKt.Q("Analytics"));
+        List list = AnalyticsFieldsSelections.b;
+        builder4.b(list);
+        List listR5 = CollectionsKt.R(compiledFieldC8, builder4.a());
+        e = listR5;
+        CompiledField compiledFieldC9 = new CompiledField.Builder(AnnotatedPrivateKey.LABEL, CompiledGraphQL.b(customScalarType)).c();
+        ObjectType objectType = Analytics.f11028a;
+        CompiledField.Builder builder5 = new CompiledField.Builder("onCtaClickAnalytics", objectType);
+        builder5.e = listR5;
+        List listR6 = CollectionsKt.R(compiledFieldC9, builder5.c());
+        f = listR6;
+        CompiledField compiledFieldC10 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder6 = new CompiledFragment.Builder("Analytics", CollectionsKt.Q("Analytics"));
+        builder6.d = list;
+        List listR7 = CollectionsKt.R(compiledFieldC10, builder6.a());
+        g = listR7;
+        CompiledField compiledFieldC11 = new CompiledField.Builder("bottomSheetTitle", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldC12 = new CompiledField.Builder("bottomSheetBody", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField.Builder builder7 = new CompiledField.Builder("primaryCta", CompiledGraphQL.b(ContentCta.f11282a));
+        builder7.e = listR6;
+        CompiledField compiledFieldC13 = builder7.c();
+        CompiledField.Builder builder8 = new CompiledField.Builder("infoClickAnalytics", CompiledGraphQL.b(objectType));
+        builder8.e = listR7;
+        List listR8 = CollectionsKt.R(compiledFieldC11, compiledFieldC12, compiledFieldC13, builder8.c());
+        h = listR8;
+        CompiledField compiledFieldC14 = new CompiledField.Builder("__typename", CompiledGraphQL.b(customScalarType)).c();
+        CompiledFragment.Builder builder9 = new CompiledFragment.Builder("Analytics", CollectionsKt.Q("Analytics"));
+        builder9.d = list;
+        List listR9 = CollectionsKt.R(compiledFieldC14, builder9.a());
+        i = listR9;
+        CompiledField compiledFieldC15 = new CompiledField.Builder("searchHint", CompiledGraphQL.b(customScalarType)).c();
+        CompiledField compiledFieldG = d.g("alternativesTitle", customScalarType);
+        CompiledField compiledFieldG2 = d.g("errorMessage", customScalarType);
+        CompiledField compiledFieldG3 = d.g("errorActionTitle", customScalarType);
+        CompiledField.Builder builder10 = new CompiledField.Builder("product", CompiledGraphQL.b(ProductReviewCard.f11772a));
+        builder10.e = listR3;
+        CompiledField compiledFieldC16 = builder10.c();
+        CompiledField.Builder builder11 = new CompiledField.Builder("alternatives", a.f(ProductCard.f11717a));
+        builder11.e = listR4;
+        CompiledField compiledFieldC17 = builder11.c();
+        CompiledField.Builder builder12 = new CompiledField.Builder("info", CompiledGraphQL.b(ProductReviewAlternativeInfoBottomSheet.f11769a));
+        builder12.e = listR8;
+        CompiledField compiledFieldC18 = builder12.c();
+        CompiledField.Builder builder13 = new CompiledField.Builder("pageImpressionAnalytics", CompiledGraphQL.b(objectType));
+        builder13.e = listR9;
+        List listR10 = CollectionsKt.R(compiledFieldC15, compiledFieldG, compiledFieldG2, compiledFieldG3, compiledFieldC16, compiledFieldC17, compiledFieldC18, builder13.c());
+        j = listR10;
+        CompiledField.Builder builder14 = new CompiledField.Builder("productReviewAlternative", CompiledGraphQL.b(ProductReviewAlternativeResponse.f11771a));
+        new CompiledArgument.Builder(Query.n2);
+        builder14.d = au.com.woolworths.android.onesite.a.v();
+        builder14.e = listR10;
+        k = CollectionsKt.Q(builder14.c());
+    }
+}

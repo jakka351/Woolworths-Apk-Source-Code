@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/receipt_total_savings_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/sng_receipt_general_spacing"
+    android:paddingEnd="@dimen/sng_receipt_general_spacing">
+    <TextView
+        android:textSize="18sp"
+        android:textColor="@color/sng_full_black"
+        android:id="@+id/lblTotalSavings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sng_receipt_total_savings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="18sp"
+        android:textColor="@color/sng_receipt_promotion"
+        android:id="@+id/lblIncPromotion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sng_receipt_inc_promotions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTotalSavings"/>
+    <TextView
+        android:textSize="18sp"
+        android:textColor="@color/sng_full_black"
+        android:id="@+id/txtSavings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sng_spacing_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblIncPromotion"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/header_text_frame"
+    android:tag="layout/epoxy_item_checkout_products_header_0"
+    android:background="@color/color_black_50"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <TextView
+        android:textAppearance="@style/TextAppearance.Body.Medium"
+        android:id="@+id/title_text_view"
+        android:tag="binding_1"
+        android:paddingTop="@dimen/three_quarter_default_padding"
+        android:paddingBottom="@dimen/half_default_padding"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.65"
+        android:paddingStart="@dimen/default_padding"
+        android:paddingEnd="@dimen/default_padding"/>
+    <TextView
+        android:textAppearance="@style/TextAppearance.Body.Medium"
+        android:gravity="end"
+        android:id="@+id/description_text_view"
+        android:tag="binding_2"
+        android:paddingTop="@dimen/three_quarter_default_padding"
+        android:paddingBottom="@dimen/half_default_padding"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.35"
+        android:paddingStart="@dimen/default_padding"
+        android:paddingEnd="@dimen/default_padding"/>
+</LinearLayout>

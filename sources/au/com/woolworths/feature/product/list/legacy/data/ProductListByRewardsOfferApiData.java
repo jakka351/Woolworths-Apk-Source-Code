@@ -1,0 +1,50 @@
+package au.com.woolworths.feature.product.list.legacy.data;
+
+import android.support.v4.media.session.a;
+import androidx.compose.runtime.internal.StabilityInferred;
+import java.util.ArrayList;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+@StabilityInferred
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\b\u0087\b\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lau/com/woolworths/feature/product/list/legacy/data/ProductListByRewardsOfferApiData;", "", "product-list-legacy_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes3.dex */
+public final /* data */ class ProductListByRewardsOfferApiData {
+
+    /* renamed from: a, reason: collision with root package name */
+    public final ArrayList f5362a;
+    public final Integer b;
+    public final ArrayList c;
+
+    public ProductListByRewardsOfferApiData(ArrayList arrayList, Integer num, ArrayList arrayList2) {
+        this.f5362a = arrayList;
+        this.b = num;
+        this.c = arrayList2;
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof ProductListByRewardsOfferApiData)) {
+            return false;
+        }
+        ProductListByRewardsOfferApiData productListByRewardsOfferApiData = (ProductListByRewardsOfferApiData) obj;
+        return this.f5362a.equals(productListByRewardsOfferApiData.f5362a) && Intrinsics.c(this.b, productListByRewardsOfferApiData.b) && this.c.equals(productListByRewardsOfferApiData.c);
+    }
+
+    public final int hashCode() {
+        int iHashCode = this.f5362a.hashCode() * 31;
+        Integer num = this.b;
+        return this.c.hashCode() + ((iHashCode + (num == null ? 0 : num.hashCode())) * 31);
+    }
+
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("ProductListByRewardsOfferApiData(customMessages=");
+        sb.append(this.f5362a);
+        sb.append(", totalNumberOfProducts=");
+        sb.append(this.b);
+        sb.append(", productsFeed=");
+        return a.q(")", sb, this.c);
+    }
+}

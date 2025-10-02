@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/fragment_base_bottom_sheet_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/bottom_sheet_epoxy_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/grab_handle_image_view"
+        android:tag="binding_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/half_default_margin"
+        android:src="@drawable/bottom_sheet_grab_handle"
+        android:importantForAccessibility="no"/>
+    <ImageButton
+        android:theme="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
+        android:id="@+id/back_image_button"
+        android:tag="binding_2"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding"
+        android:src="@drawable/ic_details_back_arrow"
+        android:contentDescription="@string/close_button"/>
+</FrameLayout>

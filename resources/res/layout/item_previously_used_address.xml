@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/previous_address_layout"
+    android:tag="layout/item_previously_used_address_0"
+    android:background="?attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/listPreferredItemHeightSmall"
+    android:paddingStart="@dimen/default_margin"
+    android:paddingEnd="@dimen/half_default_margin">
+    <TextView
+        android:textAppearance="@style/TextAppearance.Subtitle2"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/address_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:maxLines="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/item_trash_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/item_trash_button"
+        android:tag="binding_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/delete_button"
+        app:icon="@drawable/ic_trash"
+        app:iconTint="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Button.Primary.Flat"/>
+    <ProgressBar
+        android:id="@+id/item_progress_bar"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

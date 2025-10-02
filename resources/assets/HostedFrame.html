@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0"/>
+    <style>
+            * {
+                -webkit-user-select: none;
+                -webkit-touch-callout: none;
+            }
+            body {
+                margin: 0;
+                border: 0;
+            }
+        </style>
+
+    <script>
+
+            //Called once iFrame is loaded to validate the content
+            //and send error event back to the webview if
+            //validation fails
+            function onIframeLoadHandler() {
+                console.log("Inform load bind: ");
+                checkForContents();
+            }
+
+            // TODO: Remove all comments prior to public release.
+
+            //
+            // Called from the WoolworthsPay framework.
+            //
+            // Sends a pay-frame-submit message to the iframe with the parameters
+            // passed into this method, causing the form to be submitted.
+            //
+            // At some point later in time, the server contacted by the iframe
+            // will send a message back to this page, indicating the result.
+            //
+            function submitForm(message) {
+                // Add message type.
+                message["eventId"] = "pay-frame-submit"
+
+                // Send the message to the iframe.
+                postMessageToIFrame(message)
+            }
+
+            //
+            // Called from the WoolworthsPay framework.
+            // Sends a pay-frame-clear message to the iframe, causing
+            // all fields of the form to be cleared.
+            //
+            function clearForm() {
+                postMessageToIFrame({"eventId": "pay-frame-clear"})
+            }
+
+            //
+            // Called from the WoolworthsPay framework.
+            // Sends a pay-frame-status message to the iframe, to
+            // receive the status of iFrame back through iFrame callback
+            //
+            function queryFormStatus() {
+                postMessageToIFrame({"eventId": "pay-frame-status"})
+            }
+
+            //
+            // Convenience method for sending a message to the iframe.
+            // The origin of the iframe URL can be specified in the origin
+            // of the postMessage call.
+            //
+            function postMessageToIFrame(message) {
+                // Get the iframe element.
+                var frame = document.getElementById("embedded-frame")
+
+                //
+                // Sends the message to the iframe's content window.
+                // The second argument specifies what the origin of the iframe URL
+                // is expected to be.
+                //
+                // Currently for testing it is set to *, indicating no preference.
+                // In production this should be set to the production domain of the iframe.
+                //
+                // For more information, see this page:
+                // https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
+                //
+                frame.contentWindow.postMessage(message, "(iframe-domain)")
+            }
+
+            //
+            // Checks the content of the iFrame and look for "cvv_csv" field as
+            // content validation. If cvv_csv field is not found sends
+            // error callback to the native with Error code IF500
+            //
+            function checkForContents() {
+                try {
+                    var contents = document.getElementById('embedded-frame').contentWindow.document
+                    if (contents.documentElement.innerHTML.indexOf("cvv_csv") < 0) {
+                        reportError("IF500", "Error loading iFrame.")
+                    }
+                } catch (err) {
+                    reportError("IF500", "Error loading iFrame.")
+                }
+            }
+
+            function reportError(code, message) {
+                var error = {
+                    "eventId": "pay-frame-error",
+                    "code": code,
+                    "message": message
+                }
+                webView.iframeCallback(JSON.stringify(error))
+                console.log("Json " + JSON.stringify(error))
+            }
+
+            //
+            // This event listener gets called when the iframe posts a message to the parent Window object
+            // (which is this page).
+            //
+            // The message that this page receives can be one of the following objects:
+            //
+            // {
+            //     "eventId": "pay-frame-success",
+            //     "paymentInstrumentId": <integer>,
+            //     "auditId": <string>
+            // }
+            //
+            // {
+            //     "eventId": "pay-frame-error",
+            //     "code": <string>,
+            //     "message": <string>,
+            //      "auditId": <string>
+            // }
+            //
+            // There are also objects with eventId values specified such as "pay-frame-ready"
+            // and "pay-frame-loaded", however they currently don't appear to be posted.
+            //
+            window.addEventListener("message", function (event) {
+                // When receiving a message, the event's origin should be validated.
+                // However for testing this can be omitted.
+                console.log("origin is: " + event.origin)
+                if (event.origin != "(iframe-domain)") {
+                    var error = {
+                        "eventId": "pay-frame-error",
+                        "code": "IF99",
+                        "message": "A message from an unexpected domain \"" + event.origin + "\" was received."
+                    }
+                    webView.iframeCallback(JSON.stringify(error))
+                    console.log("Json " + JSON.stringify(error))
+                }
+
+                // Forward the content of the JavaScript message to the native Android application for it to handle.
+                webView.iframeCallback(JSON.stringify(event.data))
+            })
+        </script>
+</head>
+<body>
+<iframe id="embedded-frame"
+        width="100%"
+        height="100%"
+        src="(iframe-src-url)"
+        frameborder="0"
+        scrolling="no"
+        onload="onIframeLoadHandler();"
+        allowfullscreen></iframe>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="akamaiCCAcolorDialogBackground">#313030</color>
+    <color name="akamaiCCAcolorDialogMessage">#99ffffff</color>
+    <color name="akamaiCCAcolorDialogTitle">#deffffff</color>
+    <color name="akamaiCCAcolorPrimary">#ffffff</color>
+    <color name="akamaiCCAcolorProgressBackground">#424242</color>
+    <color name="animated_loading_view_background">@color/white_alpha_08</color>
+    <color name="animated_loading_view_loader">@color/white_alpha_08</color>
+    <color name="bottom_sheet_grab_handle">@color/white_alpha_32</color>
+    <color name="divider">@color/white_alpha_12</color>
+    <color name="rewards_balance_circle_indicator_bar">#33ffffff</color>
+    <color name="rewards_chip_background">@color/rewards_color_surface</color>
+    <color name="rewards_color_background">#000000</color>
+    <color name="rewards_color_error">#cf6679</color>
+    <color name="rewards_color_on_background">#ffffff</color>
+    <color name="rewards_color_on_error">#000000</color>
+    <color name="rewards_color_on_primary">#000000</color>
+    <color name="rewards_color_on_surface">#ffffff</color>
+    <color name="rewards_color_surface">#121212</color>
+    <color name="rewards_divider">@color/white_alpha_12</color>
+    <color name="rewards_offer_detail_mechanics_background">@color/rewards_color_surface</color>
+    <color name="rewards_themeable_redemption_icon">@color/white</color>
+    <color name="rewards_themeable_redemption_icon_background">@color/white_alpha_08</color>
+    <color name="rewards_tooltip_background">@color/rewards_color_surface</color>
+    <color name="rewards_tooltip_text">@color/rewards_color_on_surface</color>
+    <color name="unlock_slider_background">@color/white_alpha_04</color>
+</resources>

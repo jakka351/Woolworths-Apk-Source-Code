@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+    android:label="@string/sng_app_name"
+    android:textColorHint="@color/sng_white"
+    android:hint="@string/sng_product_search_hint"
+    android:searchMode="queryRewriteFromText"
+    android:searchSuggestSelection=" ?"
+    android:searchSuggestIntentAction="android.intent.action.SEARCH"
+    android:searchSuggestThreshold="4"
+    android:searchSettingsDescription="@string/sng_label_product_search"/>

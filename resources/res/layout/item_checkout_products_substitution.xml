@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textAppearance="@style/TextAppearance.Body.Medium"
+        android:id="@+id/substitution_title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/three_quarter_default_padding"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginEnd="@dimen/default_margin"
+        app:layout_constraintEnd_toStartOf="@+id/tool_tip_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageButton
+        android:id="@+id/tool_tip_button"
+        android:background="@android:color/transparent"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_tool_tip"
+        android:contentDescription="@string/tooltip_content_description"
+        android:layout_marginEnd="@dimen/three_quarter_default_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/substitution_title_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/substitution_title_text_view"
+        app:tint="?attr/colorPrimary"/>
+    <ImageView
+        android:id="@+id/substitution_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/substitution_spinner"
+        app:layout_constraintStart_toStartOf="@+id/substitution_title_text_view"
+        app:layout_constraintTop_toTopOf="@+id/substitution_spinner"/>
+    <Spinner
+        android:id="@+id/substitution_spinner"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/half_default_margin"
+        android:layout_marginBottom="@dimen/half_default_margin"
+        android:popupTheme="@style/ThemeOverlay.SpinnerItem"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/substitution_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/substitution_title_text_view"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

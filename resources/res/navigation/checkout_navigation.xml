@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/checkout_nav_graph"
+    app:startDestination="@+id/checkout_module_navigation">
+    <include app:graph="@navigation/checkout_module_navigation"/>
+    <include app:graph="@navigation/order_confirmation_navigation"/>
+    <action
+        android:id="@+id/action_to_restart_checkout"
+        app:destination="@+id/checkout_module_navigation"
+        app:popUpTo="@+id/checkout_module_navigation"
+        app:popUpToInclusive="true"/>
+    <action
+        android:id="@+id/action_to_checkout_payment_fragment"
+        app:destination="@+id/checkout_payment_fragment"
+        app:popUpTo="@+id/checkout_payment_error_fragment"
+        app:popUpToInclusive="true"/>
+    <fragment
+        android:name="au.com.woolworths.android.onesite.modules.checkout.digitalpay.DigitalPayForOrderFragment"
+        android:id="@+id/checkout_payment_fragment"/>
+    <action
+        android:id="@+id/action_to_checkout_payment_error_fragment"
+        app:destination="@+id/checkout_payment_error_fragment"
+        app:popUpTo="@+id/checkout_payment_fragment"
+        app:popUpToInclusive="true"/>
+    <fragment
+        android:name="au.com.woolworths.android.onesite.modules.checkout.payserviceserror.PayServicesErrorFragment"
+        android:id="@+id/checkout_payment_error_fragment"/>
+    <action
+        android:id="@+id/action_to_order_confirmation"
+        app:destination="@+id/order_confirmation_navigation">
+        <argument
+            android:name="orderId"
+            app:argType="long"
+            app:nullable="false"/>
+    </action>
+    <action
+        android:id="@+id/action_to_checkout_wpay_fragment"
+        app:destination="@+id/checkout_wpay_fragment"
+        app:popUpTo="@+id/checkout_payment_error_fragment"
+        app:popUpToInclusive="true"/>
+    <fragment
+        android:name="au.com.woolworths.feature.shop.wpay.ui.wpay.WPayForOrderFragment"
+        android:id="@+id/checkout_wpay_fragment"/>
+</navigation>

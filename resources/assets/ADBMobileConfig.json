@@ -1,0 +1,39 @@
+{
+  "lastModified": "2020-05-27T01:22:04.590Z",
+  "marketingCloud": {
+    "org": "4353388057AC8D357F000101@AdobeOrg"
+  },
+  "target": {
+    "clientCode": "woolworthsfoodgroup",
+    "timeout": 5
+  },
+  "audienceManager": {
+    "server": "wfg.demdex.net",
+    "analyticsForwardingEnabled": true,
+    "timeout": 5
+  },
+  "acquisition": {
+    "server": "c00.adobe.com",
+    "appid": "c79fb92b6ca1c65c51ee825f6e5ca3f655cbb8d7d6759a7713ee23f64128e41e"
+  },
+  "analytics": {
+    "rsids": "wfgwoolworths.mobile.app",
+    "server": "woolworthsfoodgroup.sc.omtrdc.net",
+    "ssl": true,
+    "offlineEnabled": true,
+    "charset": "UTF-8",
+    "lifecycleTimeout": 300,
+    "privacyDefault": "optedin",
+    "batchLimit": 0,
+    "timezone": "AEST",
+    "timezoneOffset": 600,
+    "referrerTimeout": 5,
+    "backdateSessionInfo": true,
+    "poi": []
+  },
+  "messages": [],
+  "remotes": {
+    "analytics.poi": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-5819443264746d5fd700e081.json",
+    "messages": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-5819443164746d390100eab9.json"
+  }
+}

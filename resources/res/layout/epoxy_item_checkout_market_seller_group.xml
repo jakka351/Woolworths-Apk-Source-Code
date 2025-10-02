@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_marketplace_seller"
+    android:tag="layout/epoxy_item_checkout_market_seller_group_0"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/default_padding"
+    android:paddingEnd="@dimen/half_default_padding"
+    android:paddingVertical="@dimen/default_padding">
+    <TextView
+        android:textAppearance="@style/TextAppearance.Caption.Medium"
+        android:id="@+id/seller_name"
+        android:tag="binding_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/half_default_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/seller_delivery"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textAppearance="@style/TextAppearance.Caption.Medium"
+        android:textColor="@color/color_black_400"
+        android:gravity="end"
+        android:id="@+id/seller_delivery"
+        android:tag="binding_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/seller_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="0.65"
+        app:layout_constraintStart_toEndOf="@+id/seller_name"
+        app:layout_constraintTop_toTopOf="@+id/seller_name"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
